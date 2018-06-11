@@ -1,0 +1,617 @@
+﻿<Window
+    x:Class="MQTTDataProvider.MainWindowView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MQTTDataProvider"
+    Width="1200"
+    Height="500"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="b2v" />
+    </Window.Resources>
+    <Grid
+        Width="1200"
+        Height="569"
+        Margin="0,0,-170,-100"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="67*" />
+            <ColumnDefinition Width="45*" />
+            <ColumnDefinition Width="680*" />
+        </Grid.ColumnDefinitions>
+        <TextBox
+            x:Name="txtTopicSubscribe"
+            Grid.Column="2"
+            Width="220"
+            Height="44"
+            Margin="127.034,41,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap"
+            Visibility="{Binding IsChecked, ElementName=check_MultipleTopics, Converter={StaticResource b2v}}" />
+        <Label
+            Grid.Column="2"
+            Margin="10.034,41,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Topic subscribe"
+            Visibility="{Binding IsChecked, ElementName=check_MultipleTopics, Converter={StaticResource b2v}}" />
+        <Button
+            x:Name="BtnSubscribe"
+            Grid.Column="2"
+            Width="75"
+            Margin="363.034,41,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="BtnSubscribe_Click"
+            Content="Subscribe"
+            Visibility="{Binding IsChecked, ElementName=check_MultipleTopics, Converter={StaticResource b2v}}" />
+        <TextBox
+            x:Name="txtReceived"
+            Grid.Column="2"
+            Width="220"
+            Height="44"
+            Margin="127.034,122,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap"
+            Visibility="{Binding IsChecked, ElementName=check_MultipleTopics, Converter={StaticResource b2v}}" />
+        <Label
+            Grid.Column="2"
+            Margin="10.034,122,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Text received"
+            Visibility="{Binding IsChecked, ElementName=check_MultipleTopics, Converter={StaticResource b2v}}" />
+        <TextBox
+            x:Name="txtTopicPublish"
+            Grid.Column="2"
+            Width="220"
+            Height="44"
+            Margin="127.034,195,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap"
+            Visibility="{Binding IsChecked, ElementName=check_Debug, Converter={StaticResource b2v}}" />
+        <TextBox
+            x:Name="txtPublish"
+            Grid.Column="2"
+            Width="220"
+            Height="44"
+            Margin="127.034,271,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap"
+            Visibility="{Binding IsChecked, ElementName=check_Debug, Converter={StaticResource b2v}}" />
+        <Label
+            Grid.Column="2"
+            Margin="10.034,195,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Topic publish"
+            Visibility="{Binding IsChecked, ElementName=check_Debug, Converter={StaticResource b2v}}" />
+        <Label
+            Grid.Column="2"
+            Margin="10.034,271,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Text published"
+            Visibility="{Binding IsChecked, ElementName=check_Debug, Converter={StaticResource b2v}}" />
+        <Button
+            x:Name="BtnPublish"
+            Grid.Column="2"
+            Width="75"
+            Margin="363.034,195,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="BtnPublish_Click"
+            Content="Publish"
+            Visibility="{Binding IsChecked, ElementName=check_Debug, Converter={StaticResource b2v}}" />
+
+        <Button
+            x:Name="BtnRecord"
+            Grid.ColumnSpan="3"
+            Width="164"
+            Height="48"
+            Margin="71,407,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="BtnRecord_Click"
+            Content="Start Recording" />
+        <Grid
+            Grid.Column="2"
+            Width="555"
+            Height="425"
+            Margin="454,30,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top">
+            <TextBlock
+                Margin="10,25,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="AccX"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="10,45,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="AccY"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="10,65,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="AccZ"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="10,85,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="GyroX"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="10,105,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="GyroY"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="10,125,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="GyroZ"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="10,145,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="MagX "
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="10,165,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="MagY "
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="10,185,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="MagZ "
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="66,7,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="IMU Lower back"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="210,25,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="AccX"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="210,45,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="AccY"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="210,65,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="AccZ"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="210,85,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="GyroX"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="210,105,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="GyroY"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="210,125,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="GyroZ"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="210,145,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="MagX"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="210,165,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="MagY"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="210,185,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="MagZ"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="266,7,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="IMU Upper torso"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU1_AccX"
+                Width="120"
+                Height="16"
+                Margin="65,25,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU1_AccY"
+                Width="120"
+                Height="16"
+                Margin="65,45,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU1_AccZ"
+                Width="120"
+                Height="16"
+                Margin="65,65,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU1_GyroX"
+                Width="120"
+                Height="16"
+                Margin="65,85,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU1_GyroY"
+                Width="120"
+                Height="16"
+                Margin="65,105,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU1_GyroZ"
+                Width="120"
+                Height="16"
+                Margin="65,125,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU1_MagX"
+                Width="120"
+                Height="16"
+                Margin="65,145,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU1_MagY"
+                Width="120"
+                Height="16"
+                Margin="65,165,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU1_MagZ"
+                Width="120"
+                Height="16"
+                Margin="65,185,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU2_AccX"
+                Width="120"
+                Height="16"
+                Margin="265,25,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU2_AccY"
+                Width="120"
+                Height="16"
+                Margin="265,45,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU2_AccZ"
+                Width="120"
+                Height="16"
+                Margin="265,65,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU2_GyroX"
+                Width="120"
+                Height="16"
+                Margin="265,85,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU2_GyroY"
+                Width="120"
+                Height="16"
+                Margin="265,105,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU2_GyroZ"
+                Width="120"
+                Height="16"
+                Margin="265,125,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU2_MagX"
+                Width="120"
+                Height="16"
+                Margin="265,145,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU2_MagY"
+                Width="120"
+                Height="16"
+                Margin="265,165,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU2_MagZ"
+                Width="120"
+                Height="16"
+                Margin="265,185,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="66,212,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="SHT1x Internal"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="10,230,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="Temp"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="10,250,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="Hum"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="SHT1X1_Temp"
+                Width="120"
+                Height="16"
+                Margin="65,230,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="SHT1X1_Hum"
+                Width="120"
+                Height="16"
+                Margin="65,250,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="266,212,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="SHT1x External"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="210,230,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="Temp"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="210,250,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="Hum"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="SHT1X2_Temp"
+                Width="120"
+                Height="16"
+                Margin="265,230,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="SHT1X2_Hum"
+                Width="120"
+                Height="16"
+                Margin="265,250,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="66,278,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="Pulse Wrist"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="10,295,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="Pulse"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="Pulse_Pulse"
+                Width="120"
+                Height="16"
+                Margin="65,295,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="266,278,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="Pulse Temperal Lobe"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="210,295,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="Pulse"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="Pulse_TempLobe"
+                Width="120"
+                Height="16"
+                Margin="265,295,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="66,324,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="GSR"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="10,340,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="GSR"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="GSR"
+                Width="120"
+                Height="16"
+                Margin="65,340,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+        </Grid>
+        <CheckBox
+            x:Name="check_MultipleTopics"
+            Grid.Column="2"
+            Margin="127,345,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Checked="MultipleTopics_Checked"
+            Content="Multiple Topics" />
+        <CheckBox
+            x:Name="check_Debug"
+            Grid.Column="2"
+            Margin="235,345,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Checked="Debug_Checked"
+            Content="Debug" />
+        <TextBox
+            x:Name="txtMQTTServer"
+            Grid.Column="2"
+            Width="184"
+            Height="23"
+            Margin="127,393,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap" />
+        <Button
+            x:Name="SetMQTTServer"
+            Grid.Column="2"
+            Width="75"
+            Height="23"
+            Margin="328,393,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="BtnServer_Set"
+            Content="Set Server"
+            Visibility="{Binding IsChecked, ElementName=check_Alternative_Server, Converter={StaticResource b2v}}" />
+        <TextBlock
+            x:Name="Placeholder"
+            Grid.Column="2"
+            Width="184"
+            Height="23"
+            Margin="129,395,0,0"
+            HorizontalAlignment="left"
+            VerticalAlignment="Top"
+            Foreground="DarkGray"
+            IsHitTestVisible="False"
+            Text="MQTT Server. Standard: Localhost"
+            TextWrapping="Wrap">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=txtMQTTServer}" Value="">
+                            <Setter Property="Visibility" Value="Visible" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <CheckBox
+            x:Name="check_Alternative_Server"
+            Grid.Column="2"
+            Margin="300,345,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Alternative MQTT Server" />
+    </Grid>
+</Window>
+
