@@ -111,21 +111,14 @@ namespace MQTTDataProvider
             }
         }
 
-        // this code runs when the button "Publish" is clicked
-        private void BtnPublish_Click(object sender, RoutedEventArgs e)
+        // this code runs when data is published to the subscribed topic
+        private void Publish_Data()
         {
-            if (txtTopicPublish.Text != "")
-            {
-                // whole topic
-                string Topic = txtTopicPublish.Text;
+            // whole topic
+            string Topic = "wekit/vest;
 
-                // publish a message with QoS 2
-                client.Publish(Topic, Encoding.UTF8.GetBytes(txtPublish.Text), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            }
-            else
-            {
-                System.Windows.MessageBox.Show("You have to enter a topic to publish!");
-            }
+            // publish a message with QoS 2
+            client.Publish(Topic, Encoding.UTF8.GetBytes(Parsed_ReceivedMessage.imus[0].gsr), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
         }
 
         // this code runs when a message was received
@@ -140,6 +133,7 @@ namespace MQTTDataProvider
                 });
 
                 JSONParse_ReceivedMessage();
+                Publish_Data();
             }
         }
 
@@ -204,8 +198,8 @@ namespace MQTTDataProvider
             Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
                          () =>
                          {
-                             //SHT1X1_Temp.Text = Parsed_ReceivedMessage.XXXXX
-                             //SHT1X1_Hum.Text = Parsed_ReceivedMessage.XXXXX
+                             SHT1X1_Temp.Text = Parsed_ReceivedMessage.sht0.temp;
+                             SHT1X1_Hum.Text = Parsed_ReceivedMessage.sht0.hum;
                          }));
         }
 
@@ -214,8 +208,8 @@ namespace MQTTDataProvider
             Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
                          () =>
                          {
-                             //SHT1X2_Temp.Text = Parsed_ReceivedMessage.XXXXXX
-                             //SHT1X2_Hum.Text = Parsed_ReceivedMessage.XXXXX
+                             SHT1X2_Temp.Text = Parsed_ReceivedMessage.sht1.temp;
+                             SHT1X2_Hum.Text = Parsed_ReceivedMessage.sht1.hum;
                          }));
         }
 
@@ -224,7 +218,7 @@ namespace MQTTDataProvider
             Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
                          () =>
                          {
-                             ///Pulse_TempLobe.Text = Parsed_ReceivedMessage.XXXXX
+                             Pulse_TempLobe.Text = Parsed_ReceivedMessage.pulse.pulse;
                          }));
         }
 

@@ -66,51 +66,6 @@
             VerticalAlignment="Top"
             Content="Text received"
             Visibility="{Binding IsChecked, ElementName=check_MultipleTopics, Converter={StaticResource b2v}}" />
-        <TextBox
-            x:Name="txtTopicPublish"
-            Grid.Column="2"
-            Width="220"
-            Height="44"
-            Margin="127.034,195,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            TextWrapping="Wrap"
-            Visibility="{Binding IsChecked, ElementName=check_Debug, Converter={StaticResource b2v}}" />
-        <TextBox
-            x:Name="txtPublish"
-            Grid.Column="2"
-            Width="220"
-            Height="44"
-            Margin="127.034,271,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            TextWrapping="Wrap"
-            Visibility="{Binding IsChecked, ElementName=check_Debug, Converter={StaticResource b2v}}" />
-        <Label
-            Grid.Column="2"
-            Margin="10.034,195,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Topic publish"
-            Visibility="{Binding IsChecked, ElementName=check_Debug, Converter={StaticResource b2v}}" />
-        <Label
-            Grid.Column="2"
-            Margin="10.034,271,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Text published"
-            Visibility="{Binding IsChecked, ElementName=check_Debug, Converter={StaticResource b2v}}" />
-        <Button
-            x:Name="BtnPublish"
-            Grid.Column="2"
-            Width="75"
-            Margin="363.034,195,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Click="BtnPublish_Click"
-            Content="Publish"
-            Visibility="{Binding IsChecked, ElementName=check_Debug, Converter={StaticResource b2v}}" />
-
         <Button
             x:Name="BtnRecord"
             Grid.ColumnSpan="3"
@@ -653,14 +608,6 @@
             VerticalAlignment="Top"
             Checked="MultipleTopics_Checked"
             Content="Multiple Topics" />
-        <CheckBox
-            x:Name="check_Debug"
-            Grid.Column="2"
-            Margin="235,345,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Checked="Debug_Checked"
-            Content="Debug" />
         <TextBox
             x:Name="txtMQTTServer"
             Grid.Column="2"
@@ -707,7 +654,7 @@
         <CheckBox
             x:Name="check_Alternative_Server"
             Grid.Column="2"
-            Margin="300,345,0,0"
+            Margin="241,345,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Alternative MQTT Server" />
