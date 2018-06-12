@@ -6,6 +6,9 @@ using System.Diagnostics;
 using System.Windows.Media;
 using System.Windows.Threading;
 
+// including json library
+using Newtonsoft.Json.Linq;
+
 // including the M2Mqtt Library
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
@@ -25,6 +28,9 @@ namespace MQTTDataProvider
         //string containing the MQTT published message
         string ReceivedMessage;
 
+        //JSON Parser MQTT message
+        dynamic Parsed_ReceivedMessage;
+
         //bool value for switching the record button text and the color
         public static bool isRecordingMQTT = false;
 
@@ -33,9 +39,6 @@ namespace MQTTDataProvider
 
         //debug value for enable debugging
         public static bool debug = false;
-
-        //string list for assigning values
-        string[] ReceivedMessage_List;
 
         MQTTManager.MQTTManager MQTTManager = new MQTTManager.MQTTManager();
         MQTTManager.LHConnector LHConnector = new MQTTManager.LHConnector();
@@ -136,42 +139,102 @@ namespace MQTTDataProvider
                     txtReceived.Text = ReceivedMessage;
                 });
 
-                Format_ReceivedMessage();
+                JSONParse_ReceivedMessage();
             }
         }
 
-        //clean up of the received MQTT string
-        void Format_ReceivedMessage()
+        //parse MQTT JSON String
+        void JSONParse_ReceivedMessage()
         {
+            Parsed_ReceivedMessage = JObject.Parse(ReceivedMessage);
 
-            int letterIndex;
-            string ReceivedMessageFiltered = "";
-            bool quotesOpened = false;
-            for (letterIndex = 0; letterIndex < ReceivedMessage.Length; letterIndex++)
-            {
-                if (ReceivedMessage[letterIndex] == '"')
-                {
-                    quotesOpened = !quotesOpened;
-
-                    ReceivedMessageFiltered = ReceivedMessageFiltered + ReceivedMessage[letterIndex];
-                }
-                else
-                {
-                    if (!quotesOpened)
-                        ReceivedMessageFiltered = ReceivedMessageFiltered + ReceivedMessage[letterIndex];
-                }
-            }
-
-            Regex charsToDestroy = new Regex(@"[^\d|\.\-\,]");
-            string ReceivedMessage_Formatted = charsToDestroy.Replace(ReceivedMessageFiltered, "");
-            ReceivedMessage_List = ReceivedMessage_Formatted.Split(',');
             UpdateIMU1();
             UpdateIMU2();
             UpdateSHT1X1();
             UpdateSHT1X2();
-            UpdatePulsePulse();
             UpdatePulseTemplobe();
             UpdateGSR();
+        }
+
+        //code blocks to update the main window textboxes with the values they represent
+        public void UpdateIMU1()
+        {
+            Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
+                         () =>
+                         {
+                             IMU1_AccX.Text = Parsed_ReceivedMessage.imus[0].ax;
+                             IMU1_AccY.Text = Parsed_ReceivedMessage.imus[0].ay;
+                             IMU1_AccZ.Text = Parsed_ReceivedMessage.imus[0].az;
+                             IMU1_GyroX.Text = Parsed_ReceivedMessage.imus[0].gx;
+                             IMU1_GyroY.Text = Parsed_ReceivedMessage.imus[0].gy;
+                             IMU1_GyroZ.Text = Parsed_ReceivedMessage.imus[0].gz;
+                             IMU1_MagX.Text = Parsed_ReceivedMessage.imus[0].mx;
+                             IMU1_MagY.Text = Parsed_ReceivedMessage.imus[0].my;
+                             IMU1_MagZ.Text = Parsed_ReceivedMessage.imus[0].mz;
+                             IMU1_Q0.Text = Parsed_ReceivedMessage.imus[0].q0;
+                             IMU1_Q1.Text = Parsed_ReceivedMessage.imus[0].q1;
+                             IMU1_Q2.Text = Parsed_ReceivedMessage.imus[0].q2;
+                             IMU1_Q3.Text = Parsed_ReceivedMessage.imus[0].q3;
+
+                         }));
+        }
+        public void UpdateIMU2()
+        {
+            Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
+                         () =>
+                         {
+                             IMU2_AccX.Text = Parsed_ReceivedMessage.imus[1].ax;
+                             IMU2_AccY.Text = Parsed_ReceivedMessage.imus[1].ay;
+                             IMU2_AccZ.Text = Parsed_ReceivedMessage.imus[1].az;
+                             IMU2_GyroX.Text = Parsed_ReceivedMessage.imus[1].gx;
+                             IMU2_GyroY.Text = Parsed_ReceivedMessage.imus[1].gy;
+                             IMU2_GyroZ.Text = Parsed_ReceivedMessage.imus[1].gz;
+                             IMU2_MagX.Text = Parsed_ReceivedMessage.imus[1].mx;
+                             IMU2_MagY.Text = Parsed_ReceivedMessage.imus[1].my;
+                             IMU2_MagZ.Text = Parsed_ReceivedMessage.imus[1].mz;
+                             IMU2_Q0.Text = Parsed_ReceivedMessage.imus[1].q0;
+                             IMU2_Q2.Text = Parsed_ReceivedMessage.imus[1].q1;
+                             IMU2_Q2.Text = Parsed_ReceivedMessage.imus[1].q2;
+                             IMU2_Q3.Text = Parsed_ReceivedMessage.imus[1].q3;
+                         }));
+        }
+
+        public void UpdateSHT1X1()
+        {
+            Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
+                         () =>
+                         {
+                             //SHT1X1_Temp.Text = Parsed_ReceivedMessage.XXXXX
+                             //SHT1X1_Hum.Text = Parsed_ReceivedMessage.XXXXX
+                         }));
+        }
+
+        public void UpdateSHT1X2()
+        {
+            Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
+                         () =>
+                         {
+                             //SHT1X2_Temp.Text = Parsed_ReceivedMessage.XXXXXX
+                             //SHT1X2_Hum.Text = Parsed_ReceivedMessage.XXXXX
+                         }));
+        }
+
+        public void UpdatePulseTemplobe()
+        {
+            Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
+                         () =>
+                         {
+                             ///Pulse_TempLobe.Text = Parsed_ReceivedMessage.XXXXX
+                         }));
+        }
+
+        public void UpdateGSR()
+        {
+            Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
+                         () =>
+                         {
+                             GSR.Text = Parsed_ReceivedMessage.imus[0].gsr;
+                         }));
         }
 
         // this code runs when the button "Record" is clicked. Without hitting record the MQTT Manager wont store or receive data.
@@ -199,90 +262,7 @@ namespace MQTTDataProvider
             }
             Debug.WriteLine("isRecordingData= " + isRecordingMQTT);
         }
-
-        //code blocks to update the main window textboxes with the values they represent
-        public void UpdateIMU1()
-        {
-            Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
-                         () =>
-                         {
-                             IMU1_AccX.Text = ReceivedMessage_List[2].ToString();
-                             IMU1_AccY.Text = ReceivedMessage_List[3].ToString();
-                             IMU1_AccZ.Text = ReceivedMessage_List[4].ToString();
-                             IMU1_GyroX.Text = ReceivedMessage_List[5].ToString();
-                             IMU1_GyroY.Text = ReceivedMessage_List[6].ToString();
-                             IMU1_GyroZ.Text = ReceivedMessage_List[7].ToString();
-                             IMU1_MagX.Text = ReceivedMessage_List[8].ToString();
-                             IMU1_MagY.Text = ReceivedMessage_List[9].ToString();
-                             IMU1_MagZ.Text = ReceivedMessage_List[10].ToString();
-
-                         }));
-        }
-
-        public void UpdateIMU2()
-        {
-            Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
-                         () =>
-                         {
-                             IMU2_AccX.Text = ReceivedMessage_List[8].ToString();
-                             IMU2_AccY.Text = ReceivedMessage_List[8].ToString();
-                             IMU2_AccZ.Text = ReceivedMessage_List[8].ToString();
-                             IMU2_GyroX.Text = ReceivedMessage_List[8].ToString();
-                             IMU2_GyroY.Text = ReceivedMessage_List[8].ToString();
-                             IMU2_GyroZ.Text = ReceivedMessage_List[8].ToString();
-                             IMU2_MagX.Text = ReceivedMessage_List[8].ToString();
-                             IMU2_MagY.Text = ReceivedMessage_List[8].ToString();
-                             IMU2_MagZ.Text = ReceivedMessage_List[8].ToString();
-                         }));
-        }
-
-        public void UpdateSHT1X1()
-        {
-            Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
-                         () =>
-                         {
-                             SHT1X1_Temp.Text = ReceivedMessage_List[8].ToString();
-                             SHT1X1_Hum.Text = ReceivedMessage_List[8].ToString();
-                         }));
-        }
-
-        public void UpdateSHT1X2()
-        {
-            Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
-                         () =>
-                         {
-                             SHT1X2_Temp.Text = ReceivedMessage_List[8].ToString();
-                             SHT1X2_Hum.Text = ReceivedMessage_List[8].ToString();
-                         }));
-        }
-
-        public void UpdatePulsePulse()
-        {
-            Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
-                         () =>
-                         {
-                             Pulse_Pulse.Text = ReceivedMessage_List[8].ToString();
-                         }));
-        }
-
-        public void UpdatePulseTemplobe()
-        {
-            Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
-                         () =>
-                         {
-                             Pulse_TempLobe.Text = ReceivedMessage_List[8].ToString();
-                         }));
-        }
-
-        public void UpdateGSR()
-        {
-            Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
-                         () =>
-                         {
-                             GSR.Text = ReceivedMessage_List[11].ToString();
-                         }));
-        }
-
+                
         private void MultipleTopics_Checked(object sender, RoutedEventArgs e)
         {
             multiple_Topics = false;

@@ -125,7 +125,7 @@
             Grid.Column="2"
             Width="555"
             Height="425"
-            Margin="454,30,0,0"
+            Margin="454,2,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top">
             <TextBlock
@@ -183,10 +183,34 @@
                 Text="MagZ "
                 TextWrapping="Wrap" />
             <TextBlock
+                Margin="10,205,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="Q0 "
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="10,225,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="Q1 "
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="10,245,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="Q2 "
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="10,265,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="Q3 "
+                TextWrapping="Wrap" />
+            <TextBlock
                 Margin="66,7,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Text="IMU Lower back"
+                Text="IMU1"
                 TextWrapping="Wrap" />
             <TextBlock
                 Margin="210,25,0,0"
@@ -246,7 +270,7 @@
                 Margin="266,7,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Text="IMU Upper torso"
+                Text="IMU2"
                 TextWrapping="Wrap" />
             <TextBox
                 Name="IMU1_AccX"
@@ -325,6 +349,42 @@
                 Width="120"
                 Height="16"
                 Margin="65,185,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU1_Q0"
+                Width="120"
+                Height="16"
+                Margin="65,205,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU1_Q1"
+                Width="120"
+                Height="16"
+                Margin="65,225,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU1_Q2"
+                Width="120"
+                Height="16"
+                Margin="65,245,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                Name="IMU1_Q3"
+                Width="120"
+                Height="16"
+                Margin="65,265,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 IsReadOnly="True"
@@ -411,28 +471,28 @@
                 IsReadOnly="True"
                 TextWrapping="Wrap" />
             <TextBlock
-                Margin="66,212,0,0"
+                Margin="66,295,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Text="SHT1x Internal"
+                Text="Sht0"
                 TextWrapping="Wrap" />
             <TextBlock
-                Margin="10,230,0,0"
+                Margin="10,313,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Text="Temp"
                 TextWrapping="Wrap" />
             <TextBlock
-                Margin="10,250,0,0"
+                Margin="10,333,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Text="Hum"
+                Text="Humid"
                 TextWrapping="Wrap" />
             <TextBox
                 x:Name="SHT1X1_Temp"
                 Width="120"
                 Height="16"
-                Margin="65,230,0,0"
+                Margin="65,313,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 IsReadOnly="True"
@@ -441,34 +501,34 @@
                 x:Name="SHT1X1_Hum"
                 Width="120"
                 Height="16"
-                Margin="65,250,0,0"
+                Margin="65,333,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 IsReadOnly="True"
                 TextWrapping="Wrap" />
             <TextBlock
-                Margin="266,212,0,0"
+                Margin="266,295,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Text="SHT1x External"
+                Text="Sht1                 "
                 TextWrapping="Wrap" />
             <TextBlock
-                Margin="210,230,0,0"
+                Margin="210,313,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Text="Temp"
                 TextWrapping="Wrap" />
             <TextBlock
-                Margin="210,250,0,0"
+                Margin="210,333,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Text="Hum"
+                Text="Humid"
                 TextWrapping="Wrap" />
             <TextBox
                 x:Name="SHT1X2_Temp"
                 Width="120"
                 Height="16"
-                Margin="265,230,0,0"
+                Margin="265,313,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 IsReadOnly="True"
@@ -477,40 +537,19 @@
                 x:Name="SHT1X2_Hum"
                 Width="120"
                 Height="16"
-                Margin="265,250,0,0"
+                Margin="265,333,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 IsReadOnly="True"
                 TextWrapping="Wrap" />
             <TextBlock
-                Margin="66,278,0,0"
+                Margin="66,361,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Text="Pulse Wrist"
+                Text="Pulse temporal lobe"
                 TextWrapping="Wrap" />
             <TextBlock
-                Margin="10,295,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Text="Pulse"
-                TextWrapping="Wrap" />
-            <TextBox
-                x:Name="Pulse_Pulse"
-                Width="120"
-                Height="16"
-                Margin="65,295,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                IsReadOnly="True"
-                TextWrapping="Wrap" />
-            <TextBlock
-                Margin="266,278,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Text="Pulse Temperal Lobe"
-                TextWrapping="Wrap" />
-            <TextBlock
-                Margin="210,295,0,0"
+                Margin="10,378,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Text="Pulse"
@@ -519,28 +558,88 @@
                 x:Name="Pulse_TempLobe"
                 Width="120"
                 Height="16"
-                Margin="265,295,0,0"
+                Margin="65,378,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 IsReadOnly="True"
                 TextWrapping="Wrap" />
             <TextBlock
-                Margin="66,324,0,0"
+                Margin="265,362,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Text="GSR"
                 TextWrapping="Wrap" />
             <TextBlock
-                Margin="10,340,0,0"
+                Margin="209,378,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Text="GSR"
+                Text="GSR_Raw"
                 TextWrapping="Wrap" />
             <TextBox
                 x:Name="GSR"
                 Width="120"
                 Height="16"
-                Margin="65,340,0,0"
+                Margin="264,378,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="210,205,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="Q0 "
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="210,225,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="Q1 "
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="210,245,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="Q2 "
+                TextWrapping="Wrap" />
+            <TextBlock
+                Margin="210,265,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="Q3 "
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="IMU2_Q0"
+                Width="120"
+                Height="16"
+                Margin="265,205,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="IMU2_Q1"
+                Width="120"
+                Height="16"
+                Margin="265,225,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="IMU2_Q2"
+                Width="120"
+                Height="16"
+                Margin="265,245,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="IMU2_Q3"
+                Width="120"
+                Height="16"
+                Margin="265,265,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 IsReadOnly="True"
