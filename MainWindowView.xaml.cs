@@ -28,17 +28,19 @@ namespace MQTTDataProvider
         //string containing the MQTT published message
         string ReceivedMessage;
 
+        //default topic value for WEKIT
+        string Topic_Subscribe = "wekit/vest";
+
+        //default MQTT server value for WEKIT
+        string BrokerAddress = "test.mosquitto.org";
+
         //JSON Parser MQTT message
         dynamic Parsed_ReceivedMessage;
 
-        //bool value for switching the record button text and the color
-        public static bool isRecordingMQTT = false;
-
-        //bool value for checking if multiple MQTT topics is enabled
-        public static bool multiple_Topics = false;
-
-        //debug value for enable debugging
-        public static bool debug = false;
+        public static bool isRecordingMQTT = false; //bool value for switching the record button text and the color
+        //Checkbox Bools//
+        public static bool multiple_Topics = false; //bool value for checking if multiple MQTT topics is enabled   
+        public static bool debug = false;           //debug value for enable debugging
 
         MQTTManager.MQTTManager MQTTManager = new MQTTManager.MQTTManager();
         MQTTManager.LHConnector LHConnector = new MQTTManager.LHConnector();
@@ -53,14 +55,14 @@ namespace MQTTDataProvider
             MQTTDataProvider.MQTTManager.LHConnector.myConnector.stopRecordingEvent += MyConnector_stopRecordingEvent;
             MQTTDataProvider.MQTTManager.LHConnector.myConnector.startRecordingEvent += MyConnector_startRecordingEvent;
 
-            // MQTT Functions//
-            string BrokerAddress = "localhost";
+            //MQTT Functions//
             client = new MqttClient(BrokerAddress);
             // register a callback-function (we have to implement, see below) which is called by the library when a message was received
             client.MqttMsgPublishReceived += Client_MqttMsgPublishReceived;
             // use a unique id as client id, each time we start the application
             clientId = Guid.NewGuid().ToString();
             client.Connect(clientId);
+            Subscribe_Default();
         }
 
         private void MyConnector_stopRecordingEvent(object sender)
@@ -92,33 +94,23 @@ namespace MQTTDataProvider
             App.Current.Shutdown();
         }
 
-
-        // this code runs when the button "Subscribe" is clicked
-        private void BtnSubscribe_Click(object sender, RoutedEventArgs e)
+        private void Subscribe_Default()
         {
-            if (txtTopicSubscribe.Text != "")
-            {
-                // whole topic
-                string Topic = txtTopicSubscribe.Text;
-
-                // subscribe to the topic with QoS 2
-                client.Subscribe(new string[] { Topic }, new byte[] { 2 });   // we need arrays as parameters because we can subscribe to different topics with one call
-                txtReceived.Text = "";
-            }
-            else
-            {
-                System.Windows.MessageBox.Show("You have to enter one or more topics to subscribe to!");
-            }
+            // subscribe to the topic with QoS 2
+            client.Subscribe(new string[] { Topic_Subscribe }, new byte[] { 2 });   // we need arrays as parameters because we can subscribe to different topics with one call
+            txtReceived.Text = "";
         }
+
 
         // this code runs when data is published to the subscribed topic
         private void Publish_Data()
         {
             // whole topic
-            string Topic = "wekit/vest;
+            string Topic_Publish = "wekit/vest/GSR_Raw";
 
             // publish a message with QoS 2
-            client.Publish(Topic, Encoding.UTF8.GetBytes(Parsed_ReceivedMessage.imus[0].gsr), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            client.Publish(Topic_Publish, Encoding.UTF8.GetBytes("Test"), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            //client.Publish(Topic_Publish, Encoding.UTF8.GetBytes(Parsed_ReceivedMessage.imus[0].gsr), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
         }
 
         // this code runs when a message was received
@@ -187,7 +179,7 @@ namespace MQTTDataProvider
                              IMU2_MagY.Text = Parsed_ReceivedMessage.imus[1].my;
                              IMU2_MagZ.Text = Parsed_ReceivedMessage.imus[1].mz;
                              IMU2_Q0.Text = Parsed_ReceivedMessage.imus[1].q0;
-                             IMU2_Q2.Text = Parsed_ReceivedMessage.imus[1].q1;
+                             IMU2_Q1.Text = Parsed_ReceivedMessage.imus[1].q1;
                              IMU2_Q2.Text = Parsed_ReceivedMessage.imus[1].q2;
                              IMU2_Q3.Text = Parsed_ReceivedMessage.imus[1].q3;
                          }));
@@ -198,8 +190,8 @@ namespace MQTTDataProvider
             Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
                          () =>
                          {
-                             SHT1X1_Temp.Text = Parsed_ReceivedMessage.sht0.temp;
-                             SHT1X1_Hum.Text = Parsed_ReceivedMessage.sht0.hum;
+                             SHT1X1_Temp.Text = Parsed_ReceivedMessage.shts[0].temp;
+                             SHT1X1_Hum.Text = Parsed_ReceivedMessage.shts[0].hum;
                          }));
         }
 
@@ -208,8 +200,8 @@ namespace MQTTDataProvider
             Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
                          () =>
                          {
-                             SHT1X2_Temp.Text = Parsed_ReceivedMessage.sht1.temp;
-                             SHT1X2_Hum.Text = Parsed_ReceivedMessage.sht1.hum;
+                             SHT1X2_Temp.Text = Parsed_ReceivedMessage.shts[1].temp;
+                             SHT1X2_Hum.Text = Parsed_ReceivedMessage.shts[1].hum;
                          }));
         }
 
@@ -218,7 +210,7 @@ namespace MQTTDataProvider
             Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
                          () =>
                          {
-                             Pulse_TempLobe.Text = Parsed_ReceivedMessage.pulse.pulse;
+                             Pulse_TempLobe.Text = Parsed_ReceivedMessage.pulse;
                          }));
         }
 
@@ -227,7 +219,7 @@ namespace MQTTDataProvider
             Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(
                          () =>
                          {
-                             GSR.Text = Parsed_ReceivedMessage.imus[0].gsr;
+                             GSR.Text = Parsed_ReceivedMessage.gsr;
                          }));
         }
 
@@ -269,7 +261,17 @@ namespace MQTTDataProvider
                 
         private void BtnServer_Set(object sender, RoutedEventArgs e)
         {
-            string BrokerAddress = txtMQTTServer.Text;
+            try
+            {
+                BrokerAddress = txtMQTTServer.Text;
+                client = new MqttClient(BrokerAddress);
+                MessageBox.Show(string.Format("The new server is: {0}", BrokerAddress));
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please enter a valid server");
+            }                    
+
         }
     }
 }

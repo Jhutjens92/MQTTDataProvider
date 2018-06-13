@@ -35,7 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ConnectorHub">
-      <HintPath>..\LearningHub-master\HubDesktop\bin\Debug\ConnectorHub.dll</HintPath>
+      <HintPath>..\..\..\Desktop\LearningHub-master\HubDesktop\bin\Debug\ConnectorHub.dll</HintPath>
     </Reference>
     <Reference Include="M2Mqtt.Net, Version=4.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\M2Mqtt.4.3.0.0\lib\net45\M2Mqtt.Net.dll</HintPath>
