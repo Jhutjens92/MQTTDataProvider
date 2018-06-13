@@ -106,11 +106,23 @@ namespace MQTTDataProvider
         private void Publish_Data()
         {
             // whole topic
-            string Topic_Publish = "wekit/vest/GSR_Raw";
+            string GSR_Value = Parsed_ReceivedMessage.gsr;
+            client.Publish("wekit/vest/GSR_Raw", Encoding.UTF8.GetBytes(GSR_Value), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
 
-            // publish a message with QoS 2
-            client.Publish(Topic_Publish, Encoding.UTF8.GetBytes("Test"), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            //client.Publish(Topic_Publish, Encoding.UTF8.GetBytes(Parsed_ReceivedMessage.imus[0].gsr), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            string Pulse_Value = Parsed_ReceivedMessage.pulse;
+            client.Publish("wekit/vest/Pulse_Raw", Encoding.UTF8.GetBytes(Pulse_Value), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+
+            string SHT1X1_Temp_Value = Parsed_ReceivedMessage.shts[0].temp;
+            client.Publish("wekit/vest/Sht0_Temp", Encoding.UTF8.GetBytes(SHT1X1_Temp_Value), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+
+            string SHT1X1_Hum_Value = Parsed_ReceivedMessage.shts[0].hum;
+            client.Publish("wekit/vest/Sht0_Hum", Encoding.UTF8.GetBytes(SHT1X1_Hum_Value), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+
+            string SHT1X2_Temp_Value = Parsed_ReceivedMessage.shts[1].temp;
+            client.Publish("wekit/vest/Sht1_Temp", Encoding.UTF8.GetBytes(SHT1X2_Temp_Value), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+
+            string SHT1X2_Hum_Value = Parsed_ReceivedMessage.shts[1].hum;
+            client.Publish("wekit/vest/Sht1_Hum", Encoding.UTF8.GetBytes(SHT1X2_Hum_Value), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
         }
 
         // this code runs when a message was received
