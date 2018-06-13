@@ -32,7 +32,7 @@ namespace MQTTDataProvider
         string Topic_Subscribe = "wekit/vest";
 
         //default MQTT server value for WEKIT
-        string BrokerAddress = "test.mosquitto.org";
+        string BrokerAddress = "localhost";
 
         //JSON Parser MQTT message
         dynamic Parsed_ReceivedMessage;
