@@ -29,10 +29,10 @@ namespace MQTTDataProvider
         string ReceivedMessage;
 
         //default topic value for WEKIT
-        string Topic_Subscribe = "wekit/vest";
+        string Topic_Subscribe;
 
         //default MQTT server value for WEKIT
-        string BrokerAddress = "localhost";
+        string BrokerAddress;
 
         //JSON Parser MQTT message
         dynamic Parsed_ReceivedMessage;
@@ -48,6 +48,11 @@ namespace MQTTDataProvider
         // this code runs when the main window opens (start of the app)
         public MainWindowView()
         {
+
+            //INIT Var Values//
+            BrokerAddress = "localhost";
+            Topic_Subscribe = "wekit/vest";
+
             //INIT Functions//
             InitializeComponent();
             LHConnector.SetValueNames();
@@ -259,31 +264,6 @@ namespace MQTTDataProvider
                 BtnRecord.Background = new SolidColorBrush(Colors.White);
             }
             Debug.WriteLine("isRecordingData= " + isRecordingMQTT);
-        }
-                
-        private void MultipleTopics_Checked(object sender, RoutedEventArgs e)
-        {
-            multiple_Topics = false;
-        }
-
-        private void Debug_Checked(object sender, RoutedEventArgs e)
-        {
-            debug = false;
-        }
-                
-        private void BtnServer_Set(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                BrokerAddress = txtMQTTServer.Text;
-                client = new MqttClient(BrokerAddress);
-                MessageBox.Show(string.Format("The new server is: {0}", BrokerAddress));
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Please enter a valid server");
-            }                    
-
         }
     }
 }

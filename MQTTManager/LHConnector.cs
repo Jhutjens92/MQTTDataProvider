@@ -113,8 +113,7 @@ namespace MQTTDataProvider.MQTTManager
                 values.Add(pulse_Pulse.ToString());
                 values.Add(pulse_TempLobe.ToString());
                 values.Add(gsr.ToString());
-                Debug.WriteLine("MQTTManager.values" + values.Count);
-                Debug.WriteLine("MQTTManager/ The size of value: " + values.Count);
+                myConnector.storeFrame(values);
             }
             catch (Exception ex)
             {

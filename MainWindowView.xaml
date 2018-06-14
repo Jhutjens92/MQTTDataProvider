@@ -568,53 +568,6 @@
                 IsReadOnly="True"
                 TextWrapping="Wrap" />
         </Grid>
-        <TextBox
-            x:Name="txtMQTTServer"
-            Width="184"
-            Height="23"
-            Margin="206,371,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            TextWrapping="Wrap" 
-            Visibility="{Binding IsChecked, ElementName=check_Alternative_Server, Converter={StaticResource b2v}}" />
-        <Button
-            x:Name="SetMQTTServer"
-            Width="75"
-            Height="23"
-            Margin="206,404,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Click="BtnServer_Set"
-            Content="Set Server"
-            Visibility="{Binding IsChecked, ElementName=check_Alternative_Server, Converter={StaticResource b2v}}"/>
-        <TextBlock
-            x:Name="Placeholder"
-            Width="184"
-            Height="23"
-            Margin="243,375,0,0"
-            HorizontalAlignment="left"
-            VerticalAlignment="Top"
-            Foreground="DarkGray"
-            IsHitTestVisible="False"
-            Text="Standard: Localhost"
-            TextWrapping="Wrap">
-            <TextBlock.Style>
-                <Style TargetType="{x:Type TextBlock}">
-                    <Setter Property="Visibility" Value="Collapsed" />
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Text, ElementName=txtMQTTServer}" Value="">
-                            <Setter Property="Visibility" Value="Visible" />
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </TextBlock.Style>
-        </TextBlock>
-        <CheckBox
-            x:Name="check_Alternative_Server"
-            Margin="205,352,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Alternative MQTT Server" />
     </Grid>
 </Window>
 
