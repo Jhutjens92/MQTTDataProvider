@@ -78,7 +78,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MQTTManager\LHConnector.cs" />
     <Compile Include="MQTTManager\MQTTManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
