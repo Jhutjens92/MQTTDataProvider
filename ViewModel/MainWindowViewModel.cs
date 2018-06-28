@@ -7,8 +7,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Threading;
 using static MQTTDataProvider.MQTTManager.MqttDataManager;
 
 namespace MQTTDataProvider.ViewModel
@@ -414,16 +416,25 @@ namespace MQTTDataProvider.ViewModel
             HubConnector.StartConnection();
             HubConnector.MyConnector.startRecordingEvent += MyConnector_startRecordingEvent;
             HubConnector.MyConnector.stopRecordingEvent += MyConnector_stopRecordingEvent;
+            SetValueNames();
         }
 
         private void MyConnector_stopRecordingEvent(object sender)
         {
-            StartRecordingData();
+            Application.Current.Dispatcher.BeginInvoke(
+                DispatcherPriority.Background,
+                new Action(() => {
+                this.StartRecordingData();
+            }));
         }
 
         private void MyConnector_startRecordingEvent(object sender)
         {
-            StartRecordingData();
+            Application.Current.Dispatcher.BeginInvoke(
+                 DispatcherPriority.Background,
+                 new Action(() => {
+                 this.StartRecordingData();
+            }));
         }
 
         private void OnNewMqttReceived(object sender, TextReceivedEventArgs e)

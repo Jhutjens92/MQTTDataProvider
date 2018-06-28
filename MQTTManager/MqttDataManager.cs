@@ -63,10 +63,8 @@ namespace MQTTDataProvider.MQTTManager
         public MqttDataManager()
         {
             //INIT Var Values//
-            BrokerAddress = "test.mosquitto.org";
+            BrokerAddress = "localhost";
             Topic_Subscribe = "wekit/vest";
-
-
             //MQTT Functions//
             client = new MqttClient(BrokerAddress);
             // register a callback-function (we have to implement, see below) which is called by the library when a message was received
