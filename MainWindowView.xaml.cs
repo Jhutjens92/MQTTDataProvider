@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 
 
-namespace ESPDataProvider
+namespace MQTTDataProvider
 {
     public partial class MainWindowView : Window
     {

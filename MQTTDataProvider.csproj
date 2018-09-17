@@ -68,7 +68,6 @@
     <Compile Include="Model\HubConnector.cs" />
     <Compile Include="Model\RelayCommand.cs" />
     <Compile Include="MQTTManager\MqttDataManager.cs" />
-    <Compile Include="UDPManager\UDPDataManager.cs" />
     <Compile Include="ViewModel\Globals.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Page Include="MainWindowView.xaml">

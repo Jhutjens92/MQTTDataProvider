@@ -1,22 +1,23 @@
-﻿using ESPDataProvider.Model;
-using ESPDataProvider.MQTTManager;
-using ESPDataProvider.UDPManager;
+﻿using MQTTDataProvider.Model;
+using MQTTDataProvider.MQTTManager;
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
-using static ESPDataProvider.MQTTManager.MqttDataManager;
-using static ESPDataProvider.UDPManager.UDPDataManager;
+using static MQTTDataProvider.MQTTManager.MqttDataManager;
 
-
-namespace ESPDataProvider.ViewModel
+namespace MQTTDataProvider.ViewModel
 {
-    class MainWindowViewModel : BindableBase
+    class MainWindowViewModel: BindableBase
     {
-        UDPDataManager udpmanager = new UDPDataManager();
+        MqttDataManager mdmanager = new MqttDataManager();
 
         #region Vars & Properties
         private string _IMU1_AccX = "";
@@ -30,7 +31,7 @@ namespace ESPDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_AccY = "";
+        private string _IMU1_AccY= "";
         public String IMU1_AccY
         {
             get { return _IMU1_AccY; }
@@ -41,7 +42,7 @@ namespace ESPDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_AccZ = "";
+        private string _IMU1_AccZ= "";
         public String IMU1_AccZ
         {
             get { return _IMU1_AccZ; }
@@ -63,7 +64,7 @@ namespace ESPDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_GyroY = "";
+        private string _IMU1_GyroY= "";
         public String IMU1_GyroY
         {
             get { return _IMU1_GyroY; }
@@ -74,7 +75,7 @@ namespace ESPDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_GyroZ = "";
+        private string _IMU1_GyroZ= "";
         public String IMU1_GyroZ
         {
             get { return _IMU1_GyroZ; }
@@ -85,7 +86,7 @@ namespace ESPDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_MagX = "";
+        private string _IMU1_MagX= "";
         public String IMU1_MagX
         {
             get { return _IMU1_MagX; }
@@ -96,7 +97,7 @@ namespace ESPDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_MagY = "";
+        private string _IMU1_MagY= "";
         public String IMU1_MagY
         {
             get { return _IMU1_MagY; }
@@ -107,7 +108,7 @@ namespace ESPDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_MagZ = "";
+        private string _IMU1_MagZ= "";
         public String IMU1_MagZ
         {
             get { return _IMU1_MagZ; }
@@ -118,7 +119,7 @@ namespace ESPDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_Q0 = "";
+        private string _IMU1_Q0= "";
         public String IMU1_Q0
         {
             get { return _IMU1_Q0; }
@@ -129,7 +130,7 @@ namespace ESPDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_Q1 = "";
+        private string _IMU1_Q1= "";
         public String IMU1_Q1
         {
             get { return _IMU1_Q1; }
@@ -140,7 +141,7 @@ namespace ESPDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_Q2 = "";
+        private string _IMU1_Q2= "";
         public String IMU1_Q2
         {
             get { return _IMU1_Q2; }
@@ -151,7 +152,7 @@ namespace ESPDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_Q3 = "";
+        private string _IMU1_Q3= "";
         public String IMU1_Q3
         {
             get { return _IMU1_Q3; }
@@ -305,7 +306,7 @@ namespace ESPDataProvider.ViewModel
             }
         }
 
-        private string _Temp_External = "";
+        private string _Temp_External= "";
         public String Temp_External
         {
             get { return _Temp_External; }
@@ -316,7 +317,7 @@ namespace ESPDataProvider.ViewModel
             }
         }
 
-        private string _Humidity_External = "";
+        private string _Humidity_External= "";
         public String Humidity_External
         {
             get { return _Humidity_External; }
@@ -327,7 +328,7 @@ namespace ESPDataProvider.ViewModel
             }
         }
 
-        private string _Temp_Internal = "";
+        private string _Temp_Internal= "";
         public String Temp_Internal
         {
             get { return _Temp_Internal; }
@@ -338,7 +339,7 @@ namespace ESPDataProvider.ViewModel
             }
         }
 
-        private string _Humidity_Internal = "";
+        private string _Humidity_Internal= "";
         public String Humidity_Internal
         {
             get { return _Humidity_Internal; }
@@ -349,7 +350,7 @@ namespace ESPDataProvider.ViewModel
             }
         }
 
-        private string _Pulse_TempLobe = "";
+        private string _Pulse_TempLobe= "";
         public String Pulse_TempLobe
         {
             get { return _Pulse_TempLobe; }
@@ -360,7 +361,7 @@ namespace ESPDataProvider.ViewModel
             }
         }
 
-        private string _GSR = "";
+        private string _GSR = ""; 
         public String GSR
         {
             get { return _GSR; }
@@ -411,7 +412,7 @@ namespace ESPDataProvider.ViewModel
 
         public MainWindowViewModel()
         {
-            udpmanager.NewUDPStringReceived += OnNewUDPReceived;
+            mdmanager.NewMqttTextReceived += OnNewMqttReceived;
             HubConnector.StartConnection();
             HubConnector.MyConnector.startRecordingEvent += MyConnector_startRecordingEvent;
             HubConnector.MyConnector.stopRecordingEvent += MyConnector_stopRecordingEvent;
@@ -422,23 +423,21 @@ namespace ESPDataProvider.ViewModel
         {
             Application.Current.Dispatcher.BeginInvoke(
                 DispatcherPriority.Background,
-                new Action(() =>
-                {
-                    this.StartRecordingData();
-                }));
+                new Action(() => {
+                this.StartRecordingData();
+            }));
         }
 
         private void MyConnector_startRecordingEvent(object sender)
         {
             Application.Current.Dispatcher.BeginInvoke(
                  DispatcherPriority.Background,
-                 new Action(() =>
-                 {
-                     this.StartRecordingData();
-                 }));
+                 new Action(() => {
+                 this.StartRecordingData();
+            }));
         }
 
-        private void OnNewUDPReceived(object sender, TextReceivedEventArgs e)
+        private void OnNewMqttReceived(object sender, TextReceivedEventArgs e)
         {
             TextReceived = e.TextReceived;
         }
@@ -448,8 +447,8 @@ namespace ESPDataProvider.ViewModel
 
         public ICommand OnButtonClicked
         {
-            get
-            {
+            get 
+                {
                 _buttonClicked = new RelayCommand(
                     param => this.StartRecordingData(), null
                     );
@@ -560,6 +559,6 @@ namespace ESPDataProvider.ViewModel
                 Debug.WriteLine(ex.StackTrace);
             }
         }
-        #endregion           
+        #endregion
     }
 }
