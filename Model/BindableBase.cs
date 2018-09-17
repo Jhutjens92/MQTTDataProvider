@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace MQTTDataProvider.Model
+namespace ESPDataProvider.Model
 {
     /// <summary>
     /// This class encapsulates the INotifyPropertyChanged implementation and 

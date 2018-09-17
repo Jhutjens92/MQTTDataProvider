@@ -1,23 +1,22 @@
-﻿using MQTTDataProvider.Model;
-using MQTTDataProvider.MQTTManager;
-
+﻿using ESPDataProvider.Model;
+using ESPDataProvider.MQTTManager;
+using ESPDataProvider.UDPManager;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
-using static MQTTDataProvider.MQTTManager.MqttDataManager;
+using static ESPDataProvider.MQTTManager.MqttDataManager;
+using static ESPDataProvider.UDPManager.UDPDataManager;
 
-namespace MQTTDataProvider.ViewModel
+
+namespace ESPDataProvider.ViewModel
 {
-    class MainWindowViewModel: BindableBase
+    class MainWindowViewModel : BindableBase
     {
-        MqttDataManager mdmanager = new MqttDataManager();
+        UDPDataManager udpmanager = new UDPDataManager();
 
         #region Vars & Properties
         private string _IMU1_AccX = "";
@@ -31,7 +30,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_AccY= "";
+        private string _IMU1_AccY = "";
         public String IMU1_AccY
         {
             get { return _IMU1_AccY; }
@@ -42,7 +41,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_AccZ= "";
+        private string _IMU1_AccZ = "";
         public String IMU1_AccZ
         {
             get { return _IMU1_AccZ; }
@@ -64,7 +63,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_GyroY= "";
+        private string _IMU1_GyroY = "";
         public String IMU1_GyroY
         {
             get { return _IMU1_GyroY; }
@@ -75,7 +74,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_GyroZ= "";
+        private string _IMU1_GyroZ = "";
         public String IMU1_GyroZ
         {
             get { return _IMU1_GyroZ; }
@@ -86,7 +85,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_MagX= "";
+        private string _IMU1_MagX = "";
         public String IMU1_MagX
         {
             get { return _IMU1_MagX; }
@@ -97,7 +96,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_MagY= "";
+        private string _IMU1_MagY = "";
         public String IMU1_MagY
         {
             get { return _IMU1_MagY; }
@@ -108,7 +107,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_MagZ= "";
+        private string _IMU1_MagZ = "";
         public String IMU1_MagZ
         {
             get { return _IMU1_MagZ; }
@@ -119,7 +118,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_Q0= "";
+        private string _IMU1_Q0 = "";
         public String IMU1_Q0
         {
             get { return _IMU1_Q0; }
@@ -130,7 +129,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_Q1= "";
+        private string _IMU1_Q1 = "";
         public String IMU1_Q1
         {
             get { return _IMU1_Q1; }
@@ -141,7 +140,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_Q2= "";
+        private string _IMU1_Q2 = "";
         public String IMU1_Q2
         {
             get { return _IMU1_Q2; }
@@ -152,7 +151,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_Q3= "";
+        private string _IMU1_Q3 = "";
         public String IMU1_Q3
         {
             get { return _IMU1_Q3; }
@@ -306,7 +305,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _Temp_External= "";
+        private string _Temp_External = "";
         public String Temp_External
         {
             get { return _Temp_External; }
@@ -317,7 +316,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _Humidity_External= "";
+        private string _Humidity_External = "";
         public String Humidity_External
         {
             get { return _Humidity_External; }
@@ -328,7 +327,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _Temp_Internal= "";
+        private string _Temp_Internal = "";
         public String Temp_Internal
         {
             get { return _Temp_Internal; }
@@ -339,7 +338,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _Humidity_Internal= "";
+        private string _Humidity_Internal = "";
         public String Humidity_Internal
         {
             get { return _Humidity_Internal; }
@@ -350,7 +349,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _Pulse_TempLobe= "";
+        private string _Pulse_TempLobe = "";
         public String Pulse_TempLobe
         {
             get { return _Pulse_TempLobe; }
@@ -361,7 +360,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _GSR = ""; 
+        private string _GSR = "";
         public String GSR
         {
             get { return _GSR; }
@@ -412,7 +411,7 @@ namespace MQTTDataProvider.ViewModel
 
         public MainWindowViewModel()
         {
-            mdmanager.NewMqttTextReceived += OnNewMqttReceived;
+            udpmanager.NewUDPStringReceived += OnNewUDPReceived;
             HubConnector.StartConnection();
             HubConnector.MyConnector.startRecordingEvent += MyConnector_startRecordingEvent;
             HubConnector.MyConnector.stopRecordingEvent += MyConnector_stopRecordingEvent;
@@ -423,21 +422,23 @@ namespace MQTTDataProvider.ViewModel
         {
             Application.Current.Dispatcher.BeginInvoke(
                 DispatcherPriority.Background,
-                new Action(() => {
-                this.StartRecordingData();
-            }));
+                new Action(() =>
+                {
+                    this.StartRecordingData();
+                }));
         }
 
         private void MyConnector_startRecordingEvent(object sender)
         {
             Application.Current.Dispatcher.BeginInvoke(
                  DispatcherPriority.Background,
-                 new Action(() => {
-                 this.StartRecordingData();
-            }));
+                 new Action(() =>
+                 {
+                     this.StartRecordingData();
+                 }));
         }
 
-        private void OnNewMqttReceived(object sender, TextReceivedEventArgs e)
+        private void OnNewUDPReceived(object sender, TextReceivedEventArgs e)
         {
             TextReceived = e.TextReceived;
         }
@@ -447,8 +448,8 @@ namespace MQTTDataProvider.ViewModel
 
         public ICommand OnButtonClicked
         {
-            get 
-                {
+            get
+            {
                 _buttonClicked = new RelayCommand(
                     param => this.StartRecordingData(), null
                     );
@@ -559,6 +560,6 @@ namespace MQTTDataProvider.ViewModel
                 Debug.WriteLine(ex.StackTrace);
             }
         }
-        #endregion
+        #endregion           
     }
 }

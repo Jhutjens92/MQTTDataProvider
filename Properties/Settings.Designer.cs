@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MQTTDataProvider.Properties
+namespace ESPDataProvider.Properties
 {
 
 

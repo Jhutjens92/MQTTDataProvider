@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MQTTDataProvider.Model
+namespace ESPDataProvider.Model
 {
     static class HubConnector
     {
