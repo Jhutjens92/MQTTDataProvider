@@ -1,17 +1,14 @@
-﻿using MQTTDataProvider.Model;
-using MQTTDataProvider.MQTTManager;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
+using MQTTDataProvider.Model;
+using MQTTDataProvider.MQTTManager;
 using static MQTTDataProvider.MQTTManager.MqttDataManager;
+
 
 namespace MQTTDataProvider.ViewModel
 {
@@ -458,7 +455,6 @@ namespace MQTTDataProvider.ViewModel
 
         public void StartRecordingData()
         {
-            Debug.WriteLine("clikity click");
             if (Globals.IsRecordingUDP == false)
             {
                 Globals.IsRecordingUDP = true;
