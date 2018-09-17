@@ -459,16 +459,16 @@ namespace MQTTDataProvider.ViewModel
         public void StartRecordingData()
         {
             Debug.WriteLine("clikity click");
-            if (Globals.IsRecordingMqtt == false)
+            if (Globals.IsRecordingUDP == false)
             {
-                Globals.IsRecordingMqtt = true;
+                Globals.IsRecordingUDP = true;
                 ButtonText = "Stop Recording";
                 ButtonColor = new SolidColorBrush(Colors.Green);
 
             }
-            else if (Globals.IsRecordingMqtt == true)
+            else if (Globals.IsRecordingUDP == true)
             {
-                Globals.IsRecordingMqtt = false;
+                Globals.IsRecordingUDP = false;
                 ButtonText = "Start Recording";
                 ButtonColor = new SolidColorBrush(Colors.White);
             }

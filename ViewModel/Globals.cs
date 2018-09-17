@@ -9,7 +9,7 @@ namespace MQTTDataProvider.ViewModel
     public static class Globals
     {
         private static bool _isRecordingMqtt = false;
-        public static bool IsRecordingMqtt
+        public static bool IsRecordingUDP
         {
             get { return _isRecordingMqtt; }
             set
