@@ -1,14 +1,28 @@
+<<<<<<< HEAD
 ﻿using System;
+=======
+﻿using MQTTDataProvider.Model;
+using MQTTDataProvider.MQTTManager;
+
+using System;
+>>>>>>> parent of f104a62... Renamed MQTTDataProvider.
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
+<<<<<<< HEAD
 using MQTTDataProvider.Model;
 using MQTTDataProvider.MQTTManager;
 using static MQTTDataProvider.MQTTManager.MqttDataManager;
 
+=======
+using static MQTTDataProvider.MQTTManager.MqttDataManager;
+>>>>>>> parent of f104a62... Renamed MQTTDataProvider.
 
 namespace MQTTDataProvider.ViewModel
 {
