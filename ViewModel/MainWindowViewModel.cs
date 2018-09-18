@@ -1,28 +1,13 @@
-<<<<<<< HEAD
 ﻿using System;
-=======
 ﻿using MQTTDataProvider.Model;
 using MQTTDataProvider.MQTTManager;
-
-using System;
->>>>>>> parent of f104a62... Renamed MQTTDataProvider.
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
-<<<<<<< HEAD
-using MQTTDataProvider.Model;
-using MQTTDataProvider.MQTTManager;
 using static MQTTDataProvider.MQTTManager.MqttDataManager;
-
-=======
-using static MQTTDataProvider.MQTTManager.MqttDataManager;
->>>>>>> parent of f104a62... Renamed MQTTDataProvider.
 
 namespace MQTTDataProvider.ViewModel
 {
@@ -469,16 +454,16 @@ namespace MQTTDataProvider.ViewModel
 
         public void StartRecordingData()
         {
-            if (Globals.IsRecordingUDP == false)
+            if (Globals.IsRecordingMqtt == false)
             {
-                Globals.IsRecordingUDP = true;
+                Globals.IsRecordingMqtt = true;
                 ButtonText = "Stop Recording";
                 ButtonColor = new SolidColorBrush(Colors.Green);
 
             }
-            else if (Globals.IsRecordingUDP == true)
+            else if (Globals.IsRecordingMqtt == true)
             {
-                Globals.IsRecordingUDP = false;
+                Globals.IsRecordingMqtt = false;
                 ButtonText = "Start Recording";
                 ButtonColor = new SolidColorBrush(Colors.White);
             }
