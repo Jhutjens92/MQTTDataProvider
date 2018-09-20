@@ -28,7 +28,8 @@
             Margin="154,42,154,0"
             VerticalAlignment="Top"
             Content="MQTT Message Received"
-            RenderTransformOrigin="2.77,-3.548"/>
+            RenderTransformOrigin="2.77,-3.548"
+            Visibility="{Binding IsChecked, ElementName=check_MultipleTopics, Converter={StaticResource b2v}}" />
         <Button
             x:Name="BtnRecord"
             Width="142"
