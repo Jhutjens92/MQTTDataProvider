@@ -42,4 +42,3 @@
             Content="{Binding ButtonText}" />
     </Grid>
 </Window>
-

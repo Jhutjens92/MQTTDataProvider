@@ -1,9 +1,13 @@
-﻿using MQTTDataProvider.ViewModel;
+﻿﻿using MQTTDataProvider.ViewModel;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Net;
-using System.Net.Sockets;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Threading;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 
@@ -14,12 +18,19 @@ namespace MQTTDataProvider.MQTTManager
 
         MqttClient client;
         string clientId;
-        string ReceivedMessage;             //string containing the UDP published message
-        string BrokerAddress;               //default MQTT server value for WEKIT
-        string Topic_Subscribe;             //default topic value for WEKIT
-        dynamic Parsed_ReceivedMessage;     //JSON Parser MQTT message
 
-        public event EventHandler<TextReceivedEventArgs> NewMqttTextReceived;
+
+        //string containing the MQTT published message
+        string ReceivedMessage;
+
+        //default topic value for WEKIT
+        string Topic_Subscribe;
+
+        //default MQTT server value for WEKIT
+        string BrokerAddress;
+
+        //JSON Parser MQTT message
+        dynamic Parsed_ReceivedMessage;
 
         private string _txtReceived = " ";
         public string TxtReceived
@@ -32,10 +43,11 @@ namespace MQTTDataProvider.MQTTManager
             }
         }
 
+        public event EventHandler<TextReceivedEventArgs> NewMqttTextReceived;
         protected virtual void OnNewTextReceived(TextReceivedEventArgs e)
         {
             EventHandler<TextReceivedEventArgs> handler = NewMqttTextReceived;
-            if(handler != null)
+            if (handler != null)
             {
                 handler(this, e);
             }
@@ -43,7 +55,6 @@ namespace MQTTDataProvider.MQTTManager
 
         public class TextReceivedEventArgs : EventArgs
         {
-            public string GSR { get; set; }
             public string TextReceived { get; set; }
         }
 
@@ -54,8 +65,10 @@ namespace MQTTDataProvider.MQTTManager
             BrokerAddress = "localhost";
             Topic_Subscribe = "wekit/vest";
             //MQTT Functions//
-            client = new MqttClient(BrokerAddress);                             //register a callback-function (we have to implement, see below) which is called by the library when a message was received
-            client.MqttMsgPublishReceived += Client_MqttMsgPublishReceived;     //use a unique id as client id, each time we start the application
+            client = new MqttClient(BrokerAddress);
+            // register a callback-function (we have to implement, see below) which is called by the library when a message was received
+            client.MqttMsgPublishReceived += Client_MqttMsgPublishReceived;
+            // use a unique id as client id, each time we start the application
             clientId = Guid.NewGuid().ToString();
             client.Connect(clientId);
             Subscribe_Default();
@@ -63,10 +76,10 @@ namespace MQTTDataProvider.MQTTManager
 
 
         #region Methods
-        // this code runs when a MQTT message was received
+        // this code runs when a message was received
         void Client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
         {
-            
+
             ReceivedMessage = Encoding.UTF8.GetString(e.Message);
 
             if (Globals.IsRecordingMqtt == true)
@@ -91,6 +104,9 @@ namespace MQTTDataProvider.MQTTManager
         {
             Parsed_ReceivedMessage = JObject.Parse(ReceivedMessage);
         }
+
+
+
         #endregion
 
         #region MQTT

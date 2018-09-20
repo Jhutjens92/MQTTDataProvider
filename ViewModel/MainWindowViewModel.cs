@@ -1,21 +1,22 @@
 ﻿using System;
-﻿using MQTTDataProvider.Model;
-using MQTTDataProvider.MQTTManager;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
+using MQTTDataProvider.Model;
+using MQTTDataProvider.MQTTManager;
 using static MQTTDataProvider.MQTTManager.MqttDataManager;
 
 namespace MQTTDataProvider.ViewModel
 {
-    class MainWindowViewModel: BindableBase
+    class MainWindowViewModel : BindableBase
     {
         MqttDataManager mdmanager = new MqttDataManager();
 
         #region Vars & Properties
+        bool recordingDone = false;
         private string _IMU1_AccX = "";
         public String IMU1_AccX
         {
@@ -27,7 +28,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_AccY= "";
+        private string _IMU1_AccY = "";
         public String IMU1_AccY
         {
             get { return _IMU1_AccY; }
@@ -38,7 +39,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_AccZ= "";
+        private string _IMU1_AccZ = "";
         public String IMU1_AccZ
         {
             get { return _IMU1_AccZ; }
@@ -60,7 +61,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_GyroY= "";
+        private string _IMU1_GyroY = "";
         public String IMU1_GyroY
         {
             get { return _IMU1_GyroY; }
@@ -71,7 +72,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_GyroZ= "";
+        private string _IMU1_GyroZ = "";
         public String IMU1_GyroZ
         {
             get { return _IMU1_GyroZ; }
@@ -82,7 +83,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_MagX= "";
+        private string _IMU1_MagX = "";
         public String IMU1_MagX
         {
             get { return _IMU1_MagX; }
@@ -93,7 +94,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_MagY= "";
+        private string _IMU1_MagY = "";
         public String IMU1_MagY
         {
             get { return _IMU1_MagY; }
@@ -104,7 +105,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_MagZ= "";
+        private string _IMU1_MagZ = "";
         public String IMU1_MagZ
         {
             get { return _IMU1_MagZ; }
@@ -115,7 +116,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_Q0= "";
+        private string _IMU1_Q0 = "";
         public String IMU1_Q0
         {
             get { return _IMU1_Q0; }
@@ -126,7 +127,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_Q1= "";
+        private string _IMU1_Q1 = "";
         public String IMU1_Q1
         {
             get { return _IMU1_Q1; }
@@ -137,7 +138,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_Q2= "";
+        private string _IMU1_Q2 = "";
         public String IMU1_Q2
         {
             get { return _IMU1_Q2; }
@@ -148,7 +149,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _IMU1_Q3= "";
+        private string _IMU1_Q3 = "";
         public String IMU1_Q3
         {
             get { return _IMU1_Q3; }
@@ -302,7 +303,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _Temp_External= "";
+        private string _Temp_External = "";
         public String Temp_External
         {
             get { return _Temp_External; }
@@ -313,7 +314,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _Humidity_External= "";
+        private string _Humidity_External = "";
         public String Humidity_External
         {
             get { return _Humidity_External; }
@@ -324,7 +325,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _Temp_Internal= "";
+        private string _Temp_Internal = "";
         public String Temp_Internal
         {
             get { return _Temp_Internal; }
@@ -335,7 +336,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _Humidity_Internal= "";
+        private string _Humidity_Internal = "";
         public String Humidity_Internal
         {
             get { return _Humidity_Internal; }
@@ -346,7 +347,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _Pulse_TempLobe= "";
+        private string _Pulse_TempLobe = "";
         public String Pulse_TempLobe
         {
             get { return _Pulse_TempLobe; }
@@ -357,7 +358,7 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private string _GSR = ""; 
+        private string _GSR = "";
         public String GSR
         {
             get { return _GSR; }
@@ -420,8 +421,8 @@ namespace MQTTDataProvider.ViewModel
             Application.Current.Dispatcher.BeginInvoke(
                 DispatcherPriority.Background,
                 new Action(() => {
-                this.StartRecordingData();
-            }));
+                    this.StartRecordingData();
+                }));
         }
 
         private void MyConnector_startRecordingEvent(object sender)
@@ -429,8 +430,8 @@ namespace MQTTDataProvider.ViewModel
             Application.Current.Dispatcher.BeginInvoke(
                  DispatcherPriority.Background,
                  new Action(() => {
-                 this.StartRecordingData();
-            }));
+                     this.StartRecordingData();
+                 }));
         }
 
         private void OnNewMqttReceived(object sender, TextReceivedEventArgs e)
@@ -443,8 +444,8 @@ namespace MQTTDataProvider.ViewModel
 
         public ICommand OnButtonClicked
         {
-            get 
-                {
+            get
+            {
                 _buttonClicked = new RelayCommand(
                     param => this.StartRecordingData(), null
                     );
