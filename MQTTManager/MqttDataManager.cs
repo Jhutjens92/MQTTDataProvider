@@ -86,7 +86,6 @@ namespace MQTTDataProvider.MQTTManager
             {
                 JSONParse_ReceivedMessage();
                 Publish_Data();
-                //MqttDataManager.MQTT_DataAcquired();
                 TextReceivedEventArgs args = new TextReceivedEventArgs();
                 args.TextReceived = ReceivedMessage;
                 OnNewTextReceived(args);
