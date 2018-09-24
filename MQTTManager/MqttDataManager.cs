@@ -17,45 +17,63 @@ namespace MQTTDataProvider.MQTTManager
     {
 
         MqttClient client;
-        string clientId;
+        readonly string clientId;
 
 
         //string containing the MQTT published message
         string ReceivedMessage;
 
         //default topic value for WEKIT
-        string Topic_Subscribe;
+        readonly string Topic_Subscribe;
 
         //default MQTT server value for WEKIT
-        string BrokerAddress;
+        readonly string BrokerAddress;
 
         //JSON Parser MQTT message
         dynamic Parsed_ReceivedMessage;
 
-        private string _txtReceived = " ";
-        public string TxtReceived
-        {
-            get { return _txtReceived; }
-            set
-            {
-                _txtReceived = value;
-
-            }
-        }
 
         public event EventHandler<TextReceivedEventArgs> NewMqttTextReceived;
-        protected virtual void OnNewTextReceived(TextReceivedEventArgs e)
+        protected virtual void OnNewTextReceived(TextReceivedEventArgs UpdateValuesEvent)
         {
-            EventHandler<TextReceivedEventArgs> handler = NewMqttTextReceived;
-            if (handler != null)
-            {
-                handler(this, e);
-            }
+            NewMqttTextReceived?.Invoke(this, UpdateValuesEvent);
         }
 
         public class TextReceivedEventArgs : EventArgs
         {
             public string TextReceived { get; set; }
+            public string IMU1_AccX { get; set; }
+            public string IMU1_AccY { get; set; }
+            public string IMU1_AccZ { get; set; }
+            public string IMU1_GyroX { get; set; }
+            public string IMU1_GyroY { get; set; }
+            public string IMU1_GyroZ { get; set; }
+            public string IMU1_MagX { get; set; }
+            public string IMU1_MagY { get; set; }
+            public string IMU1_MagZ { get; set; }
+            public string IMU1_Q0 { get; set; }
+            public string IMU1_Q1 { get; set; }
+            public string IMU1_Q2 { get; set; }
+            public string IMU1_Q3 { get; set; }
+            public string IMU2_AccX { get; set; }
+            public string IMU2_AccY { get; set; }
+            public string IMU2_AccZ { get; set; }
+            public string IMU2_GyroX { get; set; }
+            public string IMU2_GyroY { get; set; }
+            public string IMU2_GyroZ { get; set; }
+            public string IMU2_MagX { get; set; }
+            public string IMU2_MagY { get; set; }
+            public string IMU2_MagZ { get; set; }
+            public string IMU2_Q0 { get; set; } 
+            public string IMU2_Q1 { get; set; }
+            public string IMU2_Q2 { get; set; }
+            public string IMU2_Q3 { get; set; }
+            public string Temp_Ext { get; set; }
+            public string Humidity_Ext { get; set; }
+            public string Temp_Int { get; set; }
+            public string Humidity_Int { get; set; }
+            public string Pulse_TempLobe { get; set; }
+            public string GSR { get; set; }
         }
 
 
@@ -86,16 +104,52 @@ namespace MQTTDataProvider.MQTTManager
             {
                 JSONParse_ReceivedMessage();
                 Publish_Data();
-                TextReceivedEventArgs args = new TextReceivedEventArgs();
-                args.TextReceived = ReceivedMessage;
-                OnNewTextReceived(args);
+                UpdateValues();
+
             }
 
         }
 
-        public String UpdateText()
+        void UpdateValues()
         {
-            return TxtReceived;
+            TextReceivedEventArgs args = new TextReceivedEventArgs
+            {
+                TextReceived = ReceivedMessage,
+                IMU1_AccX = Parsed_ReceivedMessage.imus[0].ax,
+                IMU1_AccY = Parsed_ReceivedMessage.imus[0].ay,
+                IMU1_AccZ = Parsed_ReceivedMessage.imus[0].az,
+                IMU1_GyroX = Parsed_ReceivedMessage.imus[0].gx,
+                IMU1_GyroY = Parsed_ReceivedMessage.imus[0].gy,
+                IMU1_GyroZ = Parsed_ReceivedMessage.imus[0].gz,
+                IMU1_MagX = Parsed_ReceivedMessage.imus[0].mx,
+                IMU1_MagY = Parsed_ReceivedMessage.imus[0].my,
+                IMU1_MagZ = Parsed_ReceivedMessage.imus[0].mz,
+                IMU1_Q0 = Parsed_ReceivedMessage.imus[0].q0,
+                IMU1_Q1 = Parsed_ReceivedMessage.imus[0].q1,
+                IMU1_Q2 = Parsed_ReceivedMessage.imus[0].q2,
+                IMU1_Q3 = Parsed_ReceivedMessage.imus[0].q3,
+                IMU2_AccX = Parsed_ReceivedMessage.imus[1].ax,
+                IMU2_AccY = Parsed_ReceivedMessage.imus[1].ay,
+                IMU2_AccZ = Parsed_ReceivedMessage.imus[1].az,
+                IMU2_GyroX = Parsed_ReceivedMessage.imus[1].gx,
+                IMU2_GyroY = Parsed_ReceivedMessage.imus[1].gy,
+                IMU2_GyroZ = Parsed_ReceivedMessage.imus[1].gz,
+                IMU2_MagX = Parsed_ReceivedMessage.imus[1].mx,
+                IMU2_MagY = Parsed_ReceivedMessage.imus[1].my,
+                IMU2_MagZ = Parsed_ReceivedMessage.imus[1].mz,
+                IMU2_Q0 = Parsed_ReceivedMessage.imus[1].q0,
+                IMU2_Q1 = Parsed_ReceivedMessage.imus[1].q1,
+                IMU2_Q2 = Parsed_ReceivedMessage.imus[1].q2,
+                IMU2_Q3 = Parsed_ReceivedMessage.imus[1].q3,
+                Temp_Ext = Parsed_ReceivedMessage.shts[0].temp
+            };
+            ;
+            args.Humidity_Ext = Parsed_ReceivedMessage.shts[0].hum;
+            args.Temp_Int = Parsed_ReceivedMessage.shts[1].temp;
+            args.Humidity_Int = Parsed_ReceivedMessage.shts[1].hum;
+            args.Pulse_TempLobe = Parsed_ReceivedMessage.gsr;
+            args.GSR = Parsed_ReceivedMessage.gsr;
+            OnNewTextReceived(args);
         }
 
         //parse MQTT JSON String
@@ -103,8 +157,6 @@ namespace MQTTDataProvider.MQTTManager
         {
             Parsed_ReceivedMessage = JObject.Parse(ReceivedMessage);
         }
-
-
 
         #endregion
 

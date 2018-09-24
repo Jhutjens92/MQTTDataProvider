@@ -16,7 +16,6 @@ namespace MQTTDataProvider.ViewModel
         MqttDataManager mdmanager = new MqttDataManager();
 
         #region Vars & Properties
-        bool recordingDone = false;
         private string _IMU1_AccX = "";
         public String IMU1_AccX
         {
@@ -437,6 +436,38 @@ namespace MQTTDataProvider.ViewModel
         private void OnNewMqttReceived(object sender, TextReceivedEventArgs e)
         {
             TextReceived = e.TextReceived;
+            IMU1_AccX = e.IMU1_AccX;
+            IMU1_AccY = e.IMU1_AccY;
+            IMU1_AccZ = e.IMU1_AccZ;
+            IMU1_GyroX = e.IMU1_GyroX;
+            IMU1_GyroY = e.IMU1_GyroY;
+            IMU1_GyroZ = e.IMU1_GyroZ;
+            IMU1_MagX = e.IMU1_MagX;
+            IMU1_MagY = e.IMU1_MagY;
+            IMU1_MagZ = e.IMU1_MagZ;
+            IMU1_Q0 = e.IMU1_Q0;
+            IMU1_Q1 = e.IMU1_Q1;
+            IMU1_Q2 = e.IMU1_Q2;
+            IMU1_Q3 = e.IMU1_Q3;
+            IMU2_AccX = e.IMU2_AccX;
+            IMU2_AccY = e.IMU2_AccY;
+            IMU2_AccZ = e.IMU2_AccZ;
+            IMU2_GyroX = e.IMU2_GyroX;
+            IMU2_GyroY = e.IMU2_GyroY;
+            IMU2_GyroZ = e.IMU2_GyroZ;
+            IMU2_MagX = e.IMU2_MagX;
+            IMU2_MagY = e.IMU2_MagY;
+            IMU2_MagZ = e.IMU2_MagZ;
+            IMU2_Q0 = e.IMU2_Q0;
+            IMU2_Q1 = e.IMU2_Q1;
+            IMU2_Q2 = e.IMU2_Q2;
+            IMU2_Q3 = e.IMU2_Q3;
+            Temp_External = e.Temp_Ext;
+            Humidity_External = e.Humidity_Ext;
+            Temp_Internal = e.Temp_Int;
+            Humidity_Internal = e.Humidity_Int;
+            Pulse_TempLobe = e.Pulse_TempLobe;
+            GSR = e.GSR;
             SendData();
         }
 
@@ -474,78 +505,43 @@ namespace MQTTDataProvider.ViewModel
 
         #region LearningHubMethods
 
-        static class HubConnector
-        {
-            private static ConnectorHub.ConnectorHub _myConnector;
-            private static ConnectorHub.FeedbackHub _myFeedback;
-
-            public static ConnectorHub.ConnectorHub MyConnector
-            {
-                get
-                {
-                    if (_myConnector == null)
-                    {
-                        StartConnection();
-                    }
-                    return _myConnector;
-                }
-            }
-
-            public static void StartConnection()
-            {
-                _myConnector = new ConnectorHub.ConnectorHub();
-                _myFeedback = new ConnectorHub.FeedbackHub();
-
-                MyConnector.init();
-                MyConnector.sendReady();
-            }
-
-            public static void SendData(List<string> values)
-            {
-                MyConnector.storeFrame(values);
-            }
-
-            public static void SetValuesName(List<string> names)
-            {
-                MyConnector.setValuesName(names);
-            }
-        }
-
         public void SetValueNames()
         {
-            var names = new List<string>();
-            names.Add("IMU1_AccX");
-            names.Add("IMU1_AccY");
-            names.Add("IMU1_AccZ");
-            names.Add("IMU1_GyroX");
-            names.Add("IMU1_GyroY");
-            names.Add("IMU1_GyroZ");
-            names.Add("IMU1_MagX");
-            names.Add("IMU1_MagY");
-            names.Add("IMU1_MagZ");
-            names.Add("IMU1_Q0");
-            names.Add("IMU1_Q1");
-            names.Add("IMU1_Q2");
-            names.Add("IMU1_Q3");
-            names.Add("IMU2_AccX");
-            names.Add("IMU2_AccY");
-            names.Add("IMU2_AccZ");
-            names.Add("IMU2_GyroX");
-            names.Add("IMU2_GyroY");
-            names.Add("IMU2_GyroZ");
-            names.Add("IMU2_MagX");
-            names.Add("IMU2_MagY");
-            names.Add("IMU2_MagZ");
-            names.Add("IMU2_Q0");
-            names.Add("IMU2_Q1");
-            names.Add("IMU2_Q2");
-            names.Add("IMU2_Q3");
-            names.Add("Temp_Ext");
-            names.Add("Humidity_Ext");
-            names.Add("Temp_Int");
-            names.Add("Humidity_Int");
-            names.Add("Pulse_TempLobe");
-            names.Add("GSR");
+            var names = new List<string>
+            {
+                "IMU1_AccX",
+                "IMU1_AccY",
+                "IMU1_AccZ",
+                "IMU1_GyroX",
+                "IMU1_GyroY",
+                "IMU1_GyroZ",
+                "IMU1_MagX",
+                "IMU1_MagY",
+                "IMU1_MagZ",
+                "IMU1_Q0",
+                "IMU1_Q1",
+                "IMU1_Q2",
+                "IMU1_Q3",
+                "IMU2_AccX",
+                "IMU2_AccY",
+                "IMU2_AccZ",
+                "IMU2_GyroX",
+                "IMU2_GyroY",
+                "IMU2_GyroZ",
+                "IMU2_MagX",
+                "IMU2_MagY",
+                "IMU2_MagZ",
+                "IMU2_Q0",
+                "IMU2_Q1",
+                "IMU2_Q2",
+                "IMU2_Q3",
+                "Temp_Ext",
+                "Humidity_Ext",
+                "Temp_Int",
+                "Humidity_Int",
+                "Pulse_TempLobe",
+                "GSR"
+            };
             HubConnector.SetValuesName(names);
 
         }
@@ -554,39 +550,41 @@ namespace MQTTDataProvider.ViewModel
         {
             try
             {
-                var values = new List<string>();
-                values.Add(IMU1_AccX);
-                values.Add(IMU1_AccY);
-                values.Add(IMU1_AccZ);
-                values.Add(IMU1_GyroX);
-                values.Add(IMU1_GyroY);
-                values.Add(IMU1_GyroZ);
-                values.Add(IMU1_MagX);
-                values.Add(IMU1_MagY);
-                values.Add(IMU1_MagZ);
-                values.Add(IMU1_Q0);
-                values.Add(IMU1_Q1);
-                values.Add(IMU1_Q2);
-                values.Add(IMU1_Q3);
-                values.Add(IMU2_AccX);
-                values.Add(IMU2_AccY);
-                values.Add(IMU2_AccZ);
-                values.Add(IMU2_GyroX);
-                values.Add(IMU2_GyroY);
-                values.Add(IMU2_GyroZ);
-                values.Add(IMU2_MagX);
-                values.Add(IMU2_MagY);
-                values.Add(IMU2_MagZ);
-                values.Add(IMU2_Q0);
-                values.Add(IMU2_Q1);
-                values.Add(IMU2_Q2);
-                values.Add(IMU2_Q3);
-                values.Add(Temp_External);
-                values.Add(Humidity_External);
-                values.Add(Temp_Internal);
-                values.Add(Humidity_Internal);
-                values.Add(Pulse_TempLobe);
-                values.Add(GSR);
+                var values = new List<string>
+                {
+                    IMU1_AccX,
+                    IMU1_AccY,
+                    IMU1_AccZ,
+                    IMU1_GyroX,
+                    IMU1_GyroY,
+                    IMU1_GyroZ,
+                    IMU1_MagX,
+                    IMU1_MagY,
+                    IMU1_MagZ,
+                    IMU1_Q0,
+                    IMU1_Q1,
+                    IMU1_Q2,
+                    IMU1_Q3,
+                    IMU2_AccX,
+                    IMU2_AccY,
+                    IMU2_AccZ,
+                    IMU2_GyroX,
+                    IMU2_GyroY,
+                    IMU2_GyroZ,
+                    IMU2_MagX,
+                    IMU2_MagY,
+                    IMU2_MagZ,
+                    IMU2_Q0,
+                    IMU2_Q1,
+                    IMU2_Q2,
+                    IMU2_Q3,
+                    Temp_External,
+                    Humidity_External,
+                    Temp_Internal,
+                    Humidity_Internal,
+                    Pulse_TempLobe,
+                    GSR
+                };
                 HubConnector.SendData(values);
             }
             catch (Exception ex)
