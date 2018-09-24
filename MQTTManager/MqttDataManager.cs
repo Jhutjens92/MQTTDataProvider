@@ -23,16 +23,15 @@ namespace MQTTDataProvider.MQTTManager
         //string containing the MQTT published message
         string ReceivedMessage;
 
+        //JSON Parser MQTT message
+        dynamic Parsed_ReceivedMessage;
+
         //default topic value for WEKIT
         readonly string Topic_Subscribe;
 
         //default MQTT server value for WEKIT
         readonly string BrokerAddress;
-
-        //JSON Parser MQTT message
-        dynamic Parsed_ReceivedMessage;
-
-
+                       
         public event EventHandler<TextReceivedEventArgs> NewMqttTextReceived;
         protected virtual void OnNewTextReceived(TextReceivedEventArgs UpdateValuesEvent)
         {
