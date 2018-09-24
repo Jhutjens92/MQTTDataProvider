@@ -141,14 +141,13 @@ namespace MQTTDataProvider.MQTTManager
                 IMU2_Q1 = Parsed_ReceivedMessage.imus[1].q1,
                 IMU2_Q2 = Parsed_ReceivedMessage.imus[1].q2,
                 IMU2_Q3 = Parsed_ReceivedMessage.imus[1].q3,
-                Temp_Ext = Parsed_ReceivedMessage.shts[0].temp
-            };
-            ;
-            args.Humidity_Ext = Parsed_ReceivedMessage.shts[0].hum;
-            args.Temp_Int = Parsed_ReceivedMessage.shts[1].temp;
-            args.Humidity_Int = Parsed_ReceivedMessage.shts[1].hum;
-            args.Pulse_TempLobe = Parsed_ReceivedMessage.gsr;
-            args.GSR = Parsed_ReceivedMessage.gsr;
+                Temp_Ext = Parsed_ReceivedMessage.shts[0].temp,
+                Humidity_Ext = Parsed_ReceivedMessage.shts[0].hum,
+                Temp_Int = Parsed_ReceivedMessage.shts[1].temp,
+                Humidity_Int = Parsed_ReceivedMessage.shts[1].hum,
+                Pulse_TempLobe = Parsed_ReceivedMessage.pulse,
+                GSR = Parsed_ReceivedMessage.gsr
+        };
             OnNewTextReceived(args);
         }
 
