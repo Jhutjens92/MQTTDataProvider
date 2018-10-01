@@ -15,11 +15,15 @@ namespace MQTTDataProvider.MQTTManager
 {
     class MqttDataManager
     {
-
+        #region Instances
         MqttClient client;
+        #endregion
+
+        #region Vars
+
+        //string containing the clientID needed for MQTT
         readonly string clientId;
-
-
+        
         //string containing the MQTT published message
         string ReceivedMessage;
 
@@ -31,7 +35,9 @@ namespace MQTTDataProvider.MQTTManager
 
         //default MQTT server value for WEKIT
         readonly string BrokerAddress;
-                       
+        #endregion
+
+        #region Eventhandlers
         public event EventHandler<TextReceivedEventArgs> NewMqttTextReceived;
         protected virtual void OnNewTextReceived(TextReceivedEventArgs UpdateValuesEvent)
         {
@@ -75,7 +81,7 @@ namespace MQTTDataProvider.MQTTManager
             public string GSR { get; set; }
         }
 
-
+        // Main entry of the MQTTDataProvider
         public MqttDataManager()
         {
             //INIT Var Values//
@@ -90,10 +96,10 @@ namespace MQTTDataProvider.MQTTManager
             client.Connect(clientId);
             Subscribe_Default();
         }
-
-
+        #endregion
+        
         #region Methods
-        // this code runs when a message was received
+        // this function runs when a MQTT message was received
         void Client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
         {
 
@@ -108,7 +114,7 @@ namespace MQTTDataProvider.MQTTManager
             }
 
         }
-
+        // this function sets all the variables to the received values
         void UpdateValues()
         {
             TextReceivedEventArgs args = new TextReceivedEventArgs
@@ -150,7 +156,7 @@ namespace MQTTDataProvider.MQTTManager
             OnNewTextReceived(args);
         }
 
-        //parse MQTT JSON String
+        // this function is used to parse MQTT JSON String
         void JSONParse_ReceivedMessage()
         {
             Parsed_ReceivedMessage = JObject.Parse(ReceivedMessage);
