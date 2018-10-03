@@ -485,20 +485,26 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
+
         public void StartRecordingData()
         {
             if (Globals.IsRecordingMqtt == false)
             {
                 Globals.IsRecordingMqtt = true;
+                Globals.IsRecordingDone = true;
                 ButtonText = "Stop Recording";
                 ButtonColor = new SolidColorBrush(Colors.Green);
-
             }
             else if (Globals.IsRecordingMqtt == true)
             {
                 Globals.IsRecordingMqtt = false;
                 ButtonText = "Start Recording";
                 ButtonColor = new SolidColorBrush(Colors.White);
+                if (Globals.IsRecordingDone == true)
+                {
+                    Application.Current.Shutdown();
+                    Environment.Exit(0);
+                }
             }
         }
         #endregion

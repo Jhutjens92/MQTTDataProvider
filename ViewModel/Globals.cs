@@ -17,5 +17,15 @@ namespace MQTTDataProvider.ViewModel
                 _isRecordingMqtt = value;
             }
         }
+
+        private static bool _isRecordingDone = false;
+        public static bool IsRecordingDone
+        {
+            get { return _isRecordingDone; }
+            set
+            {
+                _isRecordingDone = value;
+            }
+        }
     }
 }
