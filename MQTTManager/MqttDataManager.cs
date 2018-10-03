@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -102,7 +103,6 @@ namespace MQTTDataProvider.MQTTManager
             if (Globals.IsRecordingMqtt == true)
             {
                 JSONParse_ReceivedMessage();
-                Publish_Data();
                 UpdateValues();
 
             }
@@ -147,7 +147,8 @@ namespace MQTTDataProvider.MQTTManager
                 Pulse_TempLobe = Parsed_ReceivedMessage.pulse,
                 GSR = Parsed_ReceivedMessage.gsr
         };
-            OnNewTextReceived(args);
+            //OnNewTextReceived(args);
+            Publish_Data(args);
         }
 
         //parse MQTT JSON String
@@ -167,26 +168,15 @@ namespace MQTTDataProvider.MQTTManager
         }
 
         // this code runs when data is published to the subscribed topic
-        private void Publish_Data()
+        private void Publish_Data(TextReceivedEventArgs e)
         {
-            // whole topic
-            string GSR_Value = Parsed_ReceivedMessage.gsr;
-            client.Publish("wekit/vest/GSR_Raw", Encoding.UTF8.GetBytes(GSR_Value), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-
-            string Pulse_Value = Parsed_ReceivedMessage.pulse;
-            client.Publish("wekit/vest/Pulse_Raw", Encoding.UTF8.GetBytes(Pulse_Value), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-
-            string SHT1X1_Temp_Value = Parsed_ReceivedMessage.shts[0].temp;
-            client.Publish("wekit/vest/Sht0_Temp", Encoding.UTF8.GetBytes(SHT1X1_Temp_Value), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-
-            string SHT1X1_Hum_Value = Parsed_ReceivedMessage.shts[0].hum;
-            client.Publish("wekit/vest/Sht0_Hum", Encoding.UTF8.GetBytes(SHT1X1_Hum_Value), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-
-            string SHT2X2_Temp_Value = Parsed_ReceivedMessage.shts[1].temp;
-            client.Publish("wekit/vest/Sht2_Temp", Encoding.UTF8.GetBytes(SHT2X2_Temp_Value), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-
-            string SHT2X2_Hum_Value = Parsed_ReceivedMessage.shts[1].hum;
-            client.Publish("wekit/vest/Sht2_Hum", Encoding.UTF8.GetBytes(SHT2X2_Hum_Value), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            // Send the data from ESP to the VTT Player using MQTT/QOS 1
+            client.Publish("wekit/vest/GSR_Raw", Encoding.UTF8.GetBytes(e.GSR), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            client.Publish("wekit/vest/Pulse_Raw", Encoding.UTF8.GetBytes(e.Pulse_TempLobe), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            client.Publish("wekit/vest/Sht0_Temp", Encoding.UTF8.GetBytes(e.Temp_Ext), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            client.Publish("wekit/vest/Sht0_Hum", Encoding.UTF8.GetBytes(e.Humidity_Ext), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            client.Publish("wekit/vest/Sht2_Temp", Encoding.UTF8.GetBytes(e.Temp_Int), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            client.Publish("wekit/vest/Sht2_Hum", Encoding.UTF8.GetBytes(e.Humidity_Int), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
         }
 
         #endregion
