@@ -651,8 +651,8 @@ namespace MQTTDataProvider.ViewModel
             Globals.Client.Publish("wekit/vest/Pulse_Raw", Encoding.UTF8.GetBytes(Pulse_TempLobe), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
             Globals.Client.Publish("wekit/vest/Sht0_Temp", Encoding.UTF8.GetBytes(Temp_External), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
             Globals.Client.Publish("wekit/vest/Sht0_Hum", Encoding.UTF8.GetBytes(Humidity_External), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            Globals.Client.Publish("wekit/vest/Sht2_Temp", Encoding.UTF8.GetBytes(Temp_Internal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            Globals.Client.Publish("wekit/vest/Sht2_Hum", Encoding.UTF8.GetBytes(Humidity_Internal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            Globals.Client.Publish("wekit/vest/Sht1_Temp", Encoding.UTF8.GetBytes(Temp_Internal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            Globals.Client.Publish("wekit/vest/Sht1_Hum", Encoding.UTF8.GetBytes(Humidity_Internal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
         }
   
         public void SetValueNames()
