@@ -36,7 +36,7 @@
   <ItemGroup>
     <Reference Include="ConnectorHub, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Desktop\LearningHub-master\HubDesktop\bin\Debug\ConnectorHub.dll</HintPath>
+      <HintPath>References\ConnectorHub.dll</HintPath>
     </Reference>
     <Reference Include="M2Mqtt.Net, Version=4.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
