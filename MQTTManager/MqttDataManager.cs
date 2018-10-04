@@ -1,30 +1,14 @@
 ﻿﻿using MQTTDataProvider.ViewModel;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Threading;
-using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 
 namespace MQTTDataProvider.MQTTManager
 {
     class MqttDataManager
     {
-        #region Instances
-        MqttClient client;
-        #endregion
-
         #region Vars
-
-        //string containing the clientID needed for MQTT
-        readonly string clientId;
-        
         //string containing the MQTT published message
         string ReceivedMessage;
 
@@ -32,19 +16,19 @@ namespace MQTTDataProvider.MQTTManager
         dynamic Parsed_ReceivedMessage;
 
         //default topic value for WEKIT
-        readonly string Topic_Subscribe;
-
-        //default MQTT server value for WEKIT
-        readonly string BrokerAddress;
+        readonly string Topic_Subscribe = "wekit/vest";
         #endregion
 
-        #region Eventhandlers
+        #region Events
+        // handler for subscribing classes where you do +=
         public event EventHandler<TextReceivedEventArgs> NewMqttTextReceived;
+
+        // this is for raising the event in the class
         protected virtual void OnNewTextReceived(TextReceivedEventArgs UpdateValuesEvent)
         {
             NewMqttTextReceived?.Invoke(this, UpdateValuesEvent);
         }
-
+        //inherits from event args which holds all the values that needs to be passed as args in the event
         public class TextReceivedEventArgs : EventArgs
         {
             public string TextReceived { get; set; }
@@ -81,39 +65,43 @@ namespace MQTTDataProvider.MQTTManager
             public string Pulse_TempLobe { get; set; }
             public string GSR { get; set; }
         }
+        #endregion
 
-        // Main entry of the MQTTDataProvider
-        public MqttDataManager()
+        #region Constructor
+        //Constructor
+        public MqttDataManager() 
         {
-            //INIT Var Values//
-            BrokerAddress = "localhost";
-            Topic_Subscribe = "wekit/vest";
-            //MQTT Functions//
-            client = new MqttClient(BrokerAddress);
             // register a callback-function (we have to implement, see below) which is called by the library when a message was received
-            client.MqttMsgPublishReceived += Client_MqttMsgPublishReceived;
-            // use a unique id as client id, each time we start the application
-            clientId = Guid.NewGuid().ToString();
-            client.Connect(clientId);
+            Globals.Client.MqttMsgPublishReceived += Client_MqttMsgPublishReceived;
+
             Subscribe_Default();
         }
         #endregion
         
         #region Methods
-        // this function runs when a MQTT message was received
-        void Client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
+        // this function executes when a MQTT message was received
+        private void Client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
         {
-
             ReceivedMessage = Encoding.UTF8.GetString(e.Message);
-
             if (Globals.IsRecordingMqtt == true)
             {
                 JSONParse_ReceivedMessage();
                 UpdateValues();
-
             }
-
         }
+        
+        // this function is used to parse MQTT JSON String
+        private void JSONParse_ReceivedMessage()
+        {
+            Parsed_ReceivedMessage = JObject.Parse(ReceivedMessage);
+        }
+
+        // this function subscribes to the default WEKIT Topic ("wekit/vest")
+        private void Subscribe_Default()
+        {
+            Globals.Client.Subscribe(new string[] { Topic_Subscribe }, new byte[] { 1 });
+        }
+
         // this function sets all the variables to the received values
         void UpdateValues()
         {
@@ -153,38 +141,8 @@ namespace MQTTDataProvider.MQTTManager
                 Pulse_TempLobe = Parsed_ReceivedMessage.pulse,
                 GSR = Parsed_ReceivedMessage.gsr
         };
-            //OnNewTextReceived(args);
-            Publish_Data(args);
+            OnNewTextReceived(args);
         }
-
-        // this function is used to parse MQTT JSON String
-        void JSONParse_ReceivedMessage()
-        {
-            Parsed_ReceivedMessage = JObject.Parse(ReceivedMessage);
-        }
-
-        #endregion
-
-        #region MQTT
-
-        private void Subscribe_Default()
-        {
-            // subscribe to the topic with QoS 2
-            client.Subscribe(new string[] { Topic_Subscribe }, new byte[] { 2 });   // we need arrays as parameters because we can subscribe to different topics with one call
-        }
-
-        // this code runs when data is published to the subscribed topic
-        private void Publish_Data(TextReceivedEventArgs e)
-        {
-            // Send the data from ESP to the VTT Player using MQTT/QOS 1
-            client.Publish("wekit/vest/GSR_Raw", Encoding.UTF8.GetBytes(e.GSR), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            client.Publish("wekit/vest/Pulse_Raw", Encoding.UTF8.GetBytes(e.Pulse_TempLobe), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            client.Publish("wekit/vest/Sht0_Temp", Encoding.UTF8.GetBytes(e.Temp_Ext), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            client.Publish("wekit/vest/Sht0_Hum", Encoding.UTF8.GetBytes(e.Humidity_Ext), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            client.Publish("wekit/vest/Sht2_Temp", Encoding.UTF8.GetBytes(e.Temp_Int), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            client.Publish("wekit/vest/Sht2_Hum", Encoding.UTF8.GetBytes(e.Humidity_Int), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-        }
-
         #endregion
     }
 }

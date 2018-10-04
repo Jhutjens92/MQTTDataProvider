@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Text;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
 using MQTTDataProvider.Model;
 using MQTTDataProvider.MQTTManager;
+using uPLibrary.Networking.M2Mqtt.Messages;
 using static MQTTDataProvider.MQTTManager.MqttDataManager;
 
 namespace MQTTDataProvider.ViewModel
@@ -15,13 +17,17 @@ namespace MQTTDataProvider.ViewModel
     {
         MqttDataManager mdmanager = new MqttDataManager();
 
-        #region Vars & Properties
+        #region Vars
         private string _IMU1_AccX = "";
         public String IMU1_AccX
         {
             get { return _IMU1_AccX; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU1_AccX = value;
                 OnPropertyChanged("IMU1_AccX");
             }
@@ -33,6 +39,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU1_AccY; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU1_AccY = value;
                 OnPropertyChanged("IMU1_AccY");
             }
@@ -44,6 +54,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU1_AccZ; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU1_AccZ = value;
                 OnPropertyChanged("IMU1_AccZ");
             }
@@ -55,6 +69,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU1_GyroX; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU1_GyroX = value;
                 OnPropertyChanged("IMU1_GyroX");
             }
@@ -66,6 +84,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU1_GyroY; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU1_GyroY = value;
                 OnPropertyChanged("IMU1_GyroY");
             }
@@ -77,6 +99,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU1_GyroZ; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU1_GyroZ = value;
                 OnPropertyChanged("IMU1_GyroZ");
             }
@@ -88,6 +114,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU1_MagX; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU1_MagX = value;
                 OnPropertyChanged("IMU1_MagX");
             }
@@ -99,6 +129,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU1_MagY; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU1_MagY = value;
                 OnPropertyChanged("IMU1_MagY");
             }
@@ -110,6 +144,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU1_MagZ; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU1_MagZ = value;
                 OnPropertyChanged("IMU1_MagZ");
             }
@@ -121,6 +159,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU1_Q0; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU1_Q0 = value;
                 OnPropertyChanged("IMU1_Q0");
             }
@@ -132,6 +174,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU1_Q1; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU1_Q1 = value;
                 OnPropertyChanged("IMU1_Q1");
             }
@@ -143,6 +189,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU1_Q2; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU1_Q2 = value;
                 OnPropertyChanged("IMU1_Q2");
             }
@@ -154,6 +204,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU1_Q3; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU1_Q3 = value;
                 OnPropertyChanged("IMU1_Q3");
             }
@@ -165,6 +219,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU2_AccX; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU2_AccX = value;
                 OnPropertyChanged("IMU2_AccX");
             }
@@ -176,6 +234,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU2_AccY; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU2_AccY = value;
                 OnPropertyChanged("IMU2_AccY");
             }
@@ -187,6 +249,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU2_AccZ; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU2_AccZ = value;
                 OnPropertyChanged("IMU2_AccZ");
             }
@@ -198,6 +264,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU2_GyroX; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU2_GyroX = value;
                 OnPropertyChanged("IMU2_GyroX");
             }
@@ -209,6 +279,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU2_GyroY; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU2_GyroY = value;
                 OnPropertyChanged("IMU2_GyroY");
             }
@@ -220,6 +294,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU2_GyroZ; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU2_GyroZ = value;
                 OnPropertyChanged("IMU2_GyroZ");
             }
@@ -231,6 +309,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU2_MagX; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU2_MagX = value;
                 OnPropertyChanged("IMU2_MagX");
             }
@@ -242,6 +324,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU2_MagY; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU2_MagY = value;
                 OnPropertyChanged("IMU2_MagY");
             }
@@ -253,6 +339,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU2_MagZ; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU2_MagZ = value;
                 OnPropertyChanged("IMU2_MagZ");
             }
@@ -264,6 +354,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU2_Q0; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU2_Q0 = value;
                 OnPropertyChanged("IMU2_Q0");
             }
@@ -275,6 +369,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU2_Q1; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU2_Q1 = value;
                 OnPropertyChanged("IMU2_Q1");
             }
@@ -286,6 +384,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU2_Q2; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU2_Q2 = value;
                 OnPropertyChanged("IMU2_Q2");
             }
@@ -297,6 +399,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _IMU2_Q3; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _IMU2_Q3 = value;
                 OnPropertyChanged("IMU2_Q3");
             }
@@ -308,6 +414,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _Temp_External; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _Temp_External = value;
                 OnPropertyChanged("Temp_External");
             }
@@ -319,6 +429,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _Humidity_External; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _Humidity_External = value;
                 OnPropertyChanged("Humidity_External");
             }
@@ -330,6 +444,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _Temp_Internal; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _Temp_Internal = value;
                 OnPropertyChanged("Temp_Internal");
             }
@@ -341,6 +459,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _Humidity_Internal; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _Humidity_Internal = value;
                 OnPropertyChanged("Humidity_Internal");
             }
@@ -352,6 +474,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _Pulse_TempLobe; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _Pulse_TempLobe = value;
                 OnPropertyChanged("Pulse_TempLobe");
             }
@@ -363,6 +489,10 @@ namespace MQTTDataProvider.ViewModel
             get { return _GSR; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _GSR = value;
                 OnPropertyChanged("GSR");
             }
@@ -374,9 +504,12 @@ namespace MQTTDataProvider.ViewModel
             get { return _textReceived; }
             set
             {
+                if (value == null)
+                {
+                    value = 0.ToString();
+                }
                 _textReceived = value;
                 OnPropertyChanged("TextReceived");
-
             }
         }
 
@@ -388,7 +521,6 @@ namespace MQTTDataProvider.ViewModel
             {
                 _buttonText = value;
                 OnPropertyChanged("ButtonText");
-
             }
         }
 
@@ -405,16 +537,8 @@ namespace MQTTDataProvider.ViewModel
         }
 
         #endregion
-
-        public MainWindowViewModel()
-        {
-            mdmanager.NewMqttTextReceived += OnNewMqttReceived;
-            HubConnector.StartConnection();
-            HubConnector.MyConnector.startRecordingEvent += MyConnector_startRecordingEvent;
-            HubConnector.MyConnector.stopRecordingEvent += MyConnector_stopRecordingEvent;
-            SetValueNames();
-        }
-
+      
+        #region events
         private void MyConnector_stopRecordingEvent(object sender)
         {
             Application.Current.Dispatcher.BeginInvoke(
@@ -469,9 +593,9 @@ namespace MQTTDataProvider.ViewModel
             Pulse_TempLobe = e.Pulse_TempLobe;
             GSR = e.GSR;
             SendData();
+            PublishData();
         }
 
-        #region events
         private ICommand _buttonClicked;
 
         public ICommand OnButtonClicked
@@ -484,7 +608,6 @@ namespace MQTTDataProvider.ViewModel
                 return _buttonClicked;
             }
         }
-
 
         public void StartRecordingData()
         {
@@ -509,8 +632,29 @@ namespace MQTTDataProvider.ViewModel
         }
         #endregion
 
-        #region LearningHubMethods
+        #region Constructor
+        public MainWindowViewModel()
+        {
+            mdmanager.NewMqttTextReceived += OnNewMqttReceived;
+            HubConnector.StartConnection();
+            HubConnector.MyConnector.startRecordingEvent += MyConnector_startRecordingEvent;
+            HubConnector.MyConnector.stopRecordingEvent += MyConnector_stopRecordingEvent;
+            SetValueNames();
+        }
+        #endregion
 
+        #region Methods
+        private void PublishData()
+        {
+            // Send the data from ESP to the VTT Player using MQTT/QOS 1
+            Globals.Client.Publish("wekit/vest/GSR_Raw", Encoding.UTF8.GetBytes(GSR), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            Globals.Client.Publish("wekit/vest/Pulse_Raw", Encoding.UTF8.GetBytes(Pulse_TempLobe), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            Globals.Client.Publish("wekit/vest/Sht0_Temp", Encoding.UTF8.GetBytes(Temp_External), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            Globals.Client.Publish("wekit/vest/Sht0_Hum", Encoding.UTF8.GetBytes(Humidity_External), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            Globals.Client.Publish("wekit/vest/Sht2_Temp", Encoding.UTF8.GetBytes(Temp_Internal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            Globals.Client.Publish("wekit/vest/Sht2_Hum", Encoding.UTF8.GetBytes(Humidity_Internal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+        }
+  
         public void SetValueNames()
         {
             var names = new List<string>
