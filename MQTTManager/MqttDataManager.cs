@@ -1,6 +1,8 @@
 ﻿﻿using MQTTDataProvider.ViewModel;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Linq;
+using System.Diagnostics;
 using System.Text;
 using uPLibrary.Networking.M2Mqtt.Messages;
 
@@ -17,6 +19,7 @@ namespace MQTTDataProvider.MQTTManager
 
         //default topic value for WEKIT
         readonly string Topic_Subscribe = "wekit/vest";
+
         #endregion
 
         #region Events
@@ -71,15 +74,15 @@ namespace MQTTDataProvider.MQTTManager
         //Constructor
         public MqttDataManager() 
         {
+            SetParameters();
             // register a callback-function (we have to implement, see below) which is called by the library when a message was received
             Globals.Client.MqttMsgPublishReceived += Client_MqttMsgPublishReceived;
-
             Subscribe_Default();
         }
         #endregion
-        
+
         #region Methods
-        // this function executes when a MQTT message was received
+        //E xecutes when a MQTT message was received
         private void Client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
         {
             ReceivedMessage = Encoding.UTF8.GetString(e.Message);
@@ -89,20 +92,36 @@ namespace MQTTDataProvider.MQTTManager
                 UpdateValues();
             }
         }
-        
-        // this function is used to parse MQTT JSON String
+
+        // checks the startup parameters
+        private void SetParameters()
+        {
+            Globals.BrokerAddress = "localhost";
+            string[] Parameters = Environment.GetCommandLineArgs();
+            if (Parameters.Any(s => s.Contains("-ba")))
+            {
+                int parameterIndex = Array.IndexOf(Parameters, "-ba");
+                Globals.BrokerAddress = Parameters[parameterIndex + 1];
+            }
+            else
+            {
+                Console.WriteLine("No valid paramater provided");
+            }
+        }
+
+        // Parse MQTT JSON String
         private void JSONParse_ReceivedMessage()
         {
             Parsed_ReceivedMessage = JObject.Parse(ReceivedMessage);
         }
 
-        // this function subscribes to the default WEKIT Topic ("wekit/vest")
+        // Subscribes to the default WEKIT Topic ("wekit/vest")
         private void Subscribe_Default()
         {
             Globals.Client.Subscribe(new string[] { Topic_Subscribe }, new byte[] { 1 });
         }
 
-        // this function sets all the variables to the received values
+        // Sets all the variables to the received values
         void UpdateValues()
         {
             TextReceivedEventArgs args = new TextReceivedEventArgs

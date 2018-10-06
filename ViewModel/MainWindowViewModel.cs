@@ -11,6 +11,7 @@ using MQTTDataProvider.MQTTManager;
 using uPLibrary.Networking.M2Mqtt.Messages;
 using static MQTTDataProvider.MQTTManager.MqttDataManager;
 
+
 namespace MQTTDataProvider.ViewModel
 {
     class MainWindowViewModel : BindableBase
@@ -557,6 +558,12 @@ namespace MQTTDataProvider.ViewModel
                  }));
         }
 
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            CloseApp();
+            Environment.Exit(Environment.ExitCode);
+        }
+                
         private void OnNewMqttReceived(object sender, TextReceivedEventArgs e)
         {
             TextReceived = e.TextReceived;
@@ -614,7 +621,6 @@ namespace MQTTDataProvider.ViewModel
             if (Globals.IsRecordingMqtt == false)
             {
                 Globals.IsRecordingMqtt = true;
-                Globals.IsRecordingDone = true;
                 ButtonText = "Stop Recording";
                 ButtonColor = new SolidColorBrush(Colors.Green);
             }
@@ -623,11 +629,7 @@ namespace MQTTDataProvider.ViewModel
                 Globals.IsRecordingMqtt = false;
                 ButtonText = "Start Recording";
                 ButtonColor = new SolidColorBrush(Colors.White);
-                if (Globals.IsRecordingDone == true)
-                {
-                    Application.Current.Shutdown();
-                    Environment.Exit(0);
-                }
+
             }
         }
         #endregion
@@ -635,15 +637,31 @@ namespace MQTTDataProvider.ViewModel
         #region Constructor
         public MainWindowViewModel()
         {
+            //Debug.WriteLine(args);
             mdmanager.NewMqttTextReceived += OnNewMqttReceived;
             HubConnector.StartConnection();
             HubConnector.MyConnector.startRecordingEvent += MyConnector_startRecordingEvent;
             HubConnector.MyConnector.stopRecordingEvent += MyConnector_stopRecordingEvent;
             SetValueNames();
+            Application.Current.MainWindow.Closing += MainWindow_Closing;
         }
         #endregion
-
         #region Methods
+        public void CloseApp()
+        {
+            try
+            {
+                Process[] pp1 = Process.GetProcessesByName("MQTTDataProvider");
+                pp1[0].CloseMainWindow();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("I got an exception after closing App" + e);
+            }
+
+        }
+
         private void PublishData()
         {
             // Send the data from ESP to the VTT Player using MQTT/QOS 1

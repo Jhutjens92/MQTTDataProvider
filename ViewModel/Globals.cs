@@ -19,21 +19,15 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private static bool _isRecordingDone = false;
-        public static bool IsRecordingDone
-        {
-            get { return _isRecordingDone; }
-            set
-            {
-                _isRecordingDone = value;
-            }
-        }
-
         //default MQTT server value for WEKIT
-        private static readonly string _brokerAddress = "localhost";
+        private static string _brokerAddress = "";
         public static string BrokerAddress
         {
             get { return _brokerAddress; }
+            set
+            {
+                _brokerAddress = value;
+            }
         }
 
         // use a unique id as client id
