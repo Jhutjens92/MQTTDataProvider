@@ -22,7 +22,7 @@ namespace MQTTDataProvider.MQTTManager
         readonly string Topic_Subscribe = "wekit/vest";
 
         // Default brokeraddress
-        string BrokerAddress = "lasldalsld";
+        string BrokerAddress = "localhost";
         #endregion
 
         #region Instance Declaration
