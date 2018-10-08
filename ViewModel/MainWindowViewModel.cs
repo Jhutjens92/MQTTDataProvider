@@ -9,13 +9,14 @@ using System.Windows.Threading;
 using MQTTDataProvider.Model;
 using MQTTDataProvider.MQTTManager;
 using uPLibrary.Networking.M2Mqtt.Messages;
-using static MQTTDataProvider.MQTTManager.MqttDataManager;
+using static MQTTDataProvider.MQTTManager.MQTTDataManager;
+
 
 namespace MQTTDataProvider.ViewModel
 {
     class MainWindowViewModel : BindableBase
     {
-        MqttDataManager mdmanager = new MqttDataManager();
+        MQTTDataManager mdmanager = new MQTTDataManager();
 
         #region Vars
         private string _IMU1_AccX = "";
@@ -557,6 +558,13 @@ namespace MQTTDataProvider.ViewModel
                  }));
         }
 
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MQTTDataManager.CloseConnection();
+            CloseApp();
+            Environment.Exit(Environment.ExitCode);
+        }
+                
         private void OnNewMqttReceived(object sender, TextReceivedEventArgs e)
         {
             TextReceived = e.TextReceived;
@@ -593,7 +601,6 @@ namespace MQTTDataProvider.ViewModel
             Pulse_TempLobe = e.Pulse_TempLobe;
             GSR = e.GSR;
             SendData();
-            PublishData();
         }
 
         private ICommand _buttonClicked;
@@ -614,7 +621,6 @@ namespace MQTTDataProvider.ViewModel
             if (Globals.IsRecordingMqtt == false)
             {
                 Globals.IsRecordingMqtt = true;
-                Globals.IsRecordingDone = true;
                 ButtonText = "Stop Recording";
                 ButtonColor = new SolidColorBrush(Colors.Green);
             }
@@ -623,11 +629,7 @@ namespace MQTTDataProvider.ViewModel
                 Globals.IsRecordingMqtt = false;
                 ButtonText = "Start Recording";
                 ButtonColor = new SolidColorBrush(Colors.White);
-                if (Globals.IsRecordingDone == true)
-                {
-                    Application.Current.Shutdown();
-                    Environment.Exit(0);
-                }
+
             }
         }
         #endregion
@@ -635,24 +637,31 @@ namespace MQTTDataProvider.ViewModel
         #region Constructor
         public MainWindowViewModel()
         {
+            Globals.IsRecordingMqtt = false;
             mdmanager.NewMqttTextReceived += OnNewMqttReceived;
             HubConnector.StartConnection();
             HubConnector.MyConnector.startRecordingEvent += MyConnector_startRecordingEvent;
             HubConnector.MyConnector.stopRecordingEvent += MyConnector_stopRecordingEvent;
             SetValueNames();
+            Application.Current.MainWindow.Closing += MainWindow_Closing;
         }
         #endregion
 
         #region Methods
-        private void PublishData()
+        public void CloseApp()
         {
-            // Send the data from ESP to the VTT Player using MQTT/QOS 1
-            Globals.Client.Publish("wekit/vest/GSR_Raw", Encoding.UTF8.GetBytes(GSR), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            Globals.Client.Publish("wekit/vest/Pulse_Raw", Encoding.UTF8.GetBytes(Pulse_TempLobe), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            Globals.Client.Publish("wekit/vest/Sht0_Temp", Encoding.UTF8.GetBytes(Temp_External), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            Globals.Client.Publish("wekit/vest/Sht0_Hum", Encoding.UTF8.GetBytes(Humidity_External), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            Globals.Client.Publish("wekit/vest/Sht1_Temp", Encoding.UTF8.GetBytes(Temp_Internal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            Globals.Client.Publish("wekit/vest/Sht1_Hum", Encoding.UTF8.GetBytes(Humidity_Internal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            try
+            {
+
+                Process[] pp1 = Process.GetProcessesByName("MQTTDataProvider");
+                pp1[0].CloseMainWindow();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("I got an exception after closing App" + e);
+            }
+
         }
   
         public void SetValueNames()

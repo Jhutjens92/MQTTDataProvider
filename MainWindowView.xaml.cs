@@ -5,6 +5,5 @@ namespace MQTTDataProvider
 {
     public partial class MainWindowView : Window
     {
-              
     }
 }

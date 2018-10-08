@@ -33,6 +33,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ConnectorHub, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -69,7 +73,7 @@
     <Compile Include="Model\BindableBase.cs" />
     <Compile Include="Model\HubConnector.cs" />
     <Compile Include="Model\RelayCommand.cs" />
-    <Compile Include="MQTTManager\MqttDataManager.cs" />
+    <Compile Include="MQTTManager\MQTTDataManager.cs" />
     <Compile Include="ViewModel\Globals.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Page Include="MainWindowView.xaml">
