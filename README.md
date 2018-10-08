@@ -9,7 +9,6 @@ filter the data, send the filtered data to predefined/preprogrammed MQTT Topics 
 
 ## Getting Started
 The brokeraddress is currently set to "localhost" (127.0.0.1). This means that Mosquitto is required for the program to be able to send and recieve data.
-If you want to use any other address use the -ba command (example -ba broker.mqttdashboard.com) as a startup argument.
 
 You can test the MQTTDataProvider without using the Learning Hub by just starting the executable and press "Start Recording"
 Currently it does not provide any logging when you run it seperatly. It only shows the received string in the textbox for testing.
@@ -28,6 +27,10 @@ Temperature_internal:	"wekit/vest/Sht0_Temp"
 Temperature_external:	"wekit/vest/Sht1_Temp"
 Humidity_internal:		"wekit/vest/Sht0_Hum"
 Humidity_external:		"wekit/vest/Sht1_Hum"
+
+## Startup Parameters (Learning Hub)
+-ba *brokedaddress* (example -ba broker.mqttdashboard.com) 
+
 
 ## Running the tests
 For testing purposes you can use this test string: 
