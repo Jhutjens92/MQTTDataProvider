@@ -9,7 +9,7 @@ using uPLibrary.Networking.M2Mqtt;
 
 namespace MQTTDataProvider.MQTTManager
 {
-    class MqttDataManager
+    class MQTTDataManager
     {
         #region Vars
         // String containing the MQTT published message
@@ -26,7 +26,7 @@ namespace MQTTDataProvider.MQTTManager
         #endregion
 
         #region Instance Declaration
-        MqttClient Client;
+        static MqttClient Client;
         #endregion
 
         #region Events
@@ -79,7 +79,7 @@ namespace MQTTDataProvider.MQTTManager
 
         #region Constructor
         // Constructor
-        public MqttDataManager() 
+        public MQTTDataManager() 
         {
             string ClientId;
             SetParameters();
@@ -93,6 +93,12 @@ namespace MQTTDataProvider.MQTTManager
         #endregion
 
         #region Methods
+        // Closes the MQTT connection when the program stops
+        public static void CloseConnection()
+        {
+            Client.Disconnect();
+        }
+
         // Executes when a MQTT message was received
         private void Client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
         {

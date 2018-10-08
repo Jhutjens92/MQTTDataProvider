@@ -9,14 +9,14 @@ using System.Windows.Threading;
 using MQTTDataProvider.Model;
 using MQTTDataProvider.MQTTManager;
 using uPLibrary.Networking.M2Mqtt.Messages;
-using static MQTTDataProvider.MQTTManager.MqttDataManager;
+using static MQTTDataProvider.MQTTManager.MQTTDataManager;
 
 
 namespace MQTTDataProvider.ViewModel
 {
     class MainWindowViewModel : BindableBase
     {
-        MqttDataManager mdmanager = new MqttDataManager();
+        MQTTDataManager mdmanager = new MQTTDataManager();
 
         #region Vars
         private string _IMU1_AccX = "";
@@ -560,6 +560,7 @@ namespace MQTTDataProvider.ViewModel
 
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            MQTTDataManager.CloseConnection();
             CloseApp();
             Environment.Exit(Environment.ExitCode);
         }
@@ -651,6 +652,7 @@ namespace MQTTDataProvider.ViewModel
         {
             try
             {
+
                 Process[] pp1 = Process.GetProcessesByName("MQTTDataProvider");
                 pp1[0].CloseMainWindow();
 

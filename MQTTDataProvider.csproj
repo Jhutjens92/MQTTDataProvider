@@ -73,7 +73,7 @@
     <Compile Include="Model\BindableBase.cs" />
     <Compile Include="Model\HubConnector.cs" />
     <Compile Include="Model\RelayCommand.cs" />
-    <Compile Include="MQTTManager\MqttDataManager.cs" />
+    <Compile Include="MQTTManager\MQTTDataManager.cs" />
     <Compile Include="ViewModel\Globals.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Page Include="MainWindowView.xaml">
