@@ -18,35 +18,5 @@ namespace MQTTDataProvider.ViewModel
                 _isRecordingMqtt = value;
             }
         }
-
-        //default MQTT server value for WEKIT
-        private static string _brokerAddress = "";
-        public static string BrokerAddress
-        {
-            get { return _brokerAddress; }
-            set
-            {
-                _brokerAddress = value;
-            }
-        }
-
-        // use a unique id as client id
-        private static readonly string _cliendID = Guid.NewGuid().ToString();
-        public static string ClientID
-        {
-            get { return _cliendID; }
-        }
-
-        private static MqttClient _client = new MqttClient(BrokerAddress);
-        public static MqttClient Client
-        {
-            get {
-                if (_client.IsConnected == false)
-                {
-                    _client.Connect(ClientID);
-                }
-                    return _client; }
-        }
-
     }
 }

@@ -600,7 +600,6 @@ namespace MQTTDataProvider.ViewModel
             Pulse_TempLobe = e.Pulse_TempLobe;
             GSR = e.GSR;
             SendData();
-            PublishData();
         }
 
         private ICommand _buttonClicked;
@@ -637,7 +636,7 @@ namespace MQTTDataProvider.ViewModel
         #region Constructor
         public MainWindowViewModel()
         {
-            //Debug.WriteLine(args);
+            Globals.IsRecordingMqtt = false;
             mdmanager.NewMqttTextReceived += OnNewMqttReceived;
             HubConnector.StartConnection();
             HubConnector.MyConnector.startRecordingEvent += MyConnector_startRecordingEvent;
@@ -646,6 +645,7 @@ namespace MQTTDataProvider.ViewModel
             Application.Current.MainWindow.Closing += MainWindow_Closing;
         }
         #endregion
+
         #region Methods
         public void CloseApp()
         {
@@ -660,17 +660,6 @@ namespace MQTTDataProvider.ViewModel
                 Console.WriteLine("I got an exception after closing App" + e);
             }
 
-        }
-
-        private void PublishData()
-        {
-            // Send the data from ESP to the VTT Player using MQTT/QOS 1
-            Globals.Client.Publish("wekit/vest/GSR_Raw", Encoding.UTF8.GetBytes(GSR), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            Globals.Client.Publish("wekit/vest/Pulse_Raw", Encoding.UTF8.GetBytes(Pulse_TempLobe), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            Globals.Client.Publish("wekit/vest/Sht0_Temp", Encoding.UTF8.GetBytes(Temp_External), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            Globals.Client.Publish("wekit/vest/Sht0_Hum", Encoding.UTF8.GetBytes(Humidity_External), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            Globals.Client.Publish("wekit/vest/Sht1_Temp", Encoding.UTF8.GetBytes(Temp_Internal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            Globals.Client.Publish("wekit/vest/Sht1_Hum", Encoding.UTF8.GetBytes(Humidity_Internal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
         }
   
         public void SetValueNames()
