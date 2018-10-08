@@ -18,5 +18,15 @@ namespace MQTTDataProvider.ViewModel
                 _isRecordingMqtt = value;
             }
         }
+
+        private static bool _JSONErrorMessage = false;
+        public static bool JSONErrorMessage
+        {
+            get { return _JSONErrorMessage; }
+            set
+            {
+                _JSONErrorMessage = value;
+            }
+        }
     }
 }
