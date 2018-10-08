@@ -83,7 +83,7 @@ namespace MQTTDataProvider.ViewModel
 
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            MQTTDataManager.CloseConnection();
+            CloseConnection();
             CloseApp();
             Environment.Exit(Environment.ExitCode);
         }
@@ -178,7 +178,6 @@ namespace MQTTDataProvider.ViewModel
         #region Constructor
         public MainWindowViewModel()
         {
-            Globals.IsRecordingMqtt = false;
             mdmanager.NewMqttTextReceived += SendData;
             HubConnector.StartConnection();
             HubConnector.MyConnector.startRecordingEvent += MyConnector_startRecordingEvent;
@@ -193,16 +192,13 @@ namespace MQTTDataProvider.ViewModel
         {
             try
             {
-
                 Process[] pp1 = Process.GetProcessesByName("MQTTDataProvider");
                 pp1[0].CloseMainWindow();
-
             }
             catch (Exception e)
             {
                 Console.WriteLine("I got an exception after closing App" + e);
             }
-
         }
   
         public void SetValueNames()
@@ -244,9 +240,7 @@ namespace MQTTDataProvider.ViewModel
                 "GSR"
             };
             HubConnector.SetValuesName(names);
-
         }
-
         #endregion
     }
 }
