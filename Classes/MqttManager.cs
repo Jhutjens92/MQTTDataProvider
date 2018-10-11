@@ -1,17 +1,13 @@
 ﻿using MQTTDataProvider.ViewModel;
-using Newtonsoft.Json.Linq;
 using System;
-using System.Linq;
 using System.Text;
 using uPLibrary.Networking.M2Mqtt.Messages;
 using uPLibrary.Networking.M2Mqtt;
-using Newtonsoft.Json.Serialization;
-using System.Runtime.Serialization;
-using Newtonsoft.Json;
 
-namespace MQTTDataProvider.MQTTManager
+
+namespace MQTTDataProvider.Classes
 {
-    class MQTTDataManager
+    class MqttManager
     {
         #region Instance Declaration
         static MqttClient Client;
@@ -19,16 +15,14 @@ namespace MQTTDataProvider.MQTTManager
 
         #region Vars
         // String containing the MQTT published message
-        string ReceivedMessage;
+        public static string ReceivedMessage;
 
-        // JSON Parser MQTT message
-        dynamic Parsed_ReceivedMessage;
+        // Default brokeraddress
+        public static string BrokerAddress = "localhost";
 
         // Default topic value for WEKIT
         readonly string Topic_Subscribe = "wekit/vest";
 
-        // Default brokeraddress
-        string BrokerAddress = "localhost";
         #endregion
 
         #region Events
@@ -40,6 +34,7 @@ namespace MQTTDataProvider.MQTTManager
         {
             NewMqttTextReceived?.Invoke(this, UpdateValuesEvent);
         }
+
         //inherits from event args which holds all the values that needs to be passed as args in the event
         public class TextReceivedEventArgs : EventArgs
         {
@@ -525,11 +520,11 @@ namespace MQTTDataProvider.MQTTManager
         #endregion
 
         #region Constructor
-            // Constructor
-            public MQTTDataManager() 
+        // Constructor
+        public MqttManager() 
         {
             string ClientId;
-            SetParameters();
+            ParameterSet.SetParameters();
             Client = new MqttClient(BrokerAddress);
             ClientId = Guid.NewGuid().ToString();
             // register a callback-function (we have to implement, see below) which is called by the library when a message was received
@@ -552,7 +547,7 @@ namespace MQTTDataProvider.MQTTManager
             ReceivedMessage = Encoding.UTF8.GetString(e.Message);
             if (Globals.IsRecordingMqtt == true)
             {
-                JSONParseReceivedMessage();
+                JsonParser.JSONParseReceivedMessage();
                 UpdateValues();
             }
         }
@@ -566,41 +561,6 @@ namespace MQTTDataProvider.MQTTManager
             Client.Publish("wekit/vest/Sht0_Hum", Encoding.UTF8.GetBytes(e.Humidity_External), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
             Client.Publish("wekit/vest/Sht1_Temp", Encoding.UTF8.GetBytes(e.Temp_Internal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
             Client.Publish("wekit/vest/Sht1_Hum", Encoding.UTF8.GetBytes(e.Humidity_Internal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-        }
-
-        // Checks the startup parameters
-        private void SetParameters()
-        {
-            string[] Parameters = Environment.GetCommandLineArgs();
-            if (Parameters.Any(s => s.Contains("-ba")))
-            {
-                int parameterIndex = Array.IndexOf(Parameters, "-ba");
-                BrokerAddress = Parameters[parameterIndex + 1];
-            }
-            else
-            {
-                Console.WriteLine("No valid paramater provided, starting with default values.");
-            }
-        }
-
-        // Parse MQTT JSON String
-        private void JSONParseReceivedMessage()
-        {
-            Globals.JSONErrorMessage = false;
-            try
-            {
-                Parsed_ReceivedMessage = JObject.Parse(ReceivedMessage);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Invalid JSON String");
-            }
-        }
-
-        public void HandleDeserializationError(object sender, ErrorEventArgs errorArgs)
-        {
-            var currentError = errorArgs.ErrorContext.Error.Message;
-            errorArgs.ErrorContext.Handled = true;
         }
 
         // Subscribes to the default WEKIT Topic ("wekit/vest")
@@ -618,44 +578,44 @@ namespace MQTTDataProvider.MQTTManager
                 TextReceivedEventArgs args = new TextReceivedEventArgs
                 {
                     TextReceived = ReceivedMessage,
-                    ESP_TimeStamp = Parsed_ReceivedMessage.time,
-                    IMU1_AccX = Parsed_ReceivedMessage.imus[0].ax,
-                    IMU1_AccY = Parsed_ReceivedMessage.imus[0].ay,
-                    IMU1_AccZ = Parsed_ReceivedMessage.imus[0].az,
-                    IMU1_GyroX = Parsed_ReceivedMessage.imus[0].gx,
-                    IMU1_GyroY = Parsed_ReceivedMessage.imus[0].gy,
-                    IMU1_GyroZ = Parsed_ReceivedMessage.imus[0].gz,
-                    IMU1_MagX = Parsed_ReceivedMessage.imus[0].mx,
-                    IMU1_MagY = Parsed_ReceivedMessage.imus[0].my,
-                    IMU1_MagZ = Parsed_ReceivedMessage.imus[0].mz,
-                    IMU1_Q0 = Parsed_ReceivedMessage.imus[0].q0,
-                    IMU1_Q1 = Parsed_ReceivedMessage.imus[0].q1,
-                    IMU1_Q2 = Parsed_ReceivedMessage.imus[0].q2,
-                    IMU1_Q3 = Parsed_ReceivedMessage.imus[0].q3,
-                    IMU2_AccX = Parsed_ReceivedMessage.imus[1].ax,
-                    IMU2_AccY = Parsed_ReceivedMessage.imus[1].ay,
-                    IMU2_AccZ = Parsed_ReceivedMessage.imus[1].az,
-                    IMU2_GyroX = Parsed_ReceivedMessage.imus[1].gx,
-                    IMU2_GyroY = Parsed_ReceivedMessage.imus[1].gy,
-                    IMU2_GyroZ = Parsed_ReceivedMessage.imus[1].gz,
-                    IMU2_MagX = Parsed_ReceivedMessage.imus[1].mx,
-                    IMU2_MagY = Parsed_ReceivedMessage.imus[1].my,
-                    IMU2_MagZ = Parsed_ReceivedMessage.imus[1].mz,
-                    IMU2_Q0 = Parsed_ReceivedMessage.imus[1].q0,
-                    IMU2_Q1 = Parsed_ReceivedMessage.imus[1].q1,
-                    IMU2_Q2 = Parsed_ReceivedMessage.imus[1].q2,
-                    IMU2_Q3 = Parsed_ReceivedMessage.imus[1].q3,
-                    Temp_External = Parsed_ReceivedMessage.shts[0].temp,
-                    Humidity_External = Parsed_ReceivedMessage.shts[0].hum,
-                    Temp_Internal = Parsed_ReceivedMessage.shts[1].temp,
-                    Humidity_Internal = Parsed_ReceivedMessage.shts[1].hum,
-                    Pulse_TempLobe = Parsed_ReceivedMessage.pulse,
-                    GSR = Parsed_ReceivedMessage.gsr
+                    ESP_TimeStamp = JsonParser.ParsedReceivedMessage.time,
+                    IMU1_AccX = JsonParser.ParsedReceivedMessage.imus[0].ax,
+                    IMU1_AccY = JsonParser.ParsedReceivedMessage.imus[0].ay,
+                    IMU1_AccZ = JsonParser.ParsedReceivedMessage.imus[0].az,
+                    IMU1_GyroX = JsonParser.ParsedReceivedMessage.imus[0].gx,
+                    IMU1_GyroY = JsonParser.ParsedReceivedMessage.imus[0].gy,
+                    IMU1_GyroZ = JsonParser.ParsedReceivedMessage.imus[0].gz,
+                    IMU1_MagX = JsonParser.ParsedReceivedMessage.imus[0].mx,
+                    IMU1_MagY = JsonParser.ParsedReceivedMessage.imus[0].my,
+                    IMU1_MagZ = JsonParser.ParsedReceivedMessage.imus[0].mz,
+                    IMU1_Q0 = JsonParser.ParsedReceivedMessage.imus[0].q0,
+                    IMU1_Q1 = JsonParser.ParsedReceivedMessage.imus[0].q1,
+                    IMU1_Q2 = JsonParser.ParsedReceivedMessage.imus[0].q2,
+                    IMU1_Q3 = JsonParser.ParsedReceivedMessage.imus[0].q3,
+                    IMU2_AccX = JsonParser.ParsedReceivedMessage.imus[1].ax,
+                    IMU2_AccY = JsonParser.ParsedReceivedMessage.imus[1].ay,
+                    IMU2_AccZ = JsonParser.ParsedReceivedMessage.imus[1].az,
+                    IMU2_GyroX = JsonParser.ParsedReceivedMessage.imus[1].gx,
+                    IMU2_GyroY = JsonParser.ParsedReceivedMessage.imus[1].gy,
+                    IMU2_GyroZ = JsonParser.ParsedReceivedMessage.imus[1].gz,
+                    IMU2_MagX = JsonParser.ParsedReceivedMessage.imus[1].mx,
+                    IMU2_MagY = JsonParser.ParsedReceivedMessage.imus[1].my,
+                    IMU2_MagZ = JsonParser.ParsedReceivedMessage.imus[1].mz,
+                    IMU2_Q0 = JsonParser.ParsedReceivedMessage.imus[1].q0,
+                    IMU2_Q1 = JsonParser.ParsedReceivedMessage.imus[1].q1,
+                    IMU2_Q2 = JsonParser.ParsedReceivedMessage.imus[1].q2,
+                    IMU2_Q3 = JsonParser.ParsedReceivedMessage.imus[1].q3,
+                    Temp_External = JsonParser.ParsedReceivedMessage.shts[0].temp,
+                    Humidity_External = JsonParser.ParsedReceivedMessage.shts[0].hum,
+                    Temp_Internal = JsonParser.ParsedReceivedMessage.shts[1].temp,
+                    Humidity_Internal = JsonParser.ParsedReceivedMessage.shts[1].hum,
+                    Pulse_TempLobe = JsonParser.ParsedReceivedMessage.pulse,
+                    GSR = JsonParser.ParsedReceivedMessage.gsr
                 };
                 OnNewTextReceived(args);
                 PublishData(args);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 TextReceivedEventArgs args = new TextReceivedEventArgs
                 {

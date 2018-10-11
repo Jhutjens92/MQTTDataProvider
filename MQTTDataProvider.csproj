@@ -70,10 +70,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\JsonParser.cs" />
+    <Compile Include="Classes\ParameterSet.cs" />
     <Compile Include="Model\BindableBase.cs" />
     <Compile Include="Model\HubConnector.cs" />
     <Compile Include="Model\RelayCommand.cs" />
-    <Compile Include="MQTTManager\MQTTDataManager.cs" />
+    <Compile Include="Classes\MqttManager.cs" />
     <Compile Include="ViewModel\Globals.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Page Include="MainWindowView.xaml">
