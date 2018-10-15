@@ -10,7 +10,7 @@ namespace MQTTDataProvider.ViewModel
     public static class Globals
     {
         private static bool _isRecordingMqtt = false;
-        public static bool IsRecordingMqtt
+        public static bool isRecordingMqtt
         {
             get { return _isRecordingMqtt; }
             set
@@ -19,13 +19,13 @@ namespace MQTTDataProvider.ViewModel
             }
         }
 
-        private static bool _JSONErrorMessage = false;
-        public static bool JSONErrorMessage
+        private static bool _jsonErrorMessage = false;
+        public static bool jsonErrorMessage
         {
-            get { return _JSONErrorMessage; }
+            get { return _jsonErrorMessage; }
             set
             {
-                _JSONErrorMessage = value;
+                _jsonErrorMessage = value;
             }
         }
     }

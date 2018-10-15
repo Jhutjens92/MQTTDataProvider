@@ -15,7 +15,7 @@ namespace MQTTDataProvider.Classes
             if (Parameters.Any(s => s.Contains("-ba")))
             {
                 int parameterIndex = Array.IndexOf(Parameters, "-ba");
-                MqttManager.BrokerAddress = Parameters[parameterIndex + 1];
+                MqttManager.brokerAddress = Parameters[parameterIndex + 1];
             }
             else
             {

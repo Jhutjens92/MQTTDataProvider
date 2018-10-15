@@ -13,17 +13,17 @@ namespace MQTTDataProvider.Classes
     {
         #region Vars
         // JSON Parser MQTT message
-        public static dynamic ParsedReceivedMessage;
+        public static dynamic parsedReceivedMessage;
         #endregion
 
         #region Methods
         // Parse MQTT JSON String
         public static void JSONParseReceivedMessage()
         {
-            Globals.JSONErrorMessage = false;
+            Globals.jsonErrorMessage = false;
             try
             {
-                ParsedReceivedMessage = JObject.Parse(MqttManager.ReceivedMessage);
+                parsedReceivedMessage = JObject.Parse(MqttManager.receivedMessage);
             }
             catch (Exception)
             {

@@ -15,13 +15,13 @@ namespace MQTTDataProvider.Classes
 
         #region Vars
         // String containing the MQTT published message
-        public static string ReceivedMessage;
+        public static string receivedMessage;
 
         // Default brokeraddress
-        public static string BrokerAddress = "localhost";
+        public static string brokerAddress = "localhost";
 
         // Default topic value for WEKIT
-        readonly string Topic_Subscribe = "wekit/vest";
+        readonly string topicSubscribe = "wekit/vest";
 
         #endregion
 
@@ -38,12 +38,12 @@ namespace MQTTDataProvider.Classes
         //inherits from event args which holds all the values that needs to be passed as args in the event
         public class TextReceivedEventArgs : EventArgs
         {
-            private string _TextReceived;
-            public string TextReceived
+            private string _textReceived;
+            public string textReceived
             {
                 get
                 {
-                    return _TextReceived;
+                    return _textReceived;
                 }
                 set
                 {
@@ -51,469 +51,469 @@ namespace MQTTDataProvider.Classes
                     {
                         value = 0.ToString();
                     }
-                    _TextReceived = value;
-                }
-            }
-
-            private string _IMU1_AccX = "";
-            public String IMU1_AccX
-            {
-                get { return _IMU1_AccX; }
-                set
-                {
-                    if (value == null)
-                    {
-                        value = 0.ToString();
-                    }
-                    _IMU1_AccX = value;
+                    _textReceived = value;
                 }
             }
 
-            private string _IMU1_AccY = "";
-            public String IMU1_AccY
+            private string _imu1_AccX = "";
+            public String imu1_AccX
             {
-                get { return _IMU1_AccY; }
+                get { return _imu1_AccX; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU1_AccY = value;
+                    _imu1_AccX = value;
                 }
             }
 
-            private string _IMU1_AccZ = "";
-            public String IMU1_AccZ
+            private string _imu1_AccY = "";
+            public String imu1_AccY
             {
-                get { return _IMU1_AccZ; }
+                get { return _imu1_AccY; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU1_AccZ = value;
+                    _imu1_AccY = value;
                 }
             }
 
-            private string _IMU1_GyroX = "";
-            public String IMU1_GyroX
+            private string _imu1_AccZ = "";
+            public String imu1_AccZ
             {
-                get { return _IMU1_GyroX; }
+                get { return _imu1_AccZ; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU1_GyroX = value;
+                    _imu1_AccZ = value;
                 }
             }
 
-            private string _IMU1_GyroY = "";
-            public String IMU1_GyroY
+            private string _imu1_GyroX = "";
+            public String imu1_GyroX
             {
-                get { return _IMU1_GyroY; }
+                get { return _imu1_GyroX; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU1_GyroY = value;
+                    _imu1_GyroX = value;
                 }
             }
 
-            private string _IMU1_GyroZ = "";
-            public String IMU1_GyroZ
+            private string _imu1_GyroY = "";
+            public String imu1_GyroY
             {
-                get { return _IMU1_GyroZ; }
+                get { return _imu1_GyroY; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU1_GyroZ = value;
+                    _imu1_GyroY = value;
                 }
             }
 
-            private string _IMU1_MagX = "";
-            public String IMU1_MagX
+            private string _imu1_GyroZ = "";
+            public String imu1_GyroZ
             {
-                get { return _IMU1_MagX; }
+                get { return _imu1_GyroZ; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU1_MagX = value;
+                    _imu1_GyroZ = value;
                 }
             }
 
-            private string _IMU1_MagY = "";
-            public String IMU1_MagY
+            private string _imu1_MagX = "";
+            public String imu1_MagX
             {
-                get { return _IMU1_MagY; }
+                get { return _imu1_MagX; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU1_MagY = value;
+                    _imu1_MagX = value;
                 }
             }
 
-            private string _IMU1_MagZ = "";
-            public String IMU1_MagZ
+            private string _imu1_MagY = "";
+            public String imu1_MagY
             {
-                get { return _IMU1_MagZ; }
+                get { return _imu1_MagY; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU1_MagZ = value;
+                    _imu1_MagY = value;
                 }
             }
 
-            private string _IMU1_Q0 = "";
-            public String IMU1_Q0
+            private string _imu1_MagZ = "";
+            public String imu1_MagZ
             {
-                get { return _IMU1_Q0; }
+                get { return _imu1_MagZ; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU1_Q0 = value;
+                    _imu1_MagZ = value;
                 }
             }
 
-            private string _IMU1_Q1 = "";
-            public String IMU1_Q1
+            private string _imu1_Q0 = "";
+            public String imu1_Q0
             {
-                get { return _IMU1_Q1; }
+                get { return _imu1_Q0; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU1_Q1 = value;
+                    _imu1_Q0 = value;
                 }
             }
 
-            private string _IMU1_Q2 = "";
-            public String IMU1_Q2
+            private string _imu1_Q1 = "";
+            public String imu1_Q1
             {
-                get { return _IMU1_Q2; }
+                get { return _imu1_Q1; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU1_Q2 = value;
+                    _imu1_Q1 = value;
                 }
             }
 
-            private string _IMU1_Q3 = "";
-            public String IMU1_Q3
+            private string _imu1_Q2 = "";
+            public String imu1_Q2
             {
-                get { return _IMU1_Q3; }
+                get { return _imu1_Q2; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU1_Q3 = value;
+                    _imu1_Q2 = value;
                 }
             }
 
-            private string _IMU2_AccX = "";
-            public String IMU2_AccX
+            private string _imu1_Q3 = "";
+            public String imu1_Q3
             {
-                get { return _IMU2_AccX; }
+                get { return _imu1_Q3; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU2_AccX = value;
+                    _imu1_Q3 = value;
                 }
             }
 
-            private string _IMU2_AccY = "";
-            public String IMU2_AccY
+            private string _imu2_AccX = "";
+            public String imu2_AccX
             {
-                get { return _IMU2_AccY; }
+                get { return _imu2_AccX; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU2_AccY = value;
+                    _imu2_AccX = value;
                 }
             }
 
-            private string _IMU2_AccZ = "";
-            public String IMU2_AccZ
+            private string _imu2_AccY = "";
+            public String imu2_AccY
             {
-                get { return _IMU2_AccZ; }
+                get { return _imu2_AccY; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU2_AccZ = value;
+                    _imu2_AccY = value;
                 }
             }
 
-            private string _IMU2_GyroX = "";
-            public String IMU2_GyroX
+            private string _imu2_AccZ = "";
+            public String imu2_AccZ
             {
-                get { return _IMU2_GyroX; }
+                get { return _imu2_AccZ; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU2_GyroX = value;
+                    _imu2_AccZ = value;
                 }
             }
 
-            private string _IMU2_GyroY = "";
-            public String IMU2_GyroY
+            private string _imu2_GyroX = "";
+            public String imu2_GyroX
             {
-                get { return _IMU2_GyroY; }
+                get { return _imu2_GyroX; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU2_GyroY = value;
+                    _imu2_GyroX = value;
                 }
             }
 
-            private string _IMU2_GyroZ = "";
-            public String IMU2_GyroZ
+            private string _imu2_GyroY = "";
+            public String imu2_GyroY
             {
-                get { return _IMU2_GyroZ; }
+                get { return _imu2_GyroY; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU2_GyroZ = value;
+                    _imu2_GyroY = value;
                 }
             }
 
-            private string _IMU2_MagX = "";
-            public String IMU2_MagX
+            private string _imu2_GyroZ = "";
+            public String imu2_GyroZ
             {
-                get { return _IMU2_MagX; }
+                get { return _imu2_GyroZ; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU2_MagX = value;
+                    _imu2_GyroZ = value;
                 }
             }
 
-            private string _IMU2_MagY = "";
-            public String IMU2_MagY
+            private string _imu2_MagX = "";
+            public String imu2_MagX
             {
-                get { return _IMU2_MagY; }
+                get { return _imu2_MagX; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU2_MagY = value;
+                    _imu2_MagX = value;
                 }
             }
 
-            private string _IMU2_MagZ = "";
-            public String IMU2_MagZ
+            private string _imu2_MagY = "";
+            public String imu2_MagY
             {
-                get { return _IMU2_MagZ; }
+                get { return _imu2_MagY; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU2_MagZ = value;
+                    _imu2_MagY = value;
+                }
+            }
+
+            private string _imu2_MagZ = "";
+            public String imu2_MagZ
+            {
+                get { return _imu2_MagZ; }
+                set
+                {
+                    if (value == null)
+                    {
+                        value = 0.ToString();
+                    }
+                    _imu2_MagZ = value;
                  }
             }
 
-            private string _IMU2_Q0 = "";
-            public String IMU2_Q0
+            private string _imu2_Q0 = "";
+            public String imu2_Q0
             {
-                get { return _IMU2_Q0; }
+                get { return _imu2_Q0; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU2_Q0 = value;
+                    _imu2_Q0 = value;
                 }
             }
 
-            private string _IMU2_Q1 = "";
-            public String IMU2_Q1
+            private string _imu2_Q1 = "";
+            public String imu2_Q1
             {
-                get { return _IMU2_Q1; }
+                get { return _imu2_Q1; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU2_Q1 = value;
+                    _imu2_Q1 = value;
                 }
             }
 
-            private string _IMU2_Q2 = "";
-            public String IMU2_Q2
+            private string _imu2_Q2 = "";
+            public String imu2_Q2
             {
-                get { return _IMU2_Q2; }
+                get { return _imu2_Q2; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU2_Q2 = value;
+                    _imu2_Q2 = value;
                 }
             }
 
-            private string _IMU2_Q3 = "";
-            public String IMU2_Q3
+            private string _imu2_Q3 = "";
+            public String imu2_Q3
             {
-                get { return _IMU2_Q3; }
+                get { return _imu2_Q3; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _IMU2_Q3 = value;
+                    _imu2_Q3 = value;
                 }
             }
 
-            private string _Temp_External = "";
-            public String Temp_External
+            private string _tempExternal = "";
+            public String tempExternal
             {
-                get { return _Temp_External; }
+                get { return _tempExternal; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _Temp_External = value;
+                    _tempExternal = value;
                 }
             }
 
-            private string _Humidity_External = "";
-            public String Humidity_External
+            private string _humExternal = "";
+            public String humExternal
             {
-                get { return _Humidity_External; }
+                get { return _humExternal; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _Humidity_External = value;
+                    _humExternal = value;
                 }
             }
 
-            private string _Temp_Internal = "";
-            public String Temp_Internal
+            private string _tempInternal = "";
+            public String tempInternal
             {
-                get { return _Temp_Internal; }
+                get { return _tempInternal; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _Temp_Internal = value;
+                    _tempInternal = value;
                 }
             }
 
-            private string _Humidity_Internal = "";
-            public String Humidity_Internal
+            private string _humInternal = "";
+            public String humInternal
             {
-                get { return _Humidity_Internal; }
+                get { return _humInternal; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _Humidity_Internal = value;
+                    _humInternal = value;
                 }
             }
 
-            private string _Pulse_TempLobe = "";
-            public String Pulse_TempLobe
+            private string _pulse = "";
+            public String pulse
             {
-                get { return _Pulse_TempLobe; }
+                get { return _pulse; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _Pulse_TempLobe = value;
+                    _pulse = value;
                 }
             }
 
-            private string _GSR = "";
-            public String GSR
+            private string _gsr = "";
+            public String gsr
             {
-                get { return _GSR; }
+                get { return _gsr; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _GSR = value;
+                    _gsr = value;
                 }
             }
 
-            private string _ESP_TimeStamp = "";
-            public String ESP_TimeStamp
+            private string _espTimeStamp = "";
+            public String espTimeStamp
             {
-                get { return _ESP_TimeStamp; }
+                get { return _espTimeStamp; }
                 set
                 {
                     if (value == null)
                     {
                         value = 0.ToString();
                     }
-                    _ESP_TimeStamp = value;
+                    _espTimeStamp = value;
                 }
             }
         }
@@ -525,7 +525,7 @@ namespace MQTTDataProvider.Classes
         {
             string ClientId;
             ParameterSet.SetParameters();
-            Client = new MqttClient(BrokerAddress);
+            Client = new MqttClient(brokerAddress);
             ClientId = Guid.NewGuid().ToString();
             // register a callback-function (we have to implement, see below) which is called by the library when a message was received
             Client.MqttMsgPublishReceived += Client_MqttMsgPublishReceived;
@@ -544,8 +544,8 @@ namespace MQTTDataProvider.Classes
         // Executes when a MQTT message was received
         private void Client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
         {
-            ReceivedMessage = Encoding.UTF8.GetString(e.Message);
-            if (Globals.IsRecordingMqtt == true)
+            receivedMessage = Encoding.UTF8.GetString(e.Message);
+            if (Globals.isRecordingMqtt == true)
             {
                 JsonParser.JSONParseReceivedMessage();
                 UpdateValues();
@@ -555,18 +555,18 @@ namespace MQTTDataProvider.Classes
         // Send the data from ESP to the VTT Player using MQTT/QOS 1
         private void PublishData(TextReceivedEventArgs e)
         {
-            Client.Publish("wekit/vest/GSR_Raw", Encoding.UTF8.GetBytes(e.GSR), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            Client.Publish("wekit/vest/Pulse_Raw", Encoding.UTF8.GetBytes(e.Pulse_TempLobe), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            Client.Publish("wekit/vest/Sht0_Temp", Encoding.UTF8.GetBytes(e.Temp_External), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            Client.Publish("wekit/vest/Sht0_Hum", Encoding.UTF8.GetBytes(e.Humidity_External), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            Client.Publish("wekit/vest/Sht1_Temp", Encoding.UTF8.GetBytes(e.Temp_Internal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            Client.Publish("wekit/vest/Sht1_Hum", Encoding.UTF8.GetBytes(e.Humidity_Internal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            Client.Publish("wekit/vest/GSR_Raw", Encoding.UTF8.GetBytes(e.gsr), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            Client.Publish("wekit/vest/Pulse_Raw", Encoding.UTF8.GetBytes(e.pulse), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            Client.Publish("wekit/vest/Sht0_Temp", Encoding.UTF8.GetBytes(e.tempExternal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            Client.Publish("wekit/vest/Sht0_Hum", Encoding.UTF8.GetBytes(e.humExternal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            Client.Publish("wekit/vest/Sht1_Temp", Encoding.UTF8.GetBytes(e.tempInternal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            Client.Publish("wekit/vest/Sht1_Hum", Encoding.UTF8.GetBytes(e.humInternal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
         }
 
         // Subscribes to the default WEKIT Topic ("wekit/vest")
         private void Subscribe_Default()
         {
-            Client.Subscribe(new string[] { Topic_Subscribe }, new byte[] { 1 });
+            Client.Subscribe(new string[] { topicSubscribe }, new byte[] { 1 });
         }
 
         // Sets all the variables to the received values
@@ -577,40 +577,40 @@ namespace MQTTDataProvider.Classes
             {
                 TextReceivedEventArgs args = new TextReceivedEventArgs
                 {
-                    TextReceived = ReceivedMessage,
-                    ESP_TimeStamp = JsonParser.ParsedReceivedMessage.time,
-                    IMU1_AccX = JsonParser.ParsedReceivedMessage.imus[0].ax,
-                    IMU1_AccY = JsonParser.ParsedReceivedMessage.imus[0].ay,
-                    IMU1_AccZ = JsonParser.ParsedReceivedMessage.imus[0].az,
-                    IMU1_GyroX = JsonParser.ParsedReceivedMessage.imus[0].gx,
-                    IMU1_GyroY = JsonParser.ParsedReceivedMessage.imus[0].gy,
-                    IMU1_GyroZ = JsonParser.ParsedReceivedMessage.imus[0].gz,
-                    IMU1_MagX = JsonParser.ParsedReceivedMessage.imus[0].mx,
-                    IMU1_MagY = JsonParser.ParsedReceivedMessage.imus[0].my,
-                    IMU1_MagZ = JsonParser.ParsedReceivedMessage.imus[0].mz,
-                    IMU1_Q0 = JsonParser.ParsedReceivedMessage.imus[0].q0,
-                    IMU1_Q1 = JsonParser.ParsedReceivedMessage.imus[0].q1,
-                    IMU1_Q2 = JsonParser.ParsedReceivedMessage.imus[0].q2,
-                    IMU1_Q3 = JsonParser.ParsedReceivedMessage.imus[0].q3,
-                    IMU2_AccX = JsonParser.ParsedReceivedMessage.imus[1].ax,
-                    IMU2_AccY = JsonParser.ParsedReceivedMessage.imus[1].ay,
-                    IMU2_AccZ = JsonParser.ParsedReceivedMessage.imus[1].az,
-                    IMU2_GyroX = JsonParser.ParsedReceivedMessage.imus[1].gx,
-                    IMU2_GyroY = JsonParser.ParsedReceivedMessage.imus[1].gy,
-                    IMU2_GyroZ = JsonParser.ParsedReceivedMessage.imus[1].gz,
-                    IMU2_MagX = JsonParser.ParsedReceivedMessage.imus[1].mx,
-                    IMU2_MagY = JsonParser.ParsedReceivedMessage.imus[1].my,
-                    IMU2_MagZ = JsonParser.ParsedReceivedMessage.imus[1].mz,
-                    IMU2_Q0 = JsonParser.ParsedReceivedMessage.imus[1].q0,
-                    IMU2_Q1 = JsonParser.ParsedReceivedMessage.imus[1].q1,
-                    IMU2_Q2 = JsonParser.ParsedReceivedMessage.imus[1].q2,
-                    IMU2_Q3 = JsonParser.ParsedReceivedMessage.imus[1].q3,
-                    Temp_External = JsonParser.ParsedReceivedMessage.shts[0].temp,
-                    Humidity_External = JsonParser.ParsedReceivedMessage.shts[0].hum,
-                    Temp_Internal = JsonParser.ParsedReceivedMessage.shts[1].temp,
-                    Humidity_Internal = JsonParser.ParsedReceivedMessage.shts[1].hum,
-                    Pulse_TempLobe = JsonParser.ParsedReceivedMessage.pulse,
-                    GSR = JsonParser.ParsedReceivedMessage.gsr
+                    textReceived = receivedMessage,
+                    espTimeStamp = JsonParser.parsedReceivedMessage.time,
+                    imu1_AccX = JsonParser.parsedReceivedMessage.imus[0].ax,
+                    imu1_AccY = JsonParser.parsedReceivedMessage.imus[0].ay,
+                    imu1_AccZ = JsonParser.parsedReceivedMessage.imus[0].az,
+                    imu1_GyroX = JsonParser.parsedReceivedMessage.imus[0].gx,
+                    imu1_GyroY = JsonParser.parsedReceivedMessage.imus[0].gy,
+                    imu1_GyroZ = JsonParser.parsedReceivedMessage.imus[0].gz,
+                    imu1_MagX = JsonParser.parsedReceivedMessage.imus[0].mx,
+                    imu1_MagY = JsonParser.parsedReceivedMessage.imus[0].my,
+                    imu1_MagZ = JsonParser.parsedReceivedMessage.imus[0].mz,
+                    imu1_Q0 = JsonParser.parsedReceivedMessage.imus[0].q0,
+                    imu1_Q1 = JsonParser.parsedReceivedMessage.imus[0].q1,
+                    imu1_Q2 = JsonParser.parsedReceivedMessage.imus[0].q2,
+                    imu1_Q3 = JsonParser.parsedReceivedMessage.imus[0].q3,
+                    imu2_AccX = JsonParser.parsedReceivedMessage.imus[1].ax,
+                    imu2_AccY = JsonParser.parsedReceivedMessage.imus[1].ay,
+                    imu2_AccZ = JsonParser.parsedReceivedMessage.imus[1].az,
+                    imu2_GyroX = JsonParser.parsedReceivedMessage.imus[1].gx,
+                    imu2_GyroY = JsonParser.parsedReceivedMessage.imus[1].gy,
+                    imu2_GyroZ = JsonParser.parsedReceivedMessage.imus[1].gz,
+                    imu2_MagX = JsonParser.parsedReceivedMessage.imus[1].mx,
+                    imu2_MagY = JsonParser.parsedReceivedMessage.imus[1].my,
+                    imu2_MagZ = JsonParser.parsedReceivedMessage.imus[1].mz,
+                    imu2_Q0 = JsonParser.parsedReceivedMessage.imus[1].q0,
+                    imu2_Q1 = JsonParser.parsedReceivedMessage.imus[1].q1,
+                    imu2_Q2 = JsonParser.parsedReceivedMessage.imus[1].q2,
+                    imu2_Q3 = JsonParser.parsedReceivedMessage.imus[1].q3,
+                    tempExternal = JsonParser.parsedReceivedMessage.shts[0].temp,
+                    humExternal = JsonParser.parsedReceivedMessage.shts[0].hum,
+                    tempInternal = JsonParser.parsedReceivedMessage.shts[1].temp,
+                    humInternal = JsonParser.parsedReceivedMessage.shts[1].hum,
+                    pulse = JsonParser.parsedReceivedMessage.pulse,
+                    gsr = JsonParser.parsedReceivedMessage.gsr
                 };
                 OnNewTextReceived(args);
                 PublishData(args);
@@ -619,9 +619,9 @@ namespace MQTTDataProvider.Classes
             {
                 TextReceivedEventArgs args = new TextReceivedEventArgs
                 {
-                    TextReceived = "Invalid JSON message at the MQTT Receiver"
+                    textReceived = "Invalid JSON message at the MQTT Receiver"
                 };
-                Globals.JSONErrorMessage = true;
+                Globals.jsonErrorMessage = true;
                 OnNewTextReceived(args);
             }
 
