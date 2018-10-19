@@ -7,9 +7,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
 using MQTTDataProvider.Model;
-using MQTTDataProvider.Classes;
+using MQTTDataProvider.MQTTManager;
 using uPLibrary.Networking.M2Mqtt.Messages;
-using static MQTTDataProvider.Classes.MqttManager;
+using static MQTTDataProvider.MQTTManager.MQTTDataManager;
 
 
 namespace MQTTDataProvider.ViewModel
@@ -17,7 +17,7 @@ namespace MQTTDataProvider.ViewModel
     class MainWindowViewModel : BindableBase
     {
         #region Instance Declaration
-        MqttManager mdmanager = new MqttManager();
+        MQTTDataManager mdmanager = new MQTTDataManager();
         #endregion
 
         #region Vars

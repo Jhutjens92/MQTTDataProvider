@@ -1,13 +1,17 @@
 ﻿using MQTTDataProvider.ViewModel;
+using Newtonsoft.Json.Linq;
 using System;
+using System.Linq;
 using System.Text;
 using uPLibrary.Networking.M2Mqtt.Messages;
 using uPLibrary.Networking.M2Mqtt;
+using Newtonsoft.Json.Serialization;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
 
-
-namespace MQTTDataProvider.Classes
+namespace MQTTDataProvider.MQTTManager
 {
-    class MqttManager
+    class MQTTDataManager
     {
         #region Instance Declaration
         static MqttClient Client;
@@ -15,14 +19,23 @@ namespace MQTTDataProvider.Classes
 
         #region Vars
         // String containing the MQTT published message
+<<<<<<< HEAD:Classes/MqttManager.cs
         public static string receivedMessage;
 
         // Default brokeraddress
         public static string brokerAddress = "localhost";
+=======
+        string ReceivedMessage;
+
+        // JSON Parser MQTT message
+        dynamic Parsed_ReceivedMessage;
+>>>>>>> parent of b24c776... Changed classes, changed naming:MQTTManager/MqttDataManager.cs
 
         // Default topic value for WEKIT
         readonly string topicSubscribe = "wekit/vest";
 
+        // Default brokeraddress
+        string BrokerAddress = "localhost";
         #endregion
 
         #region Events
@@ -34,7 +47,6 @@ namespace MQTTDataProvider.Classes
         {
             NewMqttTextReceived?.Invoke(this, UpdateValuesEvent);
         }
-
         //inherits from event args which holds all the values that needs to be passed as args in the event
         public class TextReceivedEventArgs : EventArgs
         {
@@ -520,12 +532,17 @@ namespace MQTTDataProvider.Classes
         #endregion
 
         #region Constructor
-        // Constructor
-        public MqttManager() 
+            // Constructor
+            public MQTTDataManager() 
         {
             string ClientId;
+<<<<<<< HEAD:Classes/MqttManager.cs
             ParameterSet.SetParameters();
             Client = new MqttClient(brokerAddress);
+=======
+            SetParameters();
+            Client = new MqttClient(BrokerAddress);
+>>>>>>> parent of b24c776... Changed classes, changed naming:MQTTManager/MqttDataManager.cs
             ClientId = Guid.NewGuid().ToString();
             // register a callback-function (we have to implement, see below) which is called by the library when a message was received
             Client.MqttMsgPublishReceived += Client_MqttMsgPublishReceived;
@@ -547,7 +564,7 @@ namespace MQTTDataProvider.Classes
             receivedMessage = Encoding.UTF8.GetString(e.Message);
             if (Globals.isRecordingMqtt == true)
             {
-                JsonParser.JSONParseReceivedMessage();
+                JSONParseReceivedMessage();
                 UpdateValues();
             }
         }
@@ -561,6 +578,41 @@ namespace MQTTDataProvider.Classes
             Client.Publish("wekit/vest/Sht0_Hum", Encoding.UTF8.GetBytes(e.humExternal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
             Client.Publish("wekit/vest/Sht1_Temp", Encoding.UTF8.GetBytes(e.tempInternal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
             Client.Publish("wekit/vest/Sht1_Hum", Encoding.UTF8.GetBytes(e.humInternal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+        }
+
+        // Checks the startup parameters
+        private void SetParameters()
+        {
+            string[] Parameters = Environment.GetCommandLineArgs();
+            if (Parameters.Any(s => s.Contains("-ba")))
+            {
+                int parameterIndex = Array.IndexOf(Parameters, "-ba");
+                BrokerAddress = Parameters[parameterIndex + 1];
+            }
+            else
+            {
+                Console.WriteLine("No valid paramater provided, starting with default values.");
+            }
+        }
+
+        // Parse MQTT JSON String
+        private void JSONParseReceivedMessage()
+        {
+            Globals.JSONErrorMessage = false;
+            try
+            {
+                Parsed_ReceivedMessage = JObject.Parse(ReceivedMessage);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Invalid JSON String");
+            }
+        }
+
+        public void HandleDeserializationError(object sender, ErrorEventArgs errorArgs)
+        {
+            var currentError = errorArgs.ErrorContext.Error.Message;
+            errorArgs.ErrorContext.Handled = true;
         }
 
         // Subscribes to the default WEKIT Topic ("wekit/vest")
@@ -577,6 +629,7 @@ namespace MQTTDataProvider.Classes
             {
                 TextReceivedEventArgs args = new TextReceivedEventArgs
                 {
+<<<<<<< HEAD:Classes/MqttManager.cs
                     textReceived = receivedMessage,
                     espTimeStamp = JsonParser.parsedReceivedMessage.time,
                     imu1_AccX = JsonParser.parsedReceivedMessage.imus[0].ax,
@@ -611,11 +664,47 @@ namespace MQTTDataProvider.Classes
                     humInternal = JsonParser.parsedReceivedMessage.shts[1].hum,
                     pulse = JsonParser.parsedReceivedMessage.pulse,
                     gsr = JsonParser.parsedReceivedMessage.gsr
+=======
+                    TextReceived = ReceivedMessage,
+                    ESP_TimeStamp = Parsed_ReceivedMessage.time,
+                    IMU1_AccX = Parsed_ReceivedMessage.imus[0].ax,
+                    IMU1_AccY = Parsed_ReceivedMessage.imus[0].ay,
+                    IMU1_AccZ = Parsed_ReceivedMessage.imus[0].az,
+                    IMU1_GyroX = Parsed_ReceivedMessage.imus[0].gx,
+                    IMU1_GyroY = Parsed_ReceivedMessage.imus[0].gy,
+                    IMU1_GyroZ = Parsed_ReceivedMessage.imus[0].gz,
+                    IMU1_MagX = Parsed_ReceivedMessage.imus[0].mx,
+                    IMU1_MagY = Parsed_ReceivedMessage.imus[0].my,
+                    IMU1_MagZ = Parsed_ReceivedMessage.imus[0].mz,
+                    IMU1_Q0 = Parsed_ReceivedMessage.imus[0].q0,
+                    IMU1_Q1 = Parsed_ReceivedMessage.imus[0].q1,
+                    IMU1_Q2 = Parsed_ReceivedMessage.imus[0].q2,
+                    IMU1_Q3 = Parsed_ReceivedMessage.imus[0].q3,
+                    IMU2_AccX = Parsed_ReceivedMessage.imus[1].ax,
+                    IMU2_AccY = Parsed_ReceivedMessage.imus[1].ay,
+                    IMU2_AccZ = Parsed_ReceivedMessage.imus[1].az,
+                    IMU2_GyroX = Parsed_ReceivedMessage.imus[1].gx,
+                    IMU2_GyroY = Parsed_ReceivedMessage.imus[1].gy,
+                    IMU2_GyroZ = Parsed_ReceivedMessage.imus[1].gz,
+                    IMU2_MagX = Parsed_ReceivedMessage.imus[1].mx,
+                    IMU2_MagY = Parsed_ReceivedMessage.imus[1].my,
+                    IMU2_MagZ = Parsed_ReceivedMessage.imus[1].mz,
+                    IMU2_Q0 = Parsed_ReceivedMessage.imus[1].q0,
+                    IMU2_Q1 = Parsed_ReceivedMessage.imus[1].q1,
+                    IMU2_Q2 = Parsed_ReceivedMessage.imus[1].q2,
+                    IMU2_Q3 = Parsed_ReceivedMessage.imus[1].q3,
+                    Temp_External = Parsed_ReceivedMessage.shts[0].temp,
+                    Humidity_External = Parsed_ReceivedMessage.shts[0].hum,
+                    Temp_Internal = Parsed_ReceivedMessage.shts[1].temp,
+                    Humidity_Internal = Parsed_ReceivedMessage.shts[1].hum,
+                    Pulse_TempLobe = Parsed_ReceivedMessage.pulse,
+                    GSR = Parsed_ReceivedMessage.gsr
+>>>>>>> parent of b24c776... Changed classes, changed naming:MQTTManager/MqttDataManager.cs
                 };
                 OnNewTextReceived(args);
                 PublishData(args);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 TextReceivedEventArgs args = new TextReceivedEventArgs
                 {
