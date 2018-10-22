@@ -8,8 +8,7 @@ using System.Windows.Media;
 using System.Windows.Threading;
 using MQTTDataProvider.Model;
 using MQTTDataProvider.MQTTManager;
-using uPLibrary.Networking.M2Mqtt.Messages;
-using static MQTTDataProvider.MQTTManager.MQTTDataManager;
+using static MQTTDataProvider.MQTTManager.MqttManager;
 
 
 namespace MQTTDataProvider.ViewModel
@@ -17,13 +16,13 @@ namespace MQTTDataProvider.ViewModel
     class MainWindowViewModel : BindableBase
     {
         #region Instance Declaration
-        MQTTDataManager mdmanager = new MQTTDataManager();
+        MqttManager mdmanager = new MqttManager();
         #endregion
 
         #region Vars
 
         private string _textReceived = "";
-        public String textReceived
+        public String TextReceived
         {
             get { return _textReceived; }
             set
@@ -38,7 +37,7 @@ namespace MQTTDataProvider.ViewModel
         }
 
         private string _buttonText = "Start Recording";
-        public String buttonText
+        public String ButtonText
         {
             get { return _buttonText; }
             set
@@ -49,7 +48,7 @@ namespace MQTTDataProvider.ViewModel
         }
 
         private Brush _buttonColor = new SolidColorBrush(Colors.White);
-        public Brush buttonColor
+        public Brush ButtonColor
         {
             get { return _buttonColor; }
             set
@@ -83,7 +82,7 @@ namespace MQTTDataProvider.ViewModel
 
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            CloseConnection();
+            CloseMqttConnection();
             CloseApp();
             Environment.Exit(Environment.ExitCode);
         }
@@ -94,42 +93,42 @@ namespace MQTTDataProvider.ViewModel
             {
                 try
                 {
-                    textReceived = e.textReceived;
+                    TextReceived = e.TextReceived;
                     var values = new List<string>
                 {
-                    e.espTimeStamp,
-                    e.imu1_AccX,
-                    e.imu1_AccY,
-                    e.imu1_AccZ,
-                    e.imu1_GyroX,
-                    e.imu1_GyroY,
-                    e.imu1_GyroZ,
-                    e.imu1_MagX,
-                    e.imu1_MagY,
-                    e.imu1_MagZ,
-                    e.imu1_Q0,
-                    e.imu1_Q1,
-                    e.imu1_Q2,
-                    e.imu1_Q3,
-                    e.imu2_AccX,
-                    e.imu2_AccY,
-                    e.imu2_AccZ,
-                    e.imu2_GyroX,
-                    e.imu2_GyroY,
-                    e.imu2_GyroZ,
-                    e.imu2_MagX,
-                    e.imu2_MagY,
-                    e.imu2_MagZ,
-                    e.imu2_Q0,
-                    e.imu2_Q1,
-                    e.imu2_Q2,
-                    e.imu2_Q3,
-                    e.tempExternal,
-                    e.humExternal,
-                    e.tempInternal,
-                    e.humInternal,
-                    e.pulse,
-                    e.gsr
+                    e.ESPTimeStamp,
+                    e.IMU1_AccX,
+                    e.IMU1_AccY,
+                    e.IMU1_AccZ,
+                    e.IMU1_GyroX,
+                    e.IMU1_GyroY,
+                    e.IMU1_GyroZ,
+                    e.IMU1_MagX,
+                    e.IMU1_MagY,
+                    e.IMU1_MagZ,
+                    e.IMU1_Q0,
+                    e.IMU1_Q1,
+                    e.IMU1_Q2,
+                    e.IMU1_Q3,
+                    e.IMU2_AccX,
+                    e.IMU2_AccY,
+                    e.IMU2_AccZ,
+                    e.IMU2_GyroX,
+                    e.IMU2_GyroY,
+                    e.IMU2_GyroZ,
+                    e.IMU2_MagX,
+                    e.IMU2_MagY,
+                    e.IMU2_MagZ,
+                    e.IMU2_Q0,
+                    e.IMU2_Q1,
+                    e.IMU2_Q2,
+                    e.IMU2_Q3,
+                    e.TempExternal,
+                    e.HumExternal,
+                    e.TempInternal,
+                    e.HumInternal,
+                    e.Pulse,
+                    e.GSR
                 };
                     HubConnector.SendData(values);
                 }
@@ -140,7 +139,7 @@ namespace MQTTDataProvider.ViewModel
             }  
             else if (Globals.jsonErrorMessage == true)
             {
-                textReceived = e.textReceived;
+                TextReceived = e.TextReceived;
             }
         }
 
@@ -162,14 +161,14 @@ namespace MQTTDataProvider.ViewModel
             if (Globals.isRecordingMqtt == false)
             {
                 Globals.isRecordingMqtt = true;
-                buttonText = "Stop Recording";
-                buttonColor = new SolidColorBrush(Colors.Green);
+                ButtonText = "Stop Recording";
+                ButtonColor = new SolidColorBrush(Colors.Green);
             }
             else if (Globals.isRecordingMqtt == true)
             {
                 Globals.isRecordingMqtt = false;
-                buttonText = "Start Recording";
-                buttonColor = new SolidColorBrush(Colors.White);
+                ButtonText = "Start Recording";
+                ButtonColor = new SolidColorBrush(Colors.White);
 
             }
         }
@@ -182,7 +181,6 @@ namespace MQTTDataProvider.ViewModel
             HubConnector.StartConnection();
             HubConnector.MyConnector.startRecordingEvent += MyConnector_startRecordingEvent;
             HubConnector.MyConnector.stopRecordingEvent += MyConnector_stopRecordingEvent;
-            SetValueNames();
             Application.Current.MainWindow.Closing += MainWindow_Closing;
         }
         #endregion
@@ -199,47 +197,6 @@ namespace MQTTDataProvider.ViewModel
             {
                 Console.WriteLine("I got an exception after closing App" + e);
             }
-        }
-  
-        public void SetValueNames()
-        {
-            var names = new List<string>
-            {
-                "ESP_TimeStap",
-                "IMU1_AccX",
-                "IMU1_AccY",
-                "IMU1_AccZ",
-                "IMU1_GyroX",
-                "IMU1_GyroY",
-                "IMU1_GyroZ",
-                "IMU1_MagX",
-                "IMU1_MagY",
-                "IMU1_MagZ",
-                "IMU1_Q0",
-                "IMU1_Q1",
-                "IMU1_Q2",
-                "IMU1_Q3",
-                "IMU2_AccX",
-                "IMU2_AccY",
-                "IMU2_AccZ",
-                "IMU2_GyroX",
-                "IMU2_GyroY",
-                "IMU2_GyroZ",
-                "IMU2_MagX",
-                "IMU2_MagY",
-                "IMU2_MagZ",
-                "IMU2_Q0",
-                "IMU2_Q1",
-                "IMU2_Q2",
-                "IMU2_Q3",
-                "Temp_Ext",
-                "Humidity_Ext",
-                "Temp_Int",
-                "Humidity_Int",
-                "Pulse_TempLobe",
-                "GSR"
-            };
-            HubConnector.SetValuesName(names);
         }
         #endregion
     }
