@@ -6,10 +6,10 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
+using MQTTDataProvider.Classes;
 using MQTTDataProvider.Model;
 using MQTTDataProvider.MQTTManager;
 using static MQTTDataProvider.MQTTManager.MqttManager;
-
 
 namespace MQTTDataProvider.ViewModel
 {
@@ -82,65 +82,13 @@ namespace MQTTDataProvider.ViewModel
 
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            CloseMqttConnection();
             CloseApp();
             Environment.Exit(Environment.ExitCode);
         }
                 
-        private void SendData(object sender, TextReceivedEventArgs e)
+        private void IUpdateTextBox(object sender, TextReceivedEventArgs e)
         {
-            if (Globals.jsonErrorMessage == false)
-            {
-                try
-                {
-                    TextReceived = e.TextReceived;
-                    var values = new List<string>
-                {
-                    e.ESPTimeStamp,
-                    e.IMU1_AccX,
-                    e.IMU1_AccY,
-                    e.IMU1_AccZ,
-                    e.IMU1_GyroX,
-                    e.IMU1_GyroY,
-                    e.IMU1_GyroZ,
-                    e.IMU1_MagX,
-                    e.IMU1_MagY,
-                    e.IMU1_MagZ,
-                    e.IMU1_Q0,
-                    e.IMU1_Q1,
-                    e.IMU1_Q2,
-                    e.IMU1_Q3,
-                    e.IMU2_AccX,
-                    e.IMU2_AccY,
-                    e.IMU2_AccZ,
-                    e.IMU2_GyroX,
-                    e.IMU2_GyroY,
-                    e.IMU2_GyroZ,
-                    e.IMU2_MagX,
-                    e.IMU2_MagY,
-                    e.IMU2_MagZ,
-                    e.IMU2_Q0,
-                    e.IMU2_Q1,
-                    e.IMU2_Q2,
-                    e.IMU2_Q3,
-                    e.TempExternal,
-                    e.HumExternal,
-                    e.TempInternal,
-                    e.HumInternal,
-                    e.Pulse,
-                    e.GSR
-                };
-                    HubConnector.SendData(values);
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine(ex.StackTrace);
-                }
-            }  
-            else if (Globals.jsonErrorMessage == true)
-            {
-                TextReceived = e.TextReceived;
-            }
+            TextReceived = e.TextReceived;
         }
 
         private ICommand _buttonClicked;
@@ -177,10 +125,11 @@ namespace MQTTDataProvider.ViewModel
         #region Constructor
         public MainWindowViewModel()
         {
-            mdmanager.NewMqttTextReceived += SendData;
+            mdmanager.NewMqttTextReceived += IUpdateTextBox;
             HubConnector.StartConnection();
             HubConnector.MyConnector.startRecordingEvent += MyConnector_startRecordingEvent;
             HubConnector.MyConnector.stopRecordingEvent += MyConnector_stopRecordingEvent;
+            SetLHDescriptions.SetDescriptions();
             Application.Current.MainWindow.Closing += MainWindow_Closing;
         }
         #endregion

@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:MQTTDataProvider"
     xmlns:localViewModel="clr-namespace:MQTTDataProvider.ViewModel"
-    Startup="ParameterCheck">
+    StartupUri="MainWindowView.xaml">
     <Application.Resources>
         <localViewModel:MainWindowViewModel x:Key="MainWindowViewModel" />
     </Application.Resources>
