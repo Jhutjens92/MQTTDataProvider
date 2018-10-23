@@ -8,7 +8,7 @@ namespace MQTTDataProvider.Classes
     class JsonParser
     {
 
-        #region Vars
+        #region Variables
         // JSON Parser MQTT message
         public static dynamic ParsedMqttMsg
         {
@@ -18,18 +18,18 @@ namespace MQTTDataProvider.Classes
         private static dynamic parsedMqttMsg;
         #endregion
 
-        #region Methods
-        // Parse MQTT JSON String
+        #region Method
+        // Parse MQTT JSON string
         public static void JSONParseReceivedMessage(string receivedMessage)
         {
-            Globals.jsonErrorMessage = false;
+            Globals.JsonErrorMessage = false;
             try
             {
                 parsedMqttMsg = JObject.Parse(receivedMessage);
             }
             catch (Exception)
             {
-                Console.WriteLine("Invalid JSON String");
+                Console.WriteLine("Invalid JSON string");
             }
         }
         #endregion

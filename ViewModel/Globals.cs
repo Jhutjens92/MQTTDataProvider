@@ -9,24 +9,25 @@ namespace MQTTDataProvider.ViewModel
 {
     public static class Globals
     {
-        private static bool _isRecordingMqtt = false;
-        public static bool isRecordingMqtt
+        
+        public static bool IsRecordingMqtt
         {
-            get { return _isRecordingMqtt; }
+            get { return isRecordingMqtt; }
             set
             {
-                _isRecordingMqtt = value;
+                isRecordingMqtt = value;
             }
         }
+        private static bool isRecordingMqtt = false;
 
-        private static bool _jsonErrorMessage = false;
-        public static bool jsonErrorMessage
+        public static bool JsonErrorMessage
         {
-            get { return _jsonErrorMessage; }
+            get { return jsonErrorMessage; }
             set
             {
-                _jsonErrorMessage = value;
+                jsonErrorMessage = value;
             }
         }
+        private static bool jsonErrorMessage = false;
     }
 }

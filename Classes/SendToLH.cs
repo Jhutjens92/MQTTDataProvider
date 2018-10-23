@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static MQTTDataProvider.MQTTManager.MqttManager;
+using static MQTTDataProvider.Classes.MqttManager;
 
 namespace MQTTDataProvider.Classes
 {
     class SendToLH
     {
+        // send the sensor data to the learning hub
         public static void SendDataToLH(TextReceivedEventArgs e)
         {
             var values = new List<string>

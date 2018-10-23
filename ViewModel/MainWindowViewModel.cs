@@ -8,52 +8,51 @@ using System.Windows.Media;
 using System.Windows.Threading;
 using MQTTDataProvider.Classes;
 using MQTTDataProvider.Model;
-using MQTTDataProvider.MQTTManager;
-using static MQTTDataProvider.MQTTManager.MqttManager;
+using static MQTTDataProvider.Classes.MqttManager;
 
 namespace MQTTDataProvider.ViewModel
 {
     class MainWindowViewModel : BindableBase
     {
-        #region Instance Declaration
+        #region Instance declaration
         MqttManager mdmanager = new MqttManager();
         #endregion
 
-        #region Vars
+        #region Variables
 
-        private string _textReceived = "";
-        public String TextReceived
+        private string textReceived = "";
+        public string TextReceived
         {
-            get { return _textReceived; }
+            get { return textReceived; }
             set
             {
                 if (value == null)
                 {
                     value = 0.ToString();
                 }
-                _textReceived = value;
+                textReceived = value;
                 OnPropertyChanged("TextReceived");
             }
         }
 
-        private string _buttonText = "Start Recording";
-        public String ButtonText
+        private string buttonText = "Start Recording";
+        public string ButtonText
         {
-            get { return _buttonText; }
+            get { return buttonText; }
             set
             {
-                _buttonText = value;
+                buttonText = value;
                 OnPropertyChanged("ButtonText");
             }
         }
 
-        private Brush _buttonColor = new SolidColorBrush(Colors.White);
+        private Brush buttonColor = new SolidColorBrush(Colors.White);
         public Brush ButtonColor
         {
-            get { return _buttonColor; }
+            get { return buttonColor; }
             set
             {
-                _buttonColor = value;
+                buttonColor = value;
                 OnPropertyChanged("ButtonColor");
 
             }
@@ -106,15 +105,15 @@ namespace MQTTDataProvider.ViewModel
 
         public void StartRecordingData()
         {
-            if (Globals.isRecordingMqtt == false)
+            if (Globals.IsRecordingMqtt == false)
             {
-                Globals.isRecordingMqtt = true;
+                Globals.IsRecordingMqtt = true;
                 ButtonText = "Stop Recording";
                 ButtonColor = new SolidColorBrush(Colors.Green);
             }
-            else if (Globals.isRecordingMqtt == true)
+            else if (Globals.IsRecordingMqtt == true)
             {
-                Globals.isRecordingMqtt = false;
+                Globals.IsRecordingMqtt = false;
                 ButtonText = "Start Recording";
                 ButtonColor = new SolidColorBrush(Colors.White);
 

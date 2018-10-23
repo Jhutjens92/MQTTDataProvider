@@ -9,6 +9,7 @@ namespace MQTTDataProvider.Classes
 {
     class SetLHDescriptions
     {
+        // set the descriptions for the Learning Hub JSON file
         public static void SetDescriptions()
         {
             var names = new List<string>

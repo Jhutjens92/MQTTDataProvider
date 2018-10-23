@@ -1,4 +1,4 @@
-﻿using MQTTDataProvider.MQTTManager;
+﻿using MQTTDataProvider.Classes;
 using System.Windows;
 
 
