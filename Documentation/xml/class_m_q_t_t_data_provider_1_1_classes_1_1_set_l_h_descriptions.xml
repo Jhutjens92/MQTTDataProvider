@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_m_q_t_t_data_provider_1_1_classes_1_1_set_l_h_descriptions" kind="class" language="C#" prot="public">
+    <compoundname>MQTTDataProvider::Classes::SetLHDescriptions</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_classes_1_1_set_l_h_descriptions_1a23bf7cce1134ce58dd863d4a897e2ad7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.Classes.SetLHDescriptions.SetDescriptions</definition>
+        <argsstring>()</argsstring>
+        <name>SetDescriptions</name>
+        <briefdescription>
+<para>Sets the descriptions. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/SetLHDescriptions.cs" line="22" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/SetLHDescriptions.cs" bodystart="22" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Sets the descriptions for the Learning Hub. </para>    </briefdescription>
+    <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>    </detaileddescription>
+    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/SetLHDescriptions.cs" line="16" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/SetLHDescriptions.cs" bodystart="15" bodyend="62"/>
+    <listofallmembers>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_set_l_h_descriptions_1a23bf7cce1134ce58dd863d4a897e2ad7" prot="public" virt="non-virtual"><scope>MQTTDataProvider::Classes::SetLHDescriptions</scope><name>SetDescriptions</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

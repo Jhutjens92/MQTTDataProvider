@@ -1,0 +1,416 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model" kind="class" language="C#" prot="public">
+    <compoundname>MQTTDataProvider::ViewModel::MainWindowViewModel</compoundname>
+    <basecompoundref refid="class_m_q_t_t_data_provider_1_1_model_1_1_bindable_base" prot="public" virt="non-virtual">MQTTDataProvider.Model.BindableBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1af17db57a5ff1ed6c74053621f7c5bfdd" prot="private" static="no" mutable="no">
+        <type><ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager" kindref="compound">MqttManager</ref></type>
+        <definition>MqttManager MQTTDataProvider.ViewModel.MainWindowViewModel.mdmanager</definition>
+        <argsstring></argsstring>
+        <name>mdmanager</name>
+        <initializer>= new <ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager" kindref="compound">MqttManager</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="24" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a00dd8aa4d287149c72b3e770d86364db" prot="private" static="no" mutable="no">
+        <type><ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_set_l_h_descriptions" kindref="compound">SetLHDescriptions</ref></type>
+        <definition>SetLHDescriptions MQTTDataProvider.ViewModel.MainWindowViewModel.setlhdes</definition>
+        <argsstring></argsstring>
+        <name>setlhdes</name>
+        <initializer>= new <ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_set_l_h_descriptions" kindref="compound">SetLHDescriptions</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="25" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a1fef807ca2d6032e19043c947f494222" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string MQTTDataProvider.ViewModel.MainWindowViewModel.textReceived</definition>
+        <argsstring></argsstring>
+        <name>textReceived</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="49" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1ad5d759148c2951cf652622c713f597ec" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string MQTTDataProvider.ViewModel.MainWindowViewModel.buttonText</definition>
+        <argsstring></argsstring>
+        <name>buttonText</name>
+        <initializer>= &quot;Start Recording&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="65" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1ac98b476fa6fc67c78770c64bf6913fc7" prot="private" static="no" mutable="no">
+        <type>Brush</type>
+        <definition>Brush MQTTDataProvider.ViewModel.MainWindowViewModel.buttonColor</definition>
+        <argsstring></argsstring>
+        <name>buttonColor</name>
+        <initializer>= new SolidColorBrush(Colors.White)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="82" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a6fd4d705b86d2b33093a83af0b2d4cb4" prot="private" static="no" mutable="no">
+        <type>ICommand</type>
+        <definition>ICommand MQTTDataProvider.ViewModel.MainWindowViewModel.buttonClicked</definition>
+        <argsstring></argsstring>
+        <name>buttonClicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="165" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a5546e3f1155de235655be79313f0eedb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string MQTTDataProvider.ViewModel.MainWindowViewModel.TextReceived</definition>
+        <argsstring></argsstring>
+        <name>TextReceived</name>
+        <briefdescription>
+<para>Method for getting and setting the TextReceived variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>The text received. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="36" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="37" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a1436fb52b1c4f593de4cba1afe371af6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string MQTTDataProvider.ViewModel.MainWindowViewModel.ButtonText</definition>
+        <argsstring></argsstring>
+        <name>ButtonText</name>
+        <briefdescription>
+<para>Method for getting and setting the ButtonText variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>The button text. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="56" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="57" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a92e50b1639fc67c5b152bc7eb883651b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Brush</type>
+        <definition>Brush MQTTDataProvider.ViewModel.MainWindowViewModel.ButtonColor</definition>
+        <argsstring></argsstring>
+        <name>ButtonColor</name>
+        <briefdescription>
+<para>Method for getting and setting the ButtonColor variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>The color of the button. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="72" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="73" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1aca7ced4267c9796647ef2b402e78d256" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>ICommand</type>
+        <definition>ICommand MQTTDataProvider.ViewModel.MainWindowViewModel.OnButtonClicked</definition>
+        <argsstring></argsstring>
+        <name>OnButtonClicked</name>
+        <briefdescription>
+<para>Method to execute button functionality. </para>        </briefdescription>
+        <detaileddescription>
+<para>The on button clicked. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="155" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="156" bodyend="164"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1ac2d8bc763fe7180c1da6385e1a09aaaa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.ViewModel.MainWindowViewModel.MyConnector_stopRecordingEvent</definition>
+        <argsstring>(object sender)</argsstring>
+        <name>MyConnector_stopRecordingEvent</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+<para>Method to check for the stop recording event coming from the Learning Hub. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Learning Hub (object) raising the event. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="95" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="95" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1aec0cd7f7651d8f6c46837064641b1313" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.ViewModel.MainWindowViewModel.MyConnector_startRecordingEvent</definition>
+        <argsstring>(object sender)</argsstring>
+        <name>MyConnector_startRecordingEvent</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+<para>Method to check for the start recording event coming from the Learning Hub. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Learning Hub (object) raising the event. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="113" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="113" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a1762bedaacc6d0515a8b9f800207563c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.ViewModel.MainWindowViewModel.MainWindow_Closing</definition>
+        <argsstring>(object sender, System.ComponentModel.CancelEventArgs e)</argsstring>
+        <name>MainWindow_Closing</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.ComponentModel.CancelEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Event handler. Called by MainWindow for closing events. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Learning Hub (object) raising the event. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cancel event information. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="130" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="130" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1ac4acf9a83d0c91f08729df68f70bd878" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.ViewModel.MainWindowViewModel.IUpdateTextBox</definition>
+        <argsstring>(object sender, TextReceivedEventArgs e)</argsstring>
+        <name>IUpdateTextBox</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>TextReceivedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Method to update the GUI textbox. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MqttManager raising the event&lt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter containing the filtered Json string data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="145" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="145" bodyend="148"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a4295cbc98a5a49222f8abc9922b7d135" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.ViewModel.MainWindowViewModel.StartRecordingData</definition>
+        <argsstring>()</argsstring>
+        <name>StartRecordingData</name>
+        <briefdescription>
+<para>Method to set GUI look based on IsRecording variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="172" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="172" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a7d4730af40c97576bafcb985752956c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MQTTDataProvider.ViewModel.MainWindowViewModel.MainWindowViewModel</definition>
+        <argsstring>()</argsstring>
+        <name>MainWindowViewModel</name>
+        <briefdescription>
+<para><ref refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model" kindref="compound">MainWindowViewModel</ref> constructor </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="199" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="199" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a7dc02f3aa9bf8b431185fe6936942dff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.ViewModel.MainWindowViewModel.CloseApp</definition>
+        <argsstring>()</argsstring>
+        <name>CloseApp</name>
+        <briefdescription>
+<para>Closes the application. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="218" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="218" bodyend="229"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class containing the GUI functions. </para>    </briefdescription>
+    <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="37">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="35">
+        <label>MQTTDataProvider.ViewModel.MainWindowViewModel</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model"/>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>BindableBase</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_model_1_1_bindable_base"/>
+        <childnode refid="37" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="45">
+        <label>MQTTDataProvider.Classes.CheckParameters</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_check_parameters"/>
+      </node>
+      <node id="40">
+        <label>INotifyPropertyChanged</label>
+      </node>
+      <node id="41">
+        <label>MQTTDataProvider.Classes.MqttManager</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager"/>
+        <childnode refid="42" relation="usage">
+          <edgelabel>sendlh</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>Client</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>jsonpar</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>chkpar</edgelabel>
+        </childnode>
+      </node>
+      <node id="42">
+        <label>MQTTDataProvider.Classes.SendToLH</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_send_to_l_h"/>
+      </node>
+      <node id="44">
+        <label>MQTTDataProvider.Classes.JsonParser</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser"/>
+        <childnode refid="43" relation="usage">
+          <edgelabel>parsedMqttMsg</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>MQTTDataProvider.ViewModel.MainWindowViewModel</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model"/>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>mdmanager</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>setlhdes</edgelabel>
+        </childnode>
+      </node>
+      <node id="46">
+        <label>MQTTDataProvider.Classes.SetLHDescriptions</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_set_l_h_descriptions"/>
+      </node>
+      <node id="39">
+        <label>BindableBase</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_model_1_1_bindable_base"/>
+        <childnode refid="40" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>static</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="21" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="20" bodyend="232"/>
+    <listofallmembers>
+      <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a6fd4d705b86d2b33093a83af0b2d4cb4" prot="private" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>buttonClicked</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a92e50b1639fc67c5b152bc7eb883651b" prot="public" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>ButtonColor</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1ac98b476fa6fc67c78770c64bf6913fc7" prot="private" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>buttonColor</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a1436fb52b1c4f593de4cba1afe371af6" prot="public" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>ButtonText</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1ad5d759148c2951cf652622c713f597ec" prot="private" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>buttonText</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a7dc02f3aa9bf8b431185fe6936942dff" prot="public" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>CloseApp</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1ac4acf9a83d0c91f08729df68f70bd878" prot="private" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>IUpdateTextBox</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a1762bedaacc6d0515a8b9f800207563c" prot="private" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>MainWindow_Closing</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a7d4730af40c97576bafcb985752956c9" prot="public" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>MainWindowViewModel</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1af17db57a5ff1ed6c74053621f7c5bfdd" prot="private" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>mdmanager</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1aec0cd7f7651d8f6c46837064641b1313" prot="private" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>MyConnector_startRecordingEvent</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1ac2d8bc763fe7180c1da6385e1a09aaaa" prot="private" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>MyConnector_stopRecordingEvent</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1aca7ced4267c9796647ef2b402e78d256" prot="public" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>OnButtonClicked</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_model_1_1_bindable_base_1aa307a46d490c6ce2d7dd2c762749c700" prot="protected" virt="virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>OnPropertyChanged</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_model_1_1_bindable_base_1a3f6937c3604053dfa00c78b34c7a16f5" prot="public" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>PropertyChanged</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a00dd8aa4d287149c72b3e770d86364db" prot="private" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>setlhdes</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_model_1_1_bindable_base_1a4397e998661e5b2530b66c0e8e039b24" prot="protected" virt="virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>SetProperty&lt; T &gt;</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a4295cbc98a5a49222f8abc9922b7d135" prot="public" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>StartRecordingData</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a5546e3f1155de235655be79313f0eedb" prot="public" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>TextReceived</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a1fef807ca2d6032e19043c947f494222" prot="private" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>textReceived</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

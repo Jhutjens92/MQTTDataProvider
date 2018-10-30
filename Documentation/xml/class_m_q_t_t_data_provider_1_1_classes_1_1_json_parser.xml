@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser" kind="class" language="C#" prot="public">
+    <compoundname>MQTTDataProvider::Classes::JsonParser</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser_1aa8987743fbcb744e72d76e4f8523537f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>dynamic</type>
+        <definition>dynamic MQTTDataProvider.Classes.JsonParser.ParsedMqttMsg</definition>
+        <argsstring></argsstring>
+        <name>ParsedMqttMsg</name>
+        <briefdescription>
+<para>Method for getting the ParsedMqttMsg variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>A message describing the parsed mqtt. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/JsonParser.cs" line="23" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/JsonParser.cs" bodystart="24" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser_1a00fbc620dcc289d76529fbbfd0a201bd" prot="private" static="yes" mutable="no">
+        <type>dynamic</type>
+        <definition>dynamic MQTTDataProvider.Classes.JsonParser.parsedMqttMsg</definition>
+        <argsstring></argsstring>
+        <name>parsedMqttMsg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/JsonParser.cs" line="27" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/JsonParser.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser_1a211d06e3ba4c22b73f6384adcff0ce94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.Classes.JsonParser.JSONParseReceivedMessage</definition>
+        <argsstring>(string receivedMessage)</argsstring>
+        <name>JSONParseReceivedMessage</name>
+        <param>
+          <type>string</type>
+          <declname>receivedMessage</declname>
+        </param>
+        <briefdescription>
+<para>Parse MQTT JSON string. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>receivedMessage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String containing the receivedMessage from the Mqtt callback funtion. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/JsonParser.cs" line="41" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/JsonParser.cs" bodystart="41" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class containing the Jsonparser. </para>    </briefdescription>
+    <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="24">
+        <label>MQTTDataProvider.Classes.JsonParser</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser"/>
+        <childnode refid="25" relation="usage">
+          <edgelabel>parsedMqttMsg</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>static</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/JsonParser.cs" line="15" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/JsonParser.cs" bodystart="14" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser_1a211d06e3ba4c22b73f6384adcff0ce94" prot="public" virt="non-virtual"><scope>MQTTDataProvider::Classes::JsonParser</scope><name>JSONParseReceivedMessage</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser_1aa8987743fbcb744e72d76e4f8523537f" prot="public" virt="non-virtual"><scope>MQTTDataProvider::Classes::JsonParser</scope><name>ParsedMqttMsg</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser_1a00fbc620dcc289d76529fbbfd0a201bd" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::JsonParser</scope><name>parsedMqttMsg</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -7,9 +7,20 @@ using uPLibrary.Networking.M2Mqtt;
 
 namespace MQTTDataProvider.ViewModel
 {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// <summary>   Class containing global variables. </summary>
+    ///
+    /// <remarks>   Jordi Hutjens, 26-10-2018. </remarks>
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
     public static class Globals
     {
-        
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Method for setting IsRecordingMqtt. </summary>
+        ///
+        /// <value> True if this object is recording mqtt, false if not. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         public static bool IsRecordingMqtt
         {
             get { return isRecordingMqtt; }
@@ -19,15 +30,5 @@ namespace MQTTDataProvider.ViewModel
             }
         }
         private static bool isRecordingMqtt = false;
-
-        public static bool JsonErrorMessage
-        {
-            get { return jsonErrorMessage; }
-            set
-            {
-                jsonErrorMessage = value;
-            }
-        }
-        private static bool jsonErrorMessage = false;
     }
 }

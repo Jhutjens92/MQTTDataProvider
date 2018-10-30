@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_m_q_t_t_data_provider_1_1_model_1_1_hub_connector" kind="class" language="C#" prot="public">
+    <compoundname>MQTTDataProvider::Model::HubConnector</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_model_1_1_hub_connector_1ab87fe968559891fed05aaa0d05061db9" prot="private" static="yes" mutable="no">
+        <type>ConnectorHub.ConnectorHub</type>
+        <definition>ConnectorHub.ConnectorHub MQTTDataProvider.Model.HubConnector.myConnector</definition>
+        <argsstring></argsstring>
+        <name>myConnector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Model/HubConnector.cs" line="17" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Model/HubConnector.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_model_1_1_hub_connector_1a162778bcb076e471fbaac58ea31a85fb" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>ConnectorHub.ConnectorHub</type>
+        <definition>ConnectorHub.ConnectorHub MQTTDataProvider.Model.HubConnector.MyConnector</definition>
+        <argsstring></argsstring>
+        <name>MyConnector</name>
+        <briefdescription>
+<para>Gets my connector. </para>        </briefdescription>
+        <detaileddescription>
+<para>my connector. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Model/HubConnector.cs" line="25" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Model/HubConnector.cs" bodystart="26" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_model_1_1_hub_connector_1aed6bccf76dcd9355c6480a31e614186c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void MQTTDataProvider.Model.HubConnector.StartConnection</definition>
+        <argsstring>()</argsstring>
+        <name>StartConnection</name>
+        <briefdescription>
+<para>Method to start the connection to the Learning Hub. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Model/HubConnector.cs" line="43" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Model/HubConnector.cs" bodystart="43" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_model_1_1_hub_connector_1a608ecddd549c67c62675dae2944fbdee" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void MQTTDataProvider.Model.HubConnector.SendData</definition>
+        <argsstring>(List&lt; string &gt; values)</argsstring>
+        <name>SendData</name>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+<para>Method to send the data to the Learning Hub. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The values. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Model/HubConnector.cs" line="60" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Model/HubConnector.cs" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_model_1_1_hub_connector_1a1c468d377bc28c8fff2f02c7417b2ca1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void MQTTDataProvider.Model.HubConnector.SetValuesName</definition>
+        <argsstring>(List&lt; string &gt; names)</argsstring>
+        <name>SetValuesName</name>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>names</declname>
+        </param>
+        <briefdescription>
+<para>Method to start the set the value descriptions used in the JSON file. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>names</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The names. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Model/HubConnector.cs" line="73" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Model/HubConnector.cs" bodystart="73" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Hub Connector developed by Jan Schneider </para>    </briefdescription>
+    <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="21">
+        <label>MQTTDataProvider.Model.HubConnector</label>
+        <childnode refid="22" relation="usage">
+          <edgelabel>myConnector</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>static</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Model/HubConnector.cs" line="16" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Model/HubConnector.cs" bodystart="15" bodyend="77"/>
+    <listofallmembers>
+      <member refid="class_m_q_t_t_data_provider_1_1_model_1_1_hub_connector_1ab87fe968559891fed05aaa0d05061db9" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Model::HubConnector</scope><name>myConnector</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_model_1_1_hub_connector_1a162778bcb076e471fbaac58ea31a85fb" prot="public" virt="non-virtual"><scope>MQTTDataProvider::Model::HubConnector</scope><name>MyConnector</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_model_1_1_hub_connector_1a608ecddd549c67c62675dae2944fbdee" prot="public" virt="non-virtual"><scope>MQTTDataProvider::Model::HubConnector</scope><name>SendData</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_model_1_1_hub_connector_1a1c468d377bc28c8fff2f02c7417b2ca1" prot="public" virt="non-virtual"><scope>MQTTDataProvider::Model::HubConnector</scope><name>SetValuesName</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_model_1_1_hub_connector_1aed6bccf76dcd9355c6480a31e614186c" prot="public" virt="non-virtual"><scope>MQTTDataProvider::Model::HubConnector</scope><name>StartConnection</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

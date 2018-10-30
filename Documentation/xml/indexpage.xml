@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>WEKIT MQTTDataProvider</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The WEKIT <ref refid="namespace_m_q_t_t_data_provider" kindref="compound">MQTTDataProvider</ref> is an application designed to listen to a specific MQTT Topic, filter the data, send the filtered data to predefined/preprogrammed MQTT Topics and send the data to the Learning Hub.</para><para><heading level="3">Prerequisites</heading>
+</para><para><itemizedlist>
+<listitem><para>Download the Learning Hub: <ulink url="https://github.com/janschneiderou/LearningHub">https://github.com/janschneiderou/LearningHub</ulink></para></listitem><listitem><para>Installed the Mosquitto Broker (local)</para></listitem><listitem><para>Use an MQTT Sender for testing</para></listitem></itemizedlist>
+</para><para><heading level="2">Getting Started</heading>
+</para><para>The brokeraddress is currently set to &quot;localhost&quot; (127.0.0.1). This means that Mosquitto is required for the program to be able to send and recieve data.</para><para>You can test the <ref refid="namespace_m_q_t_t_data_provider" kindref="compound">MQTTDataProvider</ref> without using the Learning Hub by just starting the executable and press &quot;Start Recording&quot; Currently it does not provide any logging when you run it seperatly. It only shows the received string in the textbox for testing.</para><para>If you want to use it with the Learning Hub combined then make you sure have the Learning Hub set up accordingly. A complete how to guide can be found here: <ulink url="https://docs.google.com/document/d/1FbTd6wjqa9P_6O51gjZRU2ubiCA94nMZr001NkgBZ5s/edit#">https://docs.google.com/document/d/1FbTd6wjqa9P_6O51gjZRU2ubiCA94nMZr001NkgBZ5s/edit#</ulink></para><para>The topics are defined as following: Receiving topic <heading level="2">Default topic: &quot;wekit/vest&quot; </heading>
+</para><para>Send topics GSR topic: &quot;wekit/vest/GSR_Raw&quot; Pulse topic: &quot;wekit/vest/Pulse_Raw&quot; Temperature_internal: &quot;wekit/vest/Sht0_Temp&quot; <linebreak/>
+Temperature_external: &quot;wekit/vest/Sht1_Temp&quot; Humidity_internal: &quot;wekit/vest/Sht0_Hum&quot; Humidity_external: &quot;wekit/vest/Sht1_Hum&quot;</para><para><heading level="2">Startup Parameters (Learning Hub)</heading>
+</para><para>-ba <emphasis>brokedaddress</emphasis> (example -ba broker.mqttdashboard.com)</para><para><heading level="2">Running the tests</heading>
+</para><para>For testing purposes you can use this test string: {&quot;client&quot;:&quot;WEKIT-VEST-000014A2&quot;,&quot;time&quot;:992953,&quot;imus&quot;:[{&quot;ax&quot;:-0.04,&quot;ay&quot;:1.25,&quot;az&quot;:-0.06,&quot;gx&quot;:-7.33,&quot;gy&quot;:-171.49,&quot;gz&quot;:-7.33,&quot;mx&quot;:-14.29,&quot;my&quot;:5.39,&quot;mz&quot;:-3.46,&quot;q0&quot;:-0.26,&quot;q1&quot;:-0.40,&quot;q2&quot;:0.57,&quot;q3&quot;:0.67},{&quot;ax&quot;:-0.05,&quot;ay&quot;:1.23,&quot;az&quot;:-0.34,&quot;gx&quot;:-7.43,&quot;gy&quot;:-171.434,&quot;gz&quot;:-7.34,&quot;mx&quot;:-14.39,&quot;my&quot;:5.39,&quot;mz&quot;:-3.36,&quot;q0&quot;:-0.36,&quot;q1&quot;:-0.30,&quot;q2&quot;:0.37,&quot;q3&quot;:0.63}],&quot;shts&quot;:[{&quot;temp&quot;:33,&quot;hum&quot;:80},{&quot;temp&quot;:21,&quot;hum&quot;:55}],&quot;pulse&quot;:60,&quot;gsr&quot;:1024}</para><para><heading level="2">Authors</heading>
+</para><para><itemizedlist>
+<listitem><para><bold>Jordi Hutjens</bold> -(<ulink url="https://github.com/jhutjens92">https://github.com/jhutjens92</ulink>) </para></listitem></itemizedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

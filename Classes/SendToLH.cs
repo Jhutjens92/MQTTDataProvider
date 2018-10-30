@@ -8,10 +8,21 @@ using static MQTTDataProvider.Classes.MqttManager;
 
 namespace MQTTDataProvider.Classes
 {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// <summary>   Class containing the function to send to Learning Hub. </summary>
+    ///
+    /// <remarks>   Jordi Hutjens, 26-10-2018. </remarks>
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
     class SendToLH
     {
-        // send the sensor data to the learning hub
-        public static void SendDataToLH(TextReceivedEventArgs e)
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Sends the published sensor data to the Learning Hub. </summary>
+        ///
+        /// <remarks>   Jordi Hutjens, 26-10-2018. </remarks>
+        ///
+        /// <param name="e">    Parameter containing the filtered Json string data. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        public void SendDataToLH(TextReceivedEventArgs e)
         {
             var values = new List<string>
                     {

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_m_q_t_t_data_provider_1_1_classes" kind="namespace" language="C#">
+    <compoundname>MQTTDataProvider::Classes</compoundname>
+    <innerclass refid="class_m_q_t_t_data_provider_1_1_classes_1_1_check_parameters" prot="public">MQTTDataProvider::Classes::CheckParameters</innerclass>
+    <innerclass refid="class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser" prot="public">MQTTDataProvider::Classes::JsonParser</innerclass>
+    <innerclass refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager" prot="public">MQTTDataProvider::Classes::MqttManager</innerclass>
+    <innerclass refid="class_m_q_t_t_data_provider_1_1_classes_1_1_send_to_l_h" prot="public">MQTTDataProvider::Classes::SendToLH</innerclass>
+    <innerclass refid="class_m_q_t_t_data_provider_1_1_classes_1_1_set_l_h_descriptions" prot="public">MQTTDataProvider::Classes::SetLHDescriptions</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/CheckParameters.cs" line="8" column="1"/>
+  </compounddef>
+</doxygen>

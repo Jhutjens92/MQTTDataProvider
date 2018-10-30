@@ -5,33 +5,51 @@ using Newtonsoft.Json.Linq;
 
 namespace MQTTDataProvider.Classes
 {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// <summary>   Class containing the Jsonparser. </summary>
+    ///
+    /// <remarks>   Jordi Hutjens, 26-10-2018. </remarks>
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
     class JsonParser
     {
-
         #region Variables
-        // JSON Parser MQTT message
-        public static dynamic ParsedMqttMsg
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Method for getting the ParsedMqttMsg variable. </summary>
+        ///
+        /// <value> A message describing the parsed mqtt. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        public dynamic ParsedMqttMsg
         {
             get { return parsedMqttMsg; }
-            set { parsedMqttMsg = value; }
         }
         private static dynamic parsedMqttMsg;
+
         #endregion
 
         #region Method
-        // Parse MQTT JSON string
-        public static void JSONParseReceivedMessage(string receivedMessage)
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Parse MQTT JSON string. </summary>
+        ///
+        /// <remarks>   Jordi Hutjens, 26-10-2018. </remarks>
+        ///
+        /// <param name="receivedMessage">  String containing the receivedMessage from the Mqtt callback
+        ///                                 funtion. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        public void JSONParseReceivedMessage(string receivedMessage)
         {
-            Globals.JsonErrorMessage = false;
             try
             {
                 parsedMqttMsg = JObject.Parse(receivedMessage);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("Invalid JSON string");
+                Console.WriteLine(ex.ToString());
             }
         }
+
         #endregion
     }
 }

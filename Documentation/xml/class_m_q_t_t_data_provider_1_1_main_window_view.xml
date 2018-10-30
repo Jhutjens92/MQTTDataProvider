@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_m_q_t_t_data_provider_1_1_main_window_view" kind="class" language="C#" prot="public">
+    <compoundname>MQTTDataProvider::MainWindowView</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IComponentConnector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_main_window_view_1a83faf96da87ff4f55dd0e84f4844d4da" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button MQTTDataProvider.MainWindowView::BtnRecord</definition>
+        <argsstring></argsstring>
+        <name>BtnRecord</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/MainWindowView.g.cs" line="45" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/MainWindowView.g.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_main_window_view_1a017d61b1e9770ebdefb65dd3b8350250" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MQTTDataProvider.MainWindowView::_contentLoaded</definition>
+        <argsstring></argsstring>
+        <name>_contentLoaded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/MainWindowView.g.cs" line="50" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/MainWindowView.g.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_main_window_view_1ac0bbdac3c3519e336fbe574e85729cbb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.MainWindowView.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/MainWindowView.g.cs" line="57" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/MainWindowView.g.cs" bodystart="57" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_main_window_view_1ac0bbdac3c3519e336fbe574e85729cbb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.MainWindowView.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/MainWindowView.g.i.cs" line="57" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/MainWindowView.g.i.cs" bodystart="57" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_main_window_view_1ad7b1cb768374207ae3d80e3a89892552" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. MQTTDataProvider.MainWindowView.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/MainWindowView.g.cs" line="77" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/MainWindowView.g.cs" bodystart="77" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_main_window_view_1ad7b1cb768374207ae3d80e3a89892552" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. MQTTDataProvider.MainWindowView.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/MainWindowView.g.i.cs" line="77" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/MainWindowView.g.i.cs" bodystart="77" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interaction logic for MainWindowView.xaml. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_m_q_t_t_data_provider_1_1_main_window_view" kindref="compound">MainWindowView</ref> </para><para>Jordi Hutjens, 26-10-2018. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="27">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="29">
+        <label>Window</label>
+      </node>
+      <node id="26">
+        <label>MQTTDataProvider.MainWindowView</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_main_window_view"/>
+        <childnode refid="27" relation="public-inheritance">
+        </childnode>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+        <childnode refid="27" relation="public-inheritance">
+        </childnode>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="31">
+        <label>System::Windows::Window</label>
+      </node>
+      <node id="33">
+        <label>Window</label>
+      </node>
+      <node id="34">
+        <label>System</label>
+      </node>
+      <node id="30">
+        <label>MQTTDataProvider.MainWindowView</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_main_window_view"/>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>BtnRecord</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>System::Windows::Markup::IComponentConnector</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/MainWindowView.xaml.cs" line="14" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/MainWindowView.xaml.cs" bodystart="13" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_m_q_t_t_data_provider_1_1_main_window_view_1a017d61b1e9770ebdefb65dd3b8350250" prot="private" virt="non-virtual"><scope>MQTTDataProvider::MainWindowView</scope><name>_contentLoaded</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_main_window_view_1a83faf96da87ff4f55dd0e84f4844d4da" prot="package" virt="non-virtual"><scope>MQTTDataProvider::MainWindowView</scope><name>BtnRecord</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_main_window_view_1ad7b1cb768374207ae3d80e3a89892552" prot="private" virt="non-virtual"><scope>MQTTDataProvider::MainWindowView</scope><name>Connect</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_main_window_view_1ad7b1cb768374207ae3d80e3a89892552" prot="private" virt="non-virtual"><scope>MQTTDataProvider::MainWindowView</scope><name>Connect</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_main_window_view_1ac0bbdac3c3519e336fbe574e85729cbb" prot="public" virt="non-virtual"><scope>MQTTDataProvider::MainWindowView</scope><name>InitializeComponent</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_main_window_view_1ac0bbdac3c3519e336fbe574e85729cbb" prot="public" virt="non-virtual"><scope>MQTTDataProvider::MainWindowView</scope><name>InitializeComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

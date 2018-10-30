@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_67b083c85185beafc91224e2675bd302" kind="dir">
+    <compoundname>C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Model</compoundname>
+    <innerfile refid="_bindable_base_8cs">BindableBase.cs</innerfile>
+    <innerfile refid="_hub_connector_8cs">HubConnector.cs</innerfile>
+    <innerfile refid="_relay_command_8cs">RelayCommand.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Model/"/>
+  </compounddef>
+</doxygen>

@@ -7,10 +7,19 @@ using System.Threading.Tasks;
 
 namespace MQTTDataProvider.Classes
 {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// <summary>   Sets the descriptions for the Learning Hub. </summary>
+    ///
+    /// <remarks>   Jordi Hutjens, 26-10-2018. </remarks>
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
     class SetLHDescriptions
     {
-        // set the descriptions for the Learning Hub JSON file
-        public static void SetDescriptions()
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Sets the descriptions. </summary>
+        ///
+        /// <remarks>   Jordi Hutjens, 26-10-2018. </remarks>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        public void SetDescriptions()
         {
             var names = new List<string>
             {
