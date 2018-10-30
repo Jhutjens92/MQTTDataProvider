@@ -776,9 +776,9 @@ namespace MQTTDataProvider.Classes
             {
                 Client = new MqttClient(chkpar.BrokerAddress);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine(e.ToString());
+                Console.WriteLine(ex.ToString());
             } 
         }
 

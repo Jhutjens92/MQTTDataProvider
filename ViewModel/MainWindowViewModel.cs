@@ -196,6 +196,7 @@ namespace MQTTDataProvider.ViewModel
         ///
         /// <remarks>   Jordi Hutjens, 26-10-2018. </remarks>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
+        
         public MainWindowViewModel()
         {
             mdmanager.NewMqttTextReceived += IUpdateTextBox;
@@ -224,7 +225,7 @@ namespace MQTTDataProvider.ViewModel
             }
             catch (Exception ex)
             {
-                Console.WriteLine("I got an exception after closing App" + ex);
+                Console.WriteLine(ex.ToString());
             }
         }
 
