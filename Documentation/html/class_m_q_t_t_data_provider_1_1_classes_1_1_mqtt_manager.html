@@ -95,7 +95,6 @@ $(document).ready(function(){initNavTree('class_m_q_t_t_data_provider_1_1_classe
 <a href="#events">Events</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">MQTTDataProvider.Classes.MqttManager Class Reference</div>  </div>
@@ -155,17 +154,17 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:aefd80467dd77ae623ccbd300a16b5cc7"><td class="memItemLeft" align="right" valign="top">MqttClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#aefd80467dd77ae623ccbd300a16b5cc7">mqttClient</a></td></tr>
+<tr class="separator:aefd80467dd77ae623ccbd300a16b5cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfd69b15f83781d9afd222e90d9f8345"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_q_t_t_data_provider_1_1_classes_1_1_check_parameters.html">CheckParameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#acfd69b15f83781d9afd222e90d9f8345">chkpar</a> = new <a class="el" href="class_m_q_t_t_data_provider_1_1_classes_1_1_check_parameters.html">CheckParameters</a>()</td></tr>
 <tr class="separator:acfd69b15f83781d9afd222e90d9f8345"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45f466c4d992482ffe593364ed85b310"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser.html">JsonParser</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#a45f466c4d992482ffe593364ed85b310">jsonpar</a> = new <a class="el" href="class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser.html">JsonParser</a>()</td></tr>
 <tr class="separator:a45f466c4d992482ffe593364ed85b310"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a01b73d8c2a7db39824b846a9d6c13b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_q_t_t_data_provider_1_1_classes_1_1_send_to_l_h.html">SendToLH</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#a3a01b73d8c2a7db39824b846a9d6c13b">sendlh</a> = new <a class="el" href="class_m_q_t_t_data_provider_1_1_classes_1_1_send_to_l_h.html">SendToLH</a>()</td></tr>
 <tr class="separator:a3a01b73d8c2a7db39824b846a9d6c13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:a116e6f394649fe479ba7683f867c2414"><td class="memItemLeft" align="right" valign="top">static MqttClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#a116e6f394649fe479ba7683f867c2414">Client</a></td></tr>
-<tr class="separator:a116e6f394649fe479ba7683f867c2414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7a2cd03d2ce6cb689e12bc5569663df"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#ab7a2cd03d2ce6cb689e12bc5569663df">receivedStrMsg</a></td></tr>
+<tr class="memdesc:ab7a2cd03d2ce6cb689e12bc5569663df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message describing the received mqtt.  <a href="#ab7a2cd03d2ce6cb689e12bc5569663df">More...</a><br /></td></tr>
+<tr class="separator:ab7a2cd03d2ce6cb689e12bc5569663df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html" title="MqttManager class handles all Mqtt functions. Also includes updating the variables based on published...">MqttManager</a> class handles all Mqtt functions. Also includes updating the variables based on published data. </p>
@@ -463,28 +462,6 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a116e6f394649fe479ba7683f867c2414"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a116e6f394649fe479ba7683f867c2414">&#9670;&nbsp;</a></span>Client</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">MqttClient MQTTDataProvider.Classes.MqttManager.Client</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a45f466c4d992482ffe593364ed85b310"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a45f466c4d992482ffe593364ed85b310">&#9670;&nbsp;</a></span>jsonpar</h2>
 
@@ -504,6 +481,52 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aefd80467dd77ae623ccbd300a16b5cc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefd80467dd77ae623ccbd300a16b5cc7">&#9670;&nbsp;</a></span>mqttClient</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MqttClient MQTTDataProvider.Classes.MqttManager.mqttClient</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7a2cd03d2ce6cb689e12bc5569663df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7a2cd03d2ce6cb689e12bc5569663df">&#9670;&nbsp;</a></span>receivedStrMsg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MQTTDataProvider.Classes.MqttManager.receivedStrMsg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Message describing the received mqtt. </p>
 
 </div>
 </div>

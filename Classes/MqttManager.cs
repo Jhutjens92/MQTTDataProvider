@@ -24,7 +24,7 @@ namespace MQTTDataProvider.Classes
     {
         #region Instance declaration
 
-        static MqttClient Client;
+        MqttClient mqttClient;
         CheckParameters chkpar = new CheckParameters();
         JsonParser jsonpar = new JsonParser();
         SendToLH sendlh = new SendToLH();
@@ -744,6 +744,13 @@ namespace MQTTDataProvider.Classes
 
         #endregion
 
+        #region Variables
+
+        /// <summary>   Message describing the received mqtt. </summary>
+        string receivedStrMsg;
+
+        #endregion
+
         #region Constructor
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -756,9 +763,8 @@ namespace MQTTDataProvider.Classes
             chkpar.CheckStartupParameters();
             CreateMqttClient();
             ConnectMqttClient();
-            Client.MqttMsgPublishReceived += Client_MqttMsgPublishReceived;
+            mqttClient.MqttMsgPublishReceived += Client_MqttMsgPublishReceived;
             Subscribe_Default();
-
         }
 
         #endregion
@@ -774,7 +780,7 @@ namespace MQTTDataProvider.Classes
         {
             try
             {
-                Client = new MqttClient(chkpar.BrokerAddress);
+                mqttClient = new MqttClient(chkpar.BrokerAddress);
             }
             catch (Exception ex)
             {
@@ -793,7 +799,7 @@ namespace MQTTDataProvider.Classes
             {
                 string clientId;
                 clientId = Guid.NewGuid().ToString();
-                Client.Connect(clientId);
+                mqttClient.Connect(clientId);
             }
             catch (Exception ex)
             {
@@ -810,7 +816,7 @@ namespace MQTTDataProvider.Classes
         {
             try
             {
-                Client.Disconnect();
+                mqttClient.Disconnect();
             }
             catch (Exception ex)
             {
@@ -831,10 +837,10 @@ namespace MQTTDataProvider.Classes
             try
             {
                 // string containing the MQTT published message
-                string ReceivedMqttMsg = Encoding.UTF8.GetString(e.Message);
+                receivedStrMsg = Encoding.UTF8.GetString(e.Message);
                 if (Globals.IsRecordingMqtt)
                 {
-                    jsonpar.JSONParseReceivedMessage(ReceivedMqttMsg);
+                    jsonpar.JSONParseReceivedMessage(receivedStrMsg);
                     UpdateValues();
                 }
             }
@@ -855,12 +861,12 @@ namespace MQTTDataProvider.Classes
         {
             try
             {
-                Client.Publish("wekit/vest/GSR_Raw", Encoding.UTF8.GetBytes(e.GSR), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-                Client.Publish("wekit/vest/Pulse_Raw", Encoding.UTF8.GetBytes(e.Pulse), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-                Client.Publish("wekit/vest/Sht0_Temp", Encoding.UTF8.GetBytes(e.TempExternal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-                Client.Publish("wekit/vest/Sht0_Hum", Encoding.UTF8.GetBytes(e.HumExternal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-                Client.Publish("wekit/vest/Sht1_Temp", Encoding.UTF8.GetBytes(e.TempInternal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-                Client.Publish("wekit/vest/Sht1_Hum", Encoding.UTF8.GetBytes(e.HumInternal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+                mqttClient.Publish("wekit/vest/GSR_Raw", Encoding.UTF8.GetBytes(e.GSR), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+                mqttClient.Publish("wekit/vest/Pulse_Raw", Encoding.UTF8.GetBytes(e.Pulse), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+                mqttClient.Publish("wekit/vest/Sht0_Temp", Encoding.UTF8.GetBytes(e.TempExternal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+                mqttClient.Publish("wekit/vest/Sht0_Hum", Encoding.UTF8.GetBytes(e.HumExternal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+                mqttClient.Publish("wekit/vest/Sht1_Temp", Encoding.UTF8.GetBytes(e.TempInternal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+                mqttClient.Publish("wekit/vest/Sht1_Hum", Encoding.UTF8.GetBytes(e.HumInternal), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
             }
 
             catch (Exception ex)
@@ -880,7 +886,7 @@ namespace MQTTDataProvider.Classes
             {
                 // Default topic value for WEKIT
                 string topicSubscribe = "wekit/vest";
-                Client.Subscribe(new string[] { topicSubscribe }, new byte[] { 1 });
+                mqttClient.Subscribe(new string[] { topicSubscribe }, new byte[] { 1 });
             }
 
             catch (Exception ex)
@@ -896,54 +902,65 @@ namespace MQTTDataProvider.Classes
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         private void UpdateValues()
         {
-            try
+            if (!Globals.JsonErrorThrown)
             {
-                TextReceivedEventArgs args = new TextReceivedEventArgs
+                try
                 {
-                    TextReceived = jsonpar.ParsedMqttMsg,
-                    ESPTimeStamp = jsonpar.ParsedMqttMsg.time,
-                    IMU1_AccX = jsonpar.ParsedMqttMsg.imus[0].ax,
-                    IMU1_AccY = jsonpar.ParsedMqttMsg.imus[0].ay,
-                    IMU1_AccZ = jsonpar.ParsedMqttMsg.imus[0].az,
-                    IMU1_GyroX = jsonpar.ParsedMqttMsg.imus[0].gx,
-                    IMU1_GyroY = jsonpar.ParsedMqttMsg.imus[0].gy,
-                    IMU1_GyroZ = jsonpar.ParsedMqttMsg.imus[0].gz,
-                    IMU1_MagX = jsonpar.ParsedMqttMsg.imus[0].mx,
-                    IMU1_MagY = jsonpar.ParsedMqttMsg.imus[0].my,
-                    IMU1_MagZ = jsonpar.ParsedMqttMsg.imus[0].mz,
-                    IMU1_Q0 = jsonpar.ParsedMqttMsg.imus[0].q0,
-                    IMU1_Q1 = jsonpar.ParsedMqttMsg.imus[0].q1,
-                    IMU1_Q2 = jsonpar.ParsedMqttMsg.imus[0].q2,
-                    IMU1_Q3 = jsonpar.ParsedMqttMsg.imus[0].q3,
-                    IMU2_AccX = jsonpar.ParsedMqttMsg.imus[1].ax,
-                    IMU2_AccY = jsonpar.ParsedMqttMsg.imus[1].ay,
-                    IMU2_AccZ = jsonpar.ParsedMqttMsg.imus[1].az,
-                    IMU2_GyroX = jsonpar.ParsedMqttMsg.imus[1].gx,
-                    IMU2_GyroY = jsonpar.ParsedMqttMsg.imus[1].gy,
-                    IMU2_GyroZ = jsonpar.ParsedMqttMsg.imus[1].gz,
-                    IMU2_MagX = jsonpar.ParsedMqttMsg.imus[1].mx,
-                    IMU2_MagY = jsonpar.ParsedMqttMsg.imus[1].my,
-                    IMU2_MagZ = jsonpar.ParsedMqttMsg.imus[1].mz,
-                    IMU2_Q0 = jsonpar.ParsedMqttMsg.imus[1].q0,
-                    IMU2_Q1 = jsonpar.ParsedMqttMsg.imus[1].q1,
-                    IMU2_Q2 = jsonpar.ParsedMqttMsg.imus[1].q2,
-                    IMU2_Q3 = jsonpar.ParsedMqttMsg.imus[1].q3,
-                    TempExternal = jsonpar.ParsedMqttMsg.shts[0].temp,
-                    HumExternal = jsonpar.ParsedMqttMsg.shts[0].hum,
-                    TempInternal = jsonpar.ParsedMqttMsg.shts[1].temp,
-                    HumInternal = jsonpar.ParsedMqttMsg.shts[1].hum,
-                    Pulse = jsonpar.ParsedMqttMsg.pulse,
-                    GSR = jsonpar.ParsedMqttMsg.gsr
-                };
-                OnNewTextReceived(args);
-                PublishData(args);
-                sendlh.SendDataToLH(args);
+                    TextReceivedEventArgs args = new TextReceivedEventArgs
+                    {
+                        TextReceived = receivedStrMsg,
+                        ESPTimeStamp = jsonpar.ParsedMqttMsg.time,
+                        IMU1_AccX = jsonpar.ParsedMqttMsg.imus[0].ax,
+                        IMU1_AccY = jsonpar.ParsedMqttMsg.imus[0].ay,
+                        IMU1_AccZ = jsonpar.ParsedMqttMsg.imus[0].az,
+                        IMU1_GyroX = jsonpar.ParsedMqttMsg.imus[0].gx,
+                        IMU1_GyroY = jsonpar.ParsedMqttMsg.imus[0].gy,
+                        IMU1_GyroZ = jsonpar.ParsedMqttMsg.imus[0].gz,
+                        IMU1_MagX = jsonpar.ParsedMqttMsg.imus[0].mx,
+                        IMU1_MagY = jsonpar.ParsedMqttMsg.imus[0].my,
+                        IMU1_MagZ = jsonpar.ParsedMqttMsg.imus[0].mz,
+                        IMU1_Q0 = jsonpar.ParsedMqttMsg.imus[0].q0,
+                        IMU1_Q1 = jsonpar.ParsedMqttMsg.imus[0].q1,
+                        IMU1_Q2 = jsonpar.ParsedMqttMsg.imus[0].q2,
+                        IMU1_Q3 = jsonpar.ParsedMqttMsg.imus[0].q3,
+                        IMU2_AccX = jsonpar.ParsedMqttMsg.imus[1].ax,
+                        IMU2_AccY = jsonpar.ParsedMqttMsg.imus[1].ay,
+                        IMU2_AccZ = jsonpar.ParsedMqttMsg.imus[1].az,
+                        IMU2_GyroX = jsonpar.ParsedMqttMsg.imus[1].gx,
+                        IMU2_GyroY = jsonpar.ParsedMqttMsg.imus[1].gy,
+                        IMU2_GyroZ = jsonpar.ParsedMqttMsg.imus[1].gz,
+                        IMU2_MagX = jsonpar.ParsedMqttMsg.imus[1].mx,
+                        IMU2_MagY = jsonpar.ParsedMqttMsg.imus[1].my,
+                        IMU2_MagZ = jsonpar.ParsedMqttMsg.imus[1].mz,
+                        IMU2_Q0 = jsonpar.ParsedMqttMsg.imus[1].q0,
+                        IMU2_Q1 = jsonpar.ParsedMqttMsg.imus[1].q1,
+                        IMU2_Q2 = jsonpar.ParsedMqttMsg.imus[1].q2,
+                        IMU2_Q3 = jsonpar.ParsedMqttMsg.imus[1].q3,
+                        TempExternal = jsonpar.ParsedMqttMsg.shts[0].temp,
+                        HumExternal = jsonpar.ParsedMqttMsg.shts[0].hum,
+                        TempInternal = jsonpar.ParsedMqttMsg.shts[1].temp,
+                        HumInternal = jsonpar.ParsedMqttMsg.shts[1].hum,
+                        Pulse = jsonpar.ParsedMqttMsg.pulse,
+                        GSR = jsonpar.ParsedMqttMsg.gsr
+                    };
+                    OnNewTextReceived(args);
+                    PublishData(args);
+                    sendlh.SendDataToLH(args);
+                }
+                catch (Exception ex)
+                {
+                    TextReceivedEventArgs args = new TextReceivedEventArgs
+                    {
+                        TextReceived = ex.Message
+                    };
+                    OnNewTextReceived(args);
+                }
             }
-            catch (Exception ex)
+            else
             {
                 TextReceivedEventArgs args = new TextReceivedEventArgs
                 {
-                    TextReceived = ex.Message
+                    TextReceived = jsonpar.ParsedMqttMsg
                 };
                 OnNewTextReceived(args);
             }

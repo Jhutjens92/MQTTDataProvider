@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_m_q_t_t_data_provider_1_1_app" kind="class" language="C#" prot="public">
+    <compoundname>MQTTDataProvider::App</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Application</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Application</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Application</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_app_1a40bd8d1ea14e8bc7edcd2f39828c3f04" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MQTTDataProvider.App::_contentLoaded</definition>
+        <argsstring></argsstring>
+        <name>_contentLoaded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/App.g.cs" line="44" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/App.g.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_app_1a14d3059c91f86459c1a18a83e58c1072" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.App.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/App.g.cs" line="51" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/App.g.cs" bodystart="51" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_app_1a14d3059c91f86459c1a18a83e58c1072" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.App.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/App.g.i.cs" line="51" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/App.g.i.cs" bodystart="51" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_app_1a6bf0305ebbe51e5113d0dc7b471dc330" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void MQTTDataProvider.App.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <briefdescription>
+<para>Application Entry Point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/App.g.cs" line="77" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/App.g.cs" bodystart="77" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_app_1a6bf0305ebbe51e5113d0dc7b471dc330" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void MQTTDataProvider.App.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <briefdescription>
+<para>Application Entry Point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/App.g.i.cs" line="77" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj/Debug/App.g.i.cs" bodystart="77" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interaction logic for App.xaml. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_m_q_t_t_data_provider_1_1_app" kindref="compound">App</ref> </para><para>Jordi Hutjens, 26-10-2018. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>System::Windows::Application</label>
+      </node>
+      <node id="2">
+        <label>Application</label>
+      </node>
+      <node id="0">
+        <label>MQTTDataProvider.App</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_app"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>System::Windows::Application</label>
+      </node>
+      <node id="5">
+        <label>Application</label>
+      </node>
+      <node id="3">
+        <label>MQTTDataProvider.App</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_app"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/App.xaml.cs" line="15" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/App.xaml.cs" bodystart="14" bodyend="16"/>
+    <listofallmembers>
+      <member refid="class_m_q_t_t_data_provider_1_1_app_1a40bd8d1ea14e8bc7edcd2f39828c3f04" prot="private" virt="non-virtual"><scope>MQTTDataProvider::App</scope><name>_contentLoaded</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_app_1a14d3059c91f86459c1a18a83e58c1072" prot="public" virt="non-virtual"><scope>MQTTDataProvider::App</scope><name>InitializeComponent</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_app_1a14d3059c91f86459c1a18a83e58c1072" prot="public" virt="non-virtual"><scope>MQTTDataProvider::App</scope><name>InitializeComponent</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_app_1a6bf0305ebbe51e5113d0dc7b471dc330" prot="public" virt="non-virtual"><scope>MQTTDataProvider::App</scope><name>Main</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_app_1a6bf0305ebbe51e5113d0dc7b471dc330" prot="public" virt="non-virtual"><scope>MQTTDataProvider::App</scope><name>Main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

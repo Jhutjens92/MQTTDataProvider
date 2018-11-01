@@ -12,6 +12,8 @@ var class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager =
     [ "UpdateValues", "class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#a4f815101a3557e1ed8e1458737475751", null ],
     [ "chkpar", "class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#acfd69b15f83781d9afd222e90d9f8345", null ],
     [ "jsonpar", "class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#a45f466c4d992482ffe593364ed85b310", null ],
+    [ "mqttClient", "class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#aefd80467dd77ae623ccbd300a16b5cc7", null ],
+    [ "receivedStrMsg", "class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#ab7a2cd03d2ce6cb689e12bc5569663df", null ],
     [ "sendlh", "class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#a3a01b73d8c2a7db39824b846a9d6c13b", null ],
     [ "NewMqttTextReceived", "class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#a80f38408c02550d7990ebbd59f4f6ba7", null ]
 ];

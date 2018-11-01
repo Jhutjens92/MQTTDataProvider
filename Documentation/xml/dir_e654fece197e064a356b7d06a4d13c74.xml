@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_e654fece197e064a356b7d06a4d13c74" kind="dir">
+    <compoundname>C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes</compoundname>
+    <innerfile refid="_check_parameters_8cs">CheckParameters.cs</innerfile>
+    <innerfile refid="_json_parser_8cs">JsonParser.cs</innerfile>
+    <innerfile refid="_mqtt_manager_8cs">MqttManager.cs</innerfile>
+    <innerfile refid="_send_to_l_h_8cs">SendToLH.cs</innerfile>
+    <innerfile refid="_set_l_h_descriptions_8cs">SetLHDescriptions.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/"/>
+  </compounddef>
+</doxygen>

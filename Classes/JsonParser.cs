@@ -18,24 +18,24 @@ namespace MQTTDataProvider.Classes
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Method for getting the ParsedMqttMsg variable. </summary>
         ///
-        /// <value> A message describing the parsed mqtt. </value>
+        /// <value> A message describing the parsed udp. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         public dynamic ParsedMqttMsg
         {
             get { return parsedMqttMsg; }
         }
-        private static dynamic parsedMqttMsg;
+        private dynamic parsedMqttMsg;
 
         #endregion
 
         #region Method
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Parse MQTT JSON string. </summary>
+        /// <summary>   Parse Mqtt JSON string. </summary>
         ///
         /// <remarks>   Jordi Hutjens, 26-10-2018. </remarks>
         ///
-        /// <param name="receivedMessage">  String containing the receivedMessage from the Mqtt callback
+        /// <param name="receivedMessage">  String containing the receivedMessage from the Mqtt Receive
         ///                                 funtion. </param>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         public void JSONParseReceivedMessage(string receivedMessage)
@@ -44,12 +44,13 @@ namespace MQTTDataProvider.Classes
             {
                 parsedMqttMsg = JObject.Parse(receivedMessage);
             }
-            catch (Exception ex)
+            catch (Newtonsoft.Json.JsonReaderException ex)
             {
-                Console.WriteLine(ex.ToString());
+                string errorMessage = "Invalid JSON structure received. Exception: " + ex.Message;
+                parsedMqttMsg = errorMessage;
+                Globals.JsonErrorThrown = true;
             }
         }
-
         #endregion
     }
 }

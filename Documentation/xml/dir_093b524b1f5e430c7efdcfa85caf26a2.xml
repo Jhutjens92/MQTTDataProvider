@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_093b524b1f5e430c7efdcfa85caf26a2" kind="dir">
+    <compoundname>C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider</compoundname>
+    <innerdir refid="dir_e654fece197e064a356b7d06a4d13c74">C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes</innerdir>
+    <innerdir refid="dir_67b083c85185beafc91224e2675bd302">C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Model</innerdir>
+    <innerdir refid="dir_2e938aff2e7eefba2b11d980a574bddc">C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/obj</innerdir>
+    <innerdir refid="dir_4881061bdeb9c64f48b854fcc1c6aa89">C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Properties</innerdir>
+    <innerdir refid="dir_192f46daf51c7c6e96f7101471dc4afd">C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel</innerdir>
+    <innerfile refid="_app_8xaml_8cs">App.xaml.cs</innerfile>
+    <innerfile refid="_main_window_view_8xaml_8cs">MainWindowView.xaml.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/"/>
+  </compounddef>
+</doxygen>

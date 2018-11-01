@@ -6,7 +6,6 @@ var searchData=
   ['checkparameters_2ecs',['CheckParameters.cs',['../_check_parameters_8cs.html',1,'']]],
   ['checkstartupparameters',['CheckStartupParameters',['../class_m_q_t_t_data_provider_1_1_classes_1_1_check_parameters.html#a53c64d288502a0c8ab2bb01d3d220cbd',1,'MQTTDataProvider::Classes::CheckParameters']]],
   ['chkpar',['chkpar',['../class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#acfd69b15f83781d9afd222e90d9f8345',1,'MQTTDataProvider::Classes::MqttManager']]],
-  ['client',['Client',['../class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#a116e6f394649fe479ba7683f867c2414',1,'MQTTDataProvider::Classes::MqttManager']]],
   ['client_5fmqttmsgpublishreceived',['Client_MqttMsgPublishReceived',['../class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#ab13c1df2508d05f6990f832db11c6eb8',1,'MQTTDataProvider::Classes::MqttManager']]],
   ['closeapp',['CloseApp',['../class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model.html#a7dc02f3aa9bf8b431185fe6936942dff',1,'MQTTDataProvider::ViewModel::MainWindowViewModel']]],
   ['closemqttconnection',['CloseMqttConnection',['../class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#a3e2e72e9396621c6571f378a3d15e090',1,'MQTTDataProvider::Classes::MqttManager']]],

@@ -11,6 +11,7 @@ var searchData=
   ['mainwindowviewmodel_2ecs',['MainWindowViewModel.cs',['../_main_window_view_model_8cs.html',1,'']]],
   ['mdmanager',['mdmanager',['../class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model.html#af17db57a5ff1ed6c74053621f7c5bfdd',1,'MQTTDataProvider::ViewModel::MainWindowViewModel']]],
   ['model',['Model',['../namespace_m_q_t_t_data_provider_1_1_model.html',1,'MQTTDataProvider']]],
+  ['mqttclient',['mqttClient',['../class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#aefd80467dd77ae623ccbd300a16b5cc7',1,'MQTTDataProvider::Classes::MqttManager']]],
   ['mqttdataprovider',['MQTTDataProvider',['../namespace_m_q_t_t_data_provider.html',1,'']]],
   ['mqttmanager',['MqttManager',['../class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html',1,'MQTTDataProvider.Classes.MqttManager'],['../class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#a92b515963863a48883896298b4e7a998',1,'MQTTDataProvider.Classes.MqttManager.MqttManager()']]],
   ['mqttmanager_2ecs',['MqttManager.cs',['../_mqtt_manager_8cs.html',1,'']]],

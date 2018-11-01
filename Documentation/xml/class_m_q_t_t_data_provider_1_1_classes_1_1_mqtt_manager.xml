@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager" kind="class" language="C#" prot="public">
+    <compoundname>MQTTDataProvider::Classes::MqttManager</compoundname>
+    <innerclass refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args" prot="public">MQTTDataProvider::Classes::MqttManager::TextReceivedEventArgs</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1aefd80467dd77ae623ccbd300a16b5cc7" prot="private" static="no" mutable="no">
+        <type>MqttClient</type>
+        <definition>MqttClient MQTTDataProvider.Classes.MqttManager.mqttClient</definition>
+        <argsstring></argsstring>
+        <name>mqttClient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="27" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1acfd69b15f83781d9afd222e90d9f8345" prot="private" static="no" mutable="no">
+        <type><ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_check_parameters" kindref="compound">CheckParameters</ref></type>
+        <definition>CheckParameters MQTTDataProvider.Classes.MqttManager.chkpar</definition>
+        <argsstring></argsstring>
+        <name>chkpar</name>
+        <initializer>= new <ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_check_parameters" kindref="compound">CheckParameters</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="28" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a45f466c4d992482ffe593364ed85b310" prot="private" static="no" mutable="no">
+        <type><ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser" kindref="compound">JsonParser</ref></type>
+        <definition>JsonParser MQTTDataProvider.Classes.MqttManager.jsonpar</definition>
+        <argsstring></argsstring>
+        <name>jsonpar</name>
+        <initializer>= new <ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser" kindref="compound">JsonParser</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="29" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a3a01b73d8c2a7db39824b846a9d6c13b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_send_to_l_h" kindref="compound">SendToLH</ref></type>
+        <definition>SendToLH MQTTDataProvider.Classes.MqttManager.sendlh</definition>
+        <argsstring></argsstring>
+        <name>sendlh</name>
+        <initializer>= new <ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_send_to_l_h" kindref="compound">SendToLH</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="30" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1ab7a2cd03d2ce6cb689e12bc5569663df" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string MQTTDataProvider.Classes.MqttManager.receivedStrMsg</definition>
+        <argsstring></argsstring>
+        <name>receivedStrMsg</name>
+        <briefdescription>
+<para>Message describing the received mqtt. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="750" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="750" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a80f38408c02550d7990ebbd59f4f6ba7" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>EventHandler&lt; <ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args" kindref="compound">TextReceivedEventArgs</ref> &gt;</type>
+        <definition>EventHandler&lt;TextReceivedEventArgs&gt; MQTTDataProvider.Classes.MqttManager.NewMqttTextReceived</definition>
+        <argsstring></argsstring>
+        <name>NewMqttTextReceived</name>
+        <briefdescription>
+<para>Handler for other classes to subscribe to. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="37" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1adf0b0947a30e145b9e0b5fcc5e1eb319" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MQTTDataProvider.Classes.MqttManager.OnNewTextReceived</definition>
+        <argsstring>(TextReceivedEventArgs e)</argsstring>
+        <name>OnNewTextReceived</name>
+        <param>
+          <type><ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args" kindref="compound">TextReceivedEventArgs</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Raising the event in the <ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager" kindref="compound">MqttManager</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Containing the filtered Json string. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="46" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="46" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a92b515963863a48883896298b4e7a998" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MQTTDataProvider.Classes.MqttManager.MqttManager</definition>
+        <argsstring>()</argsstring>
+        <name>MqttManager</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="761" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="761" bodyend="768"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a3e2e72e9396621c6571f378a3d15e090" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.Classes.MqttManager.CloseMqttConnection</definition>
+        <argsstring>()</argsstring>
+        <name>CloseMqttConnection</name>
+        <briefdescription>
+<para>Closes the MQTT connection when the program stops. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="815" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="815" bodyend="825"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a7ad4be502a40f0789ca6950885e27a7c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.Classes.MqttManager.CreateMqttClient</definition>
+        <argsstring>()</argsstring>
+        <name>CreateMqttClient</name>
+        <briefdescription>
+<para>Creates the MQTT Client. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="779" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="779" bodyend="789"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1ad6d6a01e4d6a0b01a29ac10e346d9d76" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.Classes.MqttManager.ConnectMqttClient</definition>
+        <argsstring>()</argsstring>
+        <name>ConnectMqttClient</name>
+        <briefdescription>
+<para>Connects to the MQTT Client with a random ID (generated) </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="796" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="796" bodyend="808"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1ab13c1df2508d05f6990f832db11c6eb8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.Classes.MqttManager.Client_MqttMsgPublishReceived</definition>
+        <argsstring>(object sender, MqttMsgPublishEventArgs e)</argsstring>
+        <name>Client_MqttMsgPublishReceived</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>MqttMsgPublishEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Callback function that executes when a MQTT message was received. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Event arguments containing the published Mqtt message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="835" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="835" bodyend="851"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1ad64915fc1e36544b65618ac8c621aa54" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.Classes.MqttManager.PublishData</definition>
+        <argsstring>(TextReceivedEventArgs e)</argsstring>
+        <name>PublishData</name>
+        <param>
+          <type><ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args" kindref="compound">TextReceivedEventArgs</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Publish specific ESP data to the predefined topics using Mqtt/QoS 1. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Containing the filtered received Mqtt text. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="860" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="860" bodyend="876"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a5e53289bf5d32901e928937fb43f5f0c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.Classes.MqttManager.Subscribe_Default</definition>
+        <argsstring>()</argsstring>
+        <name>Subscribe_Default</name>
+        <briefdescription>
+<para>Subscribes to the default Mqtt topic (&quot;wekit/vest&quot;) </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="883" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="883" bodyend="896"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a4f815101a3557e1ed8e1458737475751" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.Classes.MqttManager.UpdateValues</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateValues</name>
+        <briefdescription>
+<para>Sets all the variables to the received values. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="903" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="903" bodyend="967"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager" kindref="compound">MqttManager</ref> class handles all Mqtt functions. Also includes updating the variables based on published data. </para>    </briefdescription>
+    <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="49">
+        <label>MQTTDataProvider.Classes.CheckParameters</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_check_parameters"/>
+      </node>
+      <node id="46">
+        <label>MQTTDataProvider.Classes.MqttManager</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager"/>
+        <childnode refid="47" relation="usage">
+          <edgelabel>sendlh</edgelabel>
+        </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>jsonpar</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>chkpar</edgelabel>
+        </childnode>
+      </node>
+      <node id="47">
+        <label>MQTTDataProvider.Classes.SendToLH</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_send_to_l_h"/>
+      </node>
+      <node id="48">
+        <label>MQTTDataProvider.Classes.JsonParser</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="24" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="23" bodyend="970"/>
+    <listofallmembers>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1acfd69b15f83781d9afd222e90d9f8345" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MqttManager</scope><name>chkpar</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1ab13c1df2508d05f6990f832db11c6eb8" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MqttManager</scope><name>Client_MqttMsgPublishReceived</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a3e2e72e9396621c6571f378a3d15e090" prot="public" virt="non-virtual"><scope>MQTTDataProvider::Classes::MqttManager</scope><name>CloseMqttConnection</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1ad6d6a01e4d6a0b01a29ac10e346d9d76" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MqttManager</scope><name>ConnectMqttClient</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a7ad4be502a40f0789ca6950885e27a7c" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MqttManager</scope><name>CreateMqttClient</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a45f466c4d992482ffe593364ed85b310" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MqttManager</scope><name>jsonpar</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1aefd80467dd77ae623ccbd300a16b5cc7" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MqttManager</scope><name>mqttClient</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a92b515963863a48883896298b4e7a998" prot="public" virt="non-virtual"><scope>MQTTDataProvider::Classes::MqttManager</scope><name>MqttManager</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a80f38408c02550d7990ebbd59f4f6ba7" prot="public" virt="non-virtual"><scope>MQTTDataProvider::Classes::MqttManager</scope><name>NewMqttTextReceived</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1adf0b0947a30e145b9e0b5fcc5e1eb319" prot="protected" virt="virtual"><scope>MQTTDataProvider::Classes::MqttManager</scope><name>OnNewTextReceived</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1ad64915fc1e36544b65618ac8c621aa54" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MqttManager</scope><name>PublishData</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1ab7a2cd03d2ce6cb689e12bc5569663df" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MqttManager</scope><name>receivedStrMsg</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a3a01b73d8c2a7db39824b846a9d6c13b" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MqttManager</scope><name>sendlh</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a5e53289bf5d32901e928937fb43f5f0c" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MqttManager</scope><name>Subscribe_Default</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a4f815101a3557e1ed8e1458737475751" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MqttManager</scope><name>UpdateValues</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

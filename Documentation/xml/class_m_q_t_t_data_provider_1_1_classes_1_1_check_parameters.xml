@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_m_q_t_t_data_provider_1_1_classes_1_1_check_parameters" kind="class" language="C#" prot="public">
+    <compoundname>MQTTDataProvider::Classes::CheckParameters</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_check_parameters_1aa064296d540af16f10f2e3fe182e3cb2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string MQTTDataProvider.Classes.CheckParameters.BrokerAddress</definition>
+        <argsstring></argsstring>
+        <name>BrokerAddress</name>
+        <briefdescription>
+<para>method for getting the BrokerAddress variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>The broker address. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/CheckParameters.cs" line="23" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/CheckParameters.cs" bodystart="24" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_check_parameters_1a2cbd05d9bce2358abe2220a4ebad72a5" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string MQTTDataProvider.Classes.CheckParameters.brokerAddress</definition>
+        <argsstring></argsstring>
+        <name>brokerAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/CheckParameters.cs" line="27" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/CheckParameters.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_classes_1_1_check_parameters_1a53c64d288502a0c8ab2bb01d3d220cbd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.Classes.CheckParameters.CheckStartupParameters</definition>
+        <argsstring>()</argsstring>
+        <name>CheckStartupParameters</name>
+        <briefdescription>
+<para>Checks the startup parameters given (if any). If no arguments given, it sets default values. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/CheckParameters.cs" line="40" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/CheckParameters.cs" bodystart="40" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class checks the startup parameters. </para>    </briefdescription>
+    <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>    </detaileddescription>
+    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/CheckParameters.cs" line="15" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/CheckParameters.cs" bodystart="14" bodyend="64"/>
+    <listofallmembers>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_check_parameters_1aa064296d540af16f10f2e3fe182e3cb2" prot="public" virt="non-virtual"><scope>MQTTDataProvider::Classes::CheckParameters</scope><name>BrokerAddress</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_check_parameters_1a2cbd05d9bce2358abe2220a4ebad72a5" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::CheckParameters</scope><name>brokerAddress</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_check_parameters_1a53c64d288502a0c8ab2bb01d3d220cbd" prot="public" virt="non-virtual"><scope>MQTTDataProvider::Classes::CheckParameters</scope><name>CheckStartupParameters</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

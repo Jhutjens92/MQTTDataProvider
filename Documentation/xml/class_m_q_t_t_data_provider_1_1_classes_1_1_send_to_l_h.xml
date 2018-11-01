@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_m_q_t_t_data_provider_1_1_classes_1_1_send_to_l_h" kind="class" language="C#" prot="public">
+    <compoundname>MQTTDataProvider::Classes::SendToLH</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_classes_1_1_send_to_l_h_1aaff28483d2358a9fb8a4370bab92c738" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.Classes.SendToLH.SendDataToLH</definition>
+        <argsstring>(TextReceivedEventArgs e)</argsstring>
+        <name>SendDataToLH</name>
+        <param>
+          <type>TextReceivedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Sends the published sensor data to the Learning Hub. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter containing the filtered Json string data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/SendToLH.cs" line="25" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/SendToLH.cs" bodystart="25" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class containing the function to send to Learning Hub. </para>    </briefdescription>
+    <detaileddescription>
+<para>Jordi Hutjens, 26-10-2018. </para>    </detaileddescription>
+    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/SendToLH.cs" line="17" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/SendToLH.cs" bodystart="16" bodyend="65"/>
+    <listofallmembers>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_send_to_l_h_1aaff28483d2358a9fb8a4370bab92c738" prot="public" virt="non-virtual"><scope>MQTTDataProvider::Classes::SendToLH</scope><name>SendDataToLH</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
