@@ -304,7 +304,7 @@
 <para>Jordi Hutjens, 26-10-2018. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="219" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="219" bodyend="230"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="219" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="219" bodyend="232"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -329,7 +329,7 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="43">
+      <node id="45">
         <label>MQTTDataProvider.Classes.CheckParameters</label>
         <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_check_parameters"/>
       </node>
@@ -340,20 +340,34 @@
         <label>MQTTDataProvider.Classes.MqttManager</label>
         <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager"/>
         <childnode refid="41" relation="usage">
-          <edgelabel>sendlh</edgelabel>
-        </childnode>
-        <childnode refid="42" relation="usage">
-          <edgelabel>jsonpar</edgelabel>
+          <edgelabel>msqbroker</edgelabel>
         </childnode>
         <childnode refid="43" relation="usage">
+          <edgelabel>sendlh</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>jsonpar</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
           <edgelabel>chkpar</edgelabel>
         </childnode>
       </node>
       <node id="41">
+        <label>MQTTDataProvider.Classes.MosquittoBroker</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker"/>
+        <childnode refid="42" relation="usage">
+          <edgelabel>filename2</edgelabel>
+          <edgelabel>exectuable</edgelabel>
+          <edgelabel>cPath1</edgelabel>
+          <edgelabel>cPath2</edgelabel>
+          <edgelabel>filename1</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
         <label>MQTTDataProvider.Classes.SendToLH</label>
         <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_send_to_l_h"/>
       </node>
-      <node id="42">
+      <node id="44">
         <label>MQTTDataProvider.Classes.JsonParser</label>
         <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser"/>
       </node>
@@ -365,11 +379,11 @@
         <childnode refid="40" relation="usage">
           <edgelabel>mdmanager</edgelabel>
         </childnode>
-        <childnode refid="44" relation="usage">
+        <childnode refid="46" relation="usage">
           <edgelabel>setlhdes</edgelabel>
         </childnode>
       </node>
-      <node id="44">
+      <node id="46">
         <label>MQTTDataProvider.Classes.SetLHDescriptions</label>
         <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_set_l_h_descriptions"/>
       </node>
@@ -379,8 +393,11 @@
         <childnode refid="39" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="42">
+        <label>static</label>
+      </node>
     </collaborationgraph>
-    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="21" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="20" bodyend="233"/>
+    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" line="21" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs" bodystart="20" bodyend="235"/>
     <listofallmembers>
       <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a6fd4d705b86d2b33093a83af0b2d4cb4" prot="private" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>buttonClicked</name></member>
       <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a92e50b1639fc67c5b152bc7eb883651b" prot="public" virt="non-virtual"><scope>MQTTDataProvider::ViewModel::MainWindowViewModel</scope><name>ButtonColor</name></member>

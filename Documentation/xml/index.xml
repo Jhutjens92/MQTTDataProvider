@@ -74,11 +74,21 @@
     <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a7d4730af40c97576bafcb985752956c9" kind="function"><name>MainWindowViewModel</name></member>
     <member refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_main_window_view_model_1a7dc02f3aa9bf8b431185fe6936942dff" kind="function"><name>CloseApp</name></member>
   </compound>
+  <compound refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker" kind="class"><name>MQTTDataProvider::Classes::MosquittoBroker</name>
+    <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1a9a8cab70eed3db06ec188dca24a2614d" kind="variable"><name>exectuable</name></member>
+    <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1acb4b14d1601088ab8974803426e2a1af" kind="variable"><name>cPath1</name></member>
+    <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1ae87b3cce789a3bb9bc8004279e07f467" kind="variable"><name>cPath2</name></member>
+    <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1ac7a48f00ec2f7c4b5ad00fce9a03cd60" kind="variable"><name>filename1</name></member>
+    <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1aaf17cabd8741f4b2a380e19bd3797473" kind="variable"><name>filename2</name></member>
+    <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1a71d64db2b26d51045e162807e2956ef3" kind="function"><name>StartMosquittoBroker</name></member>
+    <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1af7058b5dd912fc8324cb028f4c29246b" kind="function"><name>CheckMosquittoBroker</name></member>
+  </compound>
   <compound refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager" kind="class"><name>MQTTDataProvider::Classes::MqttManager</name>
     <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1aefd80467dd77ae623ccbd300a16b5cc7" kind="variable"><name>mqttClient</name></member>
     <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1acfd69b15f83781d9afd222e90d9f8345" kind="variable"><name>chkpar</name></member>
     <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a45f466c4d992482ffe593364ed85b310" kind="variable"><name>jsonpar</name></member>
     <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a3a01b73d8c2a7db39824b846a9d6c13b" kind="variable"><name>sendlh</name></member>
+    <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a5e672d4cd54cceb4f4fc4863b32543b6" kind="variable"><name>msqbroker</name></member>
     <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1ab7a2cd03d2ce6cb689e12bc5569663df" kind="variable"><name>receivedStrMsg</name></member>
     <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1a80f38408c02550d7990ebbd59f4f6ba7" kind="event"><name>NewMqttTextReceived</name></member>
     <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1adf0b0947a30e145b9e0b5fcc5e1eb319" kind="function"><name>OnNewTextReceived</name></member>
@@ -213,6 +223,8 @@
   </compound>
   <compound refid="namespace_system_1_1_diagnostics" kind="namespace"><name>System::Diagnostics</name>
   </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
   <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
   </compound>
   <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
@@ -224,6 +236,8 @@
   <compound refid="namespace_system_1_1_runtime_1_1_interop_services" kind="namespace"><name>System::Runtime::InteropServices</name>
   </compound>
   <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading" kind="namespace"><name>System::Threading</name>
   </compound>
   <compound refid="namespace_system_1_1_threading_1_1_tasks" kind="namespace"><name>System::Threading::Tasks</name>
   </compound>
@@ -277,6 +291,8 @@
   </compound>
   <compound refid="_json_parser_8cs" kind="file"><name>JsonParser.cs</name>
   </compound>
+  <compound refid="_mosquitto_broker_8cs" kind="file"><name>MosquittoBroker.cs</name>
+  </compound>
   <compound refid="_mqtt_manager_8cs" kind="file"><name>MqttManager.cs</name>
   </compound>
   <compound refid="_send_to_l_h_8cs" kind="file"><name>SendToLH.cs</name>
@@ -304,6 +320,8 @@
   <compound refid="_main_window_view_8g_8cs" kind="file"><name>MainWindowView.g.cs</name>
   </compound>
   <compound refid="_main_window_view_8g_8i_8cs" kind="file"><name>MainWindowView.g.i.cs</name>
+  </compound>
+  <compound refid="_m_q_t_t_data_provider___content_8g_8i_8cs" kind="file"><name>MQTTDataProvider_Content.g.i.cs</name>
   </compound>
   <compound refid="_temporary_generated_file__036_c0_b5_b-1481-4323-8_d20-8_f5_a_d_c_b23_d92_8cs" kind="file"><name>TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs</name>
   </compound>

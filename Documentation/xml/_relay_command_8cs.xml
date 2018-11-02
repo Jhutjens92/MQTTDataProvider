@@ -4,7 +4,6 @@
     <compoundname>RelayCommand.cs</compoundname>
     <innerclass refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_relay_command" prot="public">MQTTDataProvider::ViewModel::RelayCommand</innerclass>
     <innernamespace refid="namespace_m_q_t_t_data_provider_1_1_view_model">MQTTDataProvider::ViewModel</innernamespace>
-    <innernamespace refid="namespace_system_1_1_diagnostics">System::Diagnostics</innernamespace>
     <innernamespace refid="namespace_system_1_1_windows_1_1_input">System::Windows::Input</innernamespace>
       <sectiondef kind="var">
       <memberdef kind="variable" id="_relay_command_8cs_1a81a223a02c34d82b47199f08308847f2" prot="public" static="no" mutable="no">

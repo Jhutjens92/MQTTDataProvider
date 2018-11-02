@@ -13,11 +13,13 @@
 <codeline></codeline>
 <codeline><highlight class="normal">###<sp/>Prerequisites</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>Download<sp/>the<sp/>Learning<sp/>Hub:<sp/>https://github.com/janschneiderou/LearningHub</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>Installed<sp/>the<sp/>Mosquitto<sp/>Broker<sp/>(local)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Installed<sp/>the<sp/>Mosquitto<sp/>Broker<sp/>(local)<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-Make<sp/>sure<sp/>the<sp/>Mosquitto<sp/>Broker<sp/>is<sp/>installed<sp/>at<sp/>C:/Program<sp/>Files/mosquitto<sp/>or<sp/>C:/Program<sp/>Files<sp/>(x86)/mosquitto</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>Use<sp/>an<sp/><sp/>MQTT<sp/>Sender<sp/>for<sp/>testing<sp/></highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>Getting<sp/>Started</highlight></codeline>
 <codeline><highlight class="normal">The<sp/>brokeraddress<sp/>is<sp/>currently<sp/>set<sp/>to<sp/>&quot;localhost&quot;<sp/>(127.0.0.1).<sp/>This<sp/>means<sp/>that<sp/>Mosquitto<sp/>is<sp/>required<sp/>for<sp/>the<sp/>program<sp/>to<sp/>be<sp/>able<sp/>to<sp/>send<sp/>and<sp/>recieve<sp/>data.</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>Mosquitto<sp/>Broker<sp/>will<sp/>run<sp/>automatically<sp/>at<sp/>the<sp/>start<sp/>of<sp/>the<sp/>MQTTDataProvider<sp/>if<sp/>it<sp/>isn&apos;t<sp/>running.<sp/></highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">You<sp/>can<sp/>test<sp/>the<sp/>MQTTDataProvider<sp/>without<sp/>using<sp/>the<sp/>Learning<sp/>Hub<sp/>by<sp/>just<sp/>starting<sp/>the<sp/>executable<sp/>and<sp/>press<sp/>&quot;Start<sp/>Recording&quot;</highlight></codeline>
 <codeline><highlight class="normal">Currently<sp/>it<sp/>does<sp/>not<sp/>provide<sp/>any<sp/>logging<sp/>when<sp/>you<sp/>run<sp/>it<sp/>seperatly.<sp/>It<sp/>only<sp/>shows<sp/>the<sp/>received<sp/>string<sp/>in<sp/>the<sp/>textbox<sp/>for<sp/>testing.</highlight></codeline>

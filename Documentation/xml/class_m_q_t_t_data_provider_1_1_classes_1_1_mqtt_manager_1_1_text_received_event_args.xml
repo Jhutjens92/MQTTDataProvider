@@ -15,7 +15,7 @@
 <para>The text received. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="67" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="68" bodyend="81"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="68" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="69" bodyend="82"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a219af866a02150ebc8cae84eb8524837" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -28,7 +28,7 @@
 <para>The imu 1 accumulate x coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="90" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="91" bodyend="101"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="91" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="92" bodyend="102"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a262f44ffb62406f30ff3306884c68e69" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -41,7 +41,7 @@
 <para>The imu 1 accumulate y coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="110" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="111" bodyend="121"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="111" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="112" bodyend="122"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1aae1632263066babca10e9819c01dcaa8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -54,7 +54,7 @@
 <para>The imu 1 accumulate z coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="130" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="131" bodyend="141"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="131" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="132" bodyend="142"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1ab060ca67baaaba0910d7a3cd48e2d32d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -67,7 +67,7 @@
 <para>The imu 1 gyro x coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="150" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="151" bodyend="161"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="151" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="152" bodyend="162"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1aca82e439cb65e03a8e404b5741d44824" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -80,7 +80,7 @@
 <para>The imu 1 gyro y coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="170" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="171" bodyend="181"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="171" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="172" bodyend="182"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a7e2898c430bb50acc08dd89c17f4a707" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -93,7 +93,7 @@
 <para>The imu 1 gyro z coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="190" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="191" bodyend="201"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="191" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="192" bodyend="202"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a61d687cd2c46bbd9f4f05ac76471e2c3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -106,7 +106,7 @@
 <para>The imu 1 magnitude x coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="210" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="211" bodyend="221"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="211" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="212" bodyend="222"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1aa787d301a39983d8de4a95fd8e77d51c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -119,7 +119,7 @@
 <para>The imu 1 magnitude y coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="230" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="231" bodyend="241"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="231" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="232" bodyend="242"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a0df64945c8a258e61c0fdf5abfe4c786" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -132,7 +132,7 @@
 <para>The imu 1 magnitude z coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="250" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="251" bodyend="261"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="251" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="252" bodyend="262"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1afe3e6b9df287433d5de1404cdcd4e52a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -145,7 +145,7 @@
 <para>The imu 1 q 0. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="270" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="271" bodyend="281"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="271" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="272" bodyend="282"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1ada5a50dd7b4c010ff10244d8519c9530" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -158,7 +158,7 @@
 <para>The imu 1 q 1. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="290" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="291" bodyend="301"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="291" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="292" bodyend="302"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a00ede97a1678449fe3e42ef4f4f76503" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -171,7 +171,7 @@
 <para>The imu 1 q 2. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="310" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="311" bodyend="321"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="311" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="312" bodyend="322"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a9f6cfd5ad34e1777674982d34f28ab44" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -184,7 +184,7 @@
 <para>The imu 1 q 3. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="330" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="331" bodyend="341"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="331" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="332" bodyend="342"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a907e2bf1c3b6d11eb1fbe4b8df07d9b9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -197,7 +197,7 @@
 <para>The imu 2 accumulate x coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="350" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="351" bodyend="361"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="351" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="352" bodyend="362"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1aeafb38b99fd4b823345cc57c8848aa6c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -210,7 +210,7 @@
 <para>The imu 2 accumulate y coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="370" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="371" bodyend="381"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="371" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="372" bodyend="382"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1aac44b1770a80314d3d4c9b28b1a20fe6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -223,7 +223,7 @@
 <para>The imu 2 accumulate z coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="390" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="391" bodyend="401"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="391" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="392" bodyend="402"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a2ed8955fe3be3e1a806620c54a7097ef" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -236,7 +236,7 @@
 <para>The imu 2 gyro x coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="410" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="411" bodyend="421"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="411" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="412" bodyend="422"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1ab388d9628ecd85ea0e4f2390908d5a0b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -249,7 +249,7 @@
 <para>The imu 2 gyro y coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="430" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="431" bodyend="441"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="431" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="432" bodyend="442"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a863ae27ef868512f092edfa70b69a8e1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -262,7 +262,7 @@
 <para>The imu 2 gyro z coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="450" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="451" bodyend="461"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="451" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="452" bodyend="462"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a598b9573633401e678de0bee462e372d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -275,7 +275,7 @@
 <para>The imu 2 magnitude x coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="470" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="471" bodyend="481"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="471" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="472" bodyend="482"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1aa110cc72b9fd43951814a55a397c67e8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -288,7 +288,7 @@
 <para>The imu 2 magnitude y coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="490" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="491" bodyend="501"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="491" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="492" bodyend="502"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1aa8562ad7f8849c5ccfd24b8df5879dee" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -301,7 +301,7 @@
 <para>The imu 2 magnitude z coordinate. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="510" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="511" bodyend="521"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="511" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="512" bodyend="522"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1ab6058c5c953495ca4f2bd0021690dc76" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -314,7 +314,7 @@
 <para>The imu 2 q 0. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="530" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="531" bodyend="541"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="531" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="532" bodyend="542"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1ad2b7d5e96dfdebf9eac26864688b6074" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -327,7 +327,7 @@
 <para>The imu 2 q 1. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="550" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="551" bodyend="561"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="551" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="552" bodyend="562"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a3848f7877a671043883e3bb175a055b0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -340,7 +340,7 @@
 <para>The imu 2 q 2. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="570" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="571" bodyend="581"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="571" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="572" bodyend="582"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a02a04845e01ee14812a9695cb63e8e64" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -353,7 +353,7 @@
 <para>The imu 2 q 3. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="590" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="591" bodyend="601"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="591" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="592" bodyend="602"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a866cecc95e0113ad8a1ba80f2c607794" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -366,7 +366,7 @@
 <para>The temporary external. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="610" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="611" bodyend="621"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="611" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="612" bodyend="622"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1ae5f2fc5ca94b889c05a3048203f5f55d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -379,7 +379,7 @@
 <para>The hum external. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="630" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="631" bodyend="641"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="631" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="632" bodyend="642"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a63eae42a59e98be7d5efe9d051d26bf6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -392,7 +392,7 @@
 <para>The temporary internal. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="650" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="651" bodyend="661"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="651" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="652" bodyend="662"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a6b4d7afba0c239205ba5b52431d932e3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -405,7 +405,7 @@
 <para>The hum internal. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="670" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="671" bodyend="681"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="671" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="672" bodyend="682"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a9fb142015ea3d834a324f3778c9a277b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -418,7 +418,7 @@
 <para>The pulse. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="690" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="691" bodyend="701"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="691" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="692" bodyend="702"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a1c20cf85fb5d796899fd99b2a1593280" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -431,7 +431,7 @@
 <para>The gsr. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="710" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="711" bodyend="721"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="711" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="712" bodyend="722"/>
       </memberdef>
       <memberdef kind="property" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a8cebe2ebaaf6a89cbb6bd7d37267782f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -444,7 +444,7 @@
 <para>The esp time stamp. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="730" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="731" bodyend="741"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="731" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="732" bodyend="742"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -459,7 +459,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="82" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="82" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="83" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="83" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1ae549d8a3c359eedce7a945b80464f73f" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -473,7 +473,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="102" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="102" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="103" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="103" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a9135ab2ba2bb8f7b5fad3e4ff442c78e" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -487,7 +487,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="122" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="122" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="123" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="123" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1aa940d6eb304941915018eea1b782d0f8" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -501,7 +501,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="142" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="142" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="143" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="143" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a70401982e9e3ac0e299aea52bd46d160" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -515,7 +515,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="162" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="162" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="163" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="163" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a1b64f5e7c676bf187e18cfd8bc47a380" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -529,7 +529,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="182" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="182" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="183" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="183" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1af56cb1e699be559ca2e3814f0467d8aa" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -543,7 +543,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="202" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="202" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="203" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="203" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1abd6142f777d37d62290858757a09638d" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -557,7 +557,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="222" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="222" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="223" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="223" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a711088b6eefe4a300f47eb7312009f42" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -571,7 +571,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="242" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="242" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="243" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="243" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a10938bb89646d87c597ca7f5eb08021c" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -585,7 +585,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="262" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="262" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="263" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="263" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a5b584b18a4ea9e35edd935156fc34a7e" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -599,7 +599,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="282" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="282" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="283" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="283" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a00fb4df19c88a2f40a27c8464f316045" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -613,7 +613,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="302" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="302" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="303" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="303" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1ab8353b4eadbf3fd2bf7ffc592f2654f3" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -627,7 +627,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="322" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="322" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="323" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="323" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1ab5f24baeaf116bb91457ca72dd5cdc25" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -641,7 +641,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="342" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="342" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="343" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="343" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1af0d8727c75e769d6eabcb5e079a860ec" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -655,7 +655,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="362" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="362" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="363" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="363" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a48ffd69506b89533323e18c613268158" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -669,7 +669,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="382" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="382" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="383" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="383" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1aa8dba905d964d1c24414146f0e3e2237" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -683,7 +683,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="402" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="402" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="403" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="403" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a7f83fee4f24733c2e92148fdfd9d7d12" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -697,7 +697,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="422" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="422" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="423" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="423" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1ab352149e47b8b85350dd5b12172e1c36" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -711,7 +711,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="442" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="442" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="443" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="443" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1ac6129cff560632da327234ec33c94add" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -725,7 +725,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="462" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="462" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="463" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="463" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a67b28fc88689119099873a15c2e25182" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -739,7 +739,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="482" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="482" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="483" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="483" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1af09c3ca6aaefd1cfba2cdb1884ad9d06" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -753,7 +753,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="502" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="502" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="503" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="503" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a4f5e5a66b557e74d5a94c1062c4c33c2" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -767,7 +767,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="522" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="522" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="523" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="523" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1aaaaeead77631237c04e0b32521696244" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -781,7 +781,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="542" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="542" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="543" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="543" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1af0233b74a52f0493e26d559c6ebe9910" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -795,7 +795,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="562" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="562" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="563" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="563" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1af6a9f28d0d6530d62b3bd49c0bc03e18" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -809,7 +809,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="582" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="582" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="583" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="583" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a2065df1a98037a1b1f35f0f0542c88ec" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -823,7 +823,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="602" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="602" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="603" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="603" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a5a79cfd38823ac0c14f51944b398f060" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -837,7 +837,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="622" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="622" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="623" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="623" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a7510c02a03a478c5d0240f2d3745fbbe" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -851,7 +851,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="642" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="642" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="643" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="643" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a1006db096294b972e1f418bae72fddb0" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -865,7 +865,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="662" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="662" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="663" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="663" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a84c57d5c6c6f74754adff0bbe03a2553" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -879,7 +879,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="682" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="682" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="683" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="683" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1aebbf24133bf4df2f86b570bbc33c7b5a" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -893,7 +893,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="702" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="702" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="703" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="703" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a07d80bc9162d1ad32b96f0785ed889e2" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -907,7 +907,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="722" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="722" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="723" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="723" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a945776864ec47b419343d6501628d88e" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -921,7 +921,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="742" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="742" bodyend="-1"/>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="743" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="743" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -929,28 +929,28 @@
     <detaileddescription>
 <para>Jordi Hutjens, 26-10-2018. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="67">
+      <node id="74">
         <label>EventArgs</label>
       </node>
-      <node id="66">
+      <node id="73">
         <label>MQTTDataProvider.Classes.MqttManager.TextReceivedEventArgs</label>
         <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args"/>
-        <childnode refid="67" relation="public-inheritance">
+        <childnode refid="74" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="69">
+      <node id="76">
         <label>EventArgs</label>
       </node>
-      <node id="68">
+      <node id="75">
         <label>MQTTDataProvider.Classes.MqttManager.TextReceivedEventArgs</label>
         <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args"/>
-        <childnode refid="69" relation="public-inheritance">
+        <childnode refid="76" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="60" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="59" bodyend="743"/>
+    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" line="61" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MqttManager.cs" bodystart="60" bodyend="744"/>
     <listofallmembers>
       <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a8cebe2ebaaf6a89cbb6bd7d37267782f" prot="public" virt="non-virtual"><scope>MQTTDataProvider::Classes::MqttManager::TextReceivedEventArgs</scope><name>ESPTimeStamp</name></member>
       <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args_1a945776864ec47b419343d6501628d88e" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MqttManager::TextReceivedEventArgs</scope><name>espTimeStamp</name></member>

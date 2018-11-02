@@ -160,16 +160,18 @@
 <codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Process[]<sp/>mqttDataProviderProcess<sp/>=<sp/>Process.GetProcessesByName(</highlight><highlight class="stringliteral">&quot;MQTTDataProvider&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mqttDataProviderProcess[0].CloseMainWindow();</highlight></codeline>
-<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>ex)</highlight></codeline>
-<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Console.WriteLine(ex.ToString());</highlight></codeline>
-<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="231"><highlight class="normal"></highlight></codeline>
-<codeline lineno="232"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endregion</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="234"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Process[]<sp/>mosquittoBrokerProcess<sp/>=<sp/>Process.GetProcessesByName(</highlight><highlight class="stringliteral">&quot;mosquitto&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mosquittoBrokerProcess[0].CloseMainWindow();</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>ex)</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Console.WriteLine(ex.ToString());</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endregion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/ViewModel/MainWindowViewModel.cs"/>
   </compounddef>

@@ -4,6 +4,7 @@
     <compoundname>MQTTDataProvider::Classes</compoundname>
     <innerclass refid="class_m_q_t_t_data_provider_1_1_classes_1_1_check_parameters" prot="public">MQTTDataProvider::Classes::CheckParameters</innerclass>
     <innerclass refid="class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser" prot="public">MQTTDataProvider::Classes::JsonParser</innerclass>
+    <innerclass refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker" prot="public">MQTTDataProvider::Classes::MosquittoBroker</innerclass>
     <innerclass refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager" prot="public">MQTTDataProvider::Classes::MqttManager</innerclass>
     <innerclass refid="class_m_q_t_t_data_provider_1_1_classes_1_1_send_to_l_h" prot="public">MQTTDataProvider::Classes::SendToLH</innerclass>
     <innerclass refid="class_m_q_t_t_data_provider_1_1_classes_1_1_set_l_h_descriptions" prot="public">MQTTDataProvider::Classes::SetLHDescriptions</innerclass>

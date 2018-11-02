@@ -173,24 +173,24 @@
     <detaileddescription>
 <para>Jordi Hutjens, 26-10-2018. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="51">
+      <node id="58">
         <label>ICommand</label>
       </node>
-      <node id="50">
+      <node id="57">
         <label>MQTTDataProvider.ViewModel.RelayCommand</label>
         <link refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_relay_command"/>
-        <childnode refid="51" relation="public-inheritance">
+        <childnode refid="58" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="53">
+      <node id="60">
         <label>ICommand</label>
       </node>
-      <node id="52">
+      <node id="59">
         <label>MQTTDataProvider.ViewModel.RelayCommand</label>
         <link refid="class_m_q_t_t_data_provider_1_1_view_model_1_1_relay_command"/>
-        <childnode refid="53" relation="public-inheritance">
+        <childnode refid="60" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

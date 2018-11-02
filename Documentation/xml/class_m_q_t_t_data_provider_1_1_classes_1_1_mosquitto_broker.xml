@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker" kind="class" language="C#" prot="public">
+    <compoundname>MQTTDataProvider::Classes::MosquittoBroker</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1a9a8cab70eed3db06ec188dca24a2614d" prot="private" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string MQTTDataProvider.Classes.MosquittoBroker.exectuable</definition>
+        <argsstring></argsstring>
+        <name>exectuable</name>
+        <initializer>= &quot;mosquitto.exe&quot;</initializer>
+        <briefdescription>
+<para>The exectuable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MosquittoBroker.cs" line="19" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MosquittoBroker.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1acb4b14d1601088ab8974803426e2a1af" prot="private" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string MQTTDataProvider.Classes.MosquittoBroker.cPath1</definition>
+        <argsstring></argsstring>
+        <name>cPath1</name>
+        <initializer>= &quot;C:/Program Files/mosquitto&quot;</initializer>
+        <briefdescription>
+<para>The first path. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MosquittoBroker.cs" line="22" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MosquittoBroker.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1ae87b3cce789a3bb9bc8004279e07f467" prot="private" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string MQTTDataProvider.Classes.MosquittoBroker.cPath2</definition>
+        <argsstring></argsstring>
+        <name>cPath2</name>
+        <initializer>= &quot;C:/Program Files (x86)/mosquitto&quot;</initializer>
+        <briefdescription>
+<para>The second path. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MosquittoBroker.cs" line="25" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MosquittoBroker.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1ac7a48f00ec2f7c4b5ad00fce9a03cd60" prot="private" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string MQTTDataProvider.Classes.MosquittoBroker.filename1</definition>
+        <argsstring></argsstring>
+        <name>filename1</name>
+        <initializer>= Path.Combine(<ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1acb4b14d1601088ab8974803426e2a1af" kindref="member">cPath1</ref>, <ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1a9a8cab70eed3db06ec188dca24a2614d" kindref="member">exectuable</ref>)</initializer>
+        <briefdescription>
+<para>The first filename. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MosquittoBroker.cs" line="28" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MosquittoBroker.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1aaf17cabd8741f4b2a380e19bd3797473" prot="private" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string MQTTDataProvider.Classes.MosquittoBroker.filename2</definition>
+        <argsstring></argsstring>
+        <name>filename2</name>
+        <initializer>= Path.Combine(<ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1ae87b3cce789a3bb9bc8004279e07f467" kindref="member">cPath2</ref>, <ref refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1a9a8cab70eed3db06ec188dca24a2614d" kindref="member">exectuable</ref>)</initializer>
+        <briefdescription>
+<para>The second filename. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MosquittoBroker.cs" line="31" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MosquittoBroker.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1a71d64db2b26d51045e162807e2956ef3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.Classes.MosquittoBroker.StartMosquittoBroker</definition>
+        <argsstring>()</argsstring>
+        <name>StartMosquittoBroker</name>
+        <briefdescription>
+<para>Starts mosquitto broker. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 2-11-2018. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MosquittoBroker.cs" line="43" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MosquittoBroker.cs" bodystart="43" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1af7058b5dd912fc8324cb028f4c29246b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MQTTDataProvider.Classes.MosquittoBroker.CheckMosquittoBroker</definition>
+        <argsstring>()</argsstring>
+        <name>CheckMosquittoBroker</name>
+        <briefdescription>
+<para>Check mosquitto broker. </para>        </briefdescription>
+        <detaileddescription>
+<para>Jordi Hutjens, 2-11-2018. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MosquittoBroker.cs" line="64" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MosquittoBroker.cs" bodystart="64" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class to check and start the mosquitto broker if it isn&apos;t running. </para>    </briefdescription>
+    <detaileddescription>
+<para>Jordi Hutjens, 2-11-2018. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="48">
+        <label>MQTTDataProvider.Classes.MosquittoBroker</label>
+        <link refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker"/>
+        <childnode refid="49" relation="usage">
+          <edgelabel>filename2</edgelabel>
+          <edgelabel>exectuable</edgelabel>
+          <edgelabel>cPath1</edgelabel>
+          <edgelabel>cPath2</edgelabel>
+          <edgelabel>filename1</edgelabel>
+        </childnode>
+      </node>
+      <node id="49">
+        <label>static</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MosquittoBroker.cs" line="15" column="1" bodyfile="C:/Users/Jordi Hutjens/Documents/GitHub/MQTTDataProvider/Classes/MosquittoBroker.cs" bodystart="14" bodyend="75"/>
+    <listofallmembers>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1af7058b5dd912fc8324cb028f4c29246b" prot="public" virt="non-virtual"><scope>MQTTDataProvider::Classes::MosquittoBroker</scope><name>CheckMosquittoBroker</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1acb4b14d1601088ab8974803426e2a1af" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MosquittoBroker</scope><name>cPath1</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1ae87b3cce789a3bb9bc8004279e07f467" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MosquittoBroker</scope><name>cPath2</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1a9a8cab70eed3db06ec188dca24a2614d" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MosquittoBroker</scope><name>exectuable</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1ac7a48f00ec2f7c4b5ad00fce9a03cd60" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MosquittoBroker</scope><name>filename1</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1aaf17cabd8741f4b2a380e19bd3797473" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MosquittoBroker</scope><name>filename2</name></member>
+      <member refid="class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker_1a71d64db2b26d51045e162807e2956ef3" prot="private" virt="non-virtual"><scope>MQTTDataProvider::Classes::MosquittoBroker</scope><name>StartMosquittoBroker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

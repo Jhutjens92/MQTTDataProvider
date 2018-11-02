@@ -39,28 +39,28 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="61">
+      <node id="68">
         <label>MQTTDataProvider.Properties.Settings</label>
-        <childnode refid="62" relation="public-inheritance">
+        <childnode refid="69" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="62">
+      <node id="69">
         <label>global::SystemConfiguration::ApplicationSettingsBase</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="63">
+      <node id="70">
         <label>MQTTDataProvider.Properties.Settings</label>
-        <childnode refid="64" relation="public-inheritance">
+        <childnode refid="71" relation="public-inheritance">
         </childnode>
-        <childnode refid="65" relation="usage">
+        <childnode refid="72" relation="usage">
           <edgelabel>defaultInstance</edgelabel>
         </childnode>
       </node>
-      <node id="64">
+      <node id="71">
         <label>global::SystemConfiguration::ApplicationSettingsBase</label>
       </node>
-      <node id="65">
+      <node id="72">
         <label>static</label>
       </node>
     </collaborationgraph>

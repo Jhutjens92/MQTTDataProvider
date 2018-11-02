@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['license_2emd',['LICENSE.md',['../_l_i_c_e_n_s_e_8md.html',1,'']]],
-  ['license',['LICENSE',['../md__c_1__users__jordi__hutjens__documents__git_hub__m_q_t_t_data_provider_packages__newtonsoft_8_json_811_80_82__l_i_c_e_n_s_e.html',1,'']]]
+  ['jsonpar',['jsonpar',['../class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#a45f466c4d992482ffe593364ed85b310',1,'MQTTDataProvider::Classes::MqttManager']]],
+  ['jsonparser',['JsonParser',['../class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser.html',1,'MQTTDataProvider::Classes']]],
+  ['jsonparser_2ecs',['JsonParser.cs',['../_json_parser_8cs.html',1,'']]],
+  ['jsonparsereceivedmessage',['JSONParseReceivedMessage',['../class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser.html#a211d06e3ba4c22b73f6384adcff0ce94',1,'MQTTDataProvider::Classes::JsonParser']]]
 ];

@@ -26,6 +26,7 @@ var hierarchy =
       [ "XamlGeneratedNamespace.GeneratedInternalTypeHelper", "class_xaml_generated_namespace_1_1_generated_internal_type_helper.html", null ]
     ] ],
     [ "MQTTDataProvider.Classes.JsonParser", "class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser.html", null ],
+    [ "MQTTDataProvider.Classes.MosquittoBroker", "class_m_q_t_t_data_provider_1_1_classes_1_1_mosquitto_broker.html", null ],
     [ "MQTTDataProvider.Classes.MqttManager", "class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html", null ],
     [ "MQTTDataProvider.Classes.SendToLH", "class_m_q_t_t_data_provider_1_1_classes_1_1_send_to_l_h.html", null ],
     [ "MQTTDataProvider.Classes.SetLHDescriptions", "class_m_q_t_t_data_provider_1_1_classes_1_1_set_l_h_descriptions.html", null ],

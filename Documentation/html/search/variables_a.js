@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['receivedstrmsg',['receivedStrMsg',['../class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager.html#ab7a2cd03d2ce6cb689e12bc5569663df',1,'MQTTDataProvider::Classes::MqttManager']]]
+  ['parsedmqttmsg',['parsedMqttMsg',['../class_m_q_t_t_data_provider_1_1_classes_1_1_json_parser.html#a00fbc620dcc289d76529fbbfd0a201bd',1,'MQTTDataProvider::Classes::JsonParser']]],
+  ['pulse',['pulse',['../class_m_q_t_t_data_provider_1_1_classes_1_1_mqtt_manager_1_1_text_received_event_args.html#aebbf24133bf4df2f86b570bbc33c7b5a',1,'MQTTDataProvider::Classes::MqttManager::TextReceivedEventArgs']]]
 ];

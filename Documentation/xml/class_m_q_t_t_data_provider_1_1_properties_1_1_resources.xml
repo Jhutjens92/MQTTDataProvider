@@ -78,14 +78,14 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="55">
+      <node id="62">
         <label>MQTTDataProvider.Properties.Resources</label>
-        <childnode refid="56" relation="usage">
+        <childnode refid="63" relation="usage">
           <edgelabel>resourceCulture</edgelabel>
           <edgelabel>resourceMan</edgelabel>
         </childnode>
       </node>
-      <node id="56">
+      <node id="63">
         <label>static</label>
       </node>
     </collaborationgraph>

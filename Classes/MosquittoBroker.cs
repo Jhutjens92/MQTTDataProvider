@@ -70,7 +70,6 @@ namespace MQTTDataProvider.Classes
                 Thread.Sleep(500);
             }
         }
-
         #endregion
     }
 }

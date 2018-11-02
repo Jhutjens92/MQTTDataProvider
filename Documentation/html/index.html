@@ -96,11 +96,11 @@ $(document).ready(function(){initNavTree('index.html','');});
 <h3>Prerequisites</h3>
 <ul>
 <li>Download the Learning Hub: <a href="https://github.com/janschneiderou/LearningHub">https://github.com/janschneiderou/LearningHub</a></li>
-<li>Installed the Mosquitto Broker (local)</li>
+<li>Installed the Mosquitto Broker (local) -Make sure the Mosquitto Broker is installed at C:/Program Files/mosquitto or C:/Program Files (x86)/mosquitto</li>
 <li>Use an MQTT Sender for testing</li>
 </ul>
 <h2>Getting Started</h2>
-<p>The brokeraddress is currently set to "localhost" (127.0.0.1). This means that Mosquitto is required for the program to be able to send and recieve data.</p>
+<p>The brokeraddress is currently set to "localhost" (127.0.0.1). This means that Mosquitto is required for the program to be able to send and recieve data. The Mosquitto Broker will run automatically at the start of the <a class="el" href="namespace_m_q_t_t_data_provider.html">MQTTDataProvider</a> if it isn't running.</p>
 <p>You can test the <a class="el" href="namespace_m_q_t_t_data_provider.html">MQTTDataProvider</a> without using the Learning Hub by just starting the executable and press "Start Recording" Currently it does not provide any logging when you run it seperatly. It only shows the received string in the textbox for testing.</p>
 <p>If you want to use it with the Learning Hub combined then make you sure have the Learning Hub set up accordingly. A complete how to guide can be found here: <a href="https://docs.google.com/document/d/1FbTd6wjqa9P_6O51gjZRU2ubiCA94nMZr001NkgBZ5s/edit#">https://docs.google.com/document/d/1FbTd6wjqa9P_6O51gjZRU2ubiCA94nMZr001NkgBZ5s/edit#</a></p>
 <p>The topics are defined as following: Receiving topic </p><h2>Default topic: "wekit/vest" </h2>
