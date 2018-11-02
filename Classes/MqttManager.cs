@@ -24,10 +24,11 @@ namespace MQTTDataProvider.Classes
     {
         #region Instance declaration
 
-        MqttClient mqttClient;
-        CheckParameters chkpar = new CheckParameters();
-        JsonParser jsonpar = new JsonParser();
-        SendToLH sendlh = new SendToLH();
+        MqttClient      mqttClient;
+        CheckParameters chkpar      = new CheckParameters();
+        JsonParser      jsonpar     = new JsonParser();
+        SendToLH        sendlh      = new SendToLH();
+        MosquittoBroker msqbroker   = new MosquittoBroker();
 
         #endregion
 
@@ -761,6 +762,7 @@ namespace MQTTDataProvider.Classes
         public MqttManager()
         {
             chkpar.CheckStartupParameters();
+            msqbroker.CheckMosquittoBroker();
             CreateMqttClient();
             ConnectMqttClient();
             mqttClient.MqttMsgPublishReceived += Client_MqttMsgPublishReceived;

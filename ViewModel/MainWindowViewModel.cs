@@ -222,6 +222,8 @@ namespace MQTTDataProvider.ViewModel
             {
                 Process[] mqttDataProviderProcess = Process.GetProcessesByName("MQTTDataProvider");
                 mqttDataProviderProcess[0].CloseMainWindow();
+                Process[] mosquittoBrokerProcess = Process.GetProcessesByName("mosquitto");
+                mosquittoBrokerProcess[0].CloseMainWindow();
             }
             catch (Exception ex)
             {

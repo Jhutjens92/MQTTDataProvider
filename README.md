@@ -4,11 +4,13 @@ filter the data, send the filtered data to predefined/preprogrammed MQTT Topics 
 
 ### Prerequisites
 - Download the Learning Hub: https://github.com/janschneiderou/LearningHub
-- Installed the Mosquitto Broker (local)
+- Installed the Mosquitto Broker (local) 
+	-Make sure the Mosquitto Broker is installed at C:/Program Files/mosquitto or C:/Program Files (x86)/mosquitto
 - Use an  MQTT Sender for testing 
 
 ## Getting Started
 The brokeraddress is currently set to "localhost" (127.0.0.1). This means that Mosquitto is required for the program to be able to send and recieve data.
+The Mosquitto Broker will run automatically at the start of the MQTTDataProvider if it isn't running. 
 
 You can test the MQTTDataProvider without using the Learning Hub by just starting the executable and press "Start Recording"
 Currently it does not provide any logging when you run it seperatly. It only shows the received string in the textbox for testing.
