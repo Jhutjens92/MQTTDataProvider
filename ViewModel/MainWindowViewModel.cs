@@ -199,10 +199,11 @@ namespace MQTTDataProvider.ViewModel
         
         public MainWindowViewModel()
         {
-            mdmanager.NewMqttTextReceived += IUpdateTextBox;
+           
             HubConnector.StartConnection();
             HubConnector.MyConnector.startRecordingEvent += MyConnector_startRecordingEvent;
             HubConnector.MyConnector.stopRecordingEvent += MyConnector_stopRecordingEvent;
+            mdmanager.NewMqttTextReceived += IUpdateTextBox;
             setlhdes.SetDescriptions();
             Application.Current.MainWindow.Closing += MainWindow_Closing;
         }
