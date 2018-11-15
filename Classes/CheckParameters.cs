@@ -50,7 +50,7 @@ namespace MQTTDataProvider.Classes
                 }
                 else
                 {
-                    brokerAddress = "localhost";
+                    brokerAddress = "127.0.0.1";
                     Console.WriteLine("Starting with default broker address (localhost).");
                 }
             }
